@@ -29,7 +29,7 @@ export default function AboutPage() {
         eyebrow="About us"
         heading="Who we are & what we stand for."
         description="The Phoenix Way is a Global Majority movement for funding justice and systems change, rooted in lived experience and community-led decision making, ending funding inequity by redistributing power and resources to our communities."
-        imageUrl="/phoenix/images/about-us.jpeg"
+        imageUrl={`${import.meta.env.BASE_URL}images/about-us.jpeg`}
       />
 
       {/* Trustees */}
@@ -51,7 +51,7 @@ export default function AboutPage() {
           ))}
         </div>
         <div style={{ marginTop: '2.5rem' }}>
-          <a href="/phoenix/#/opportunities" style={{ fontSize: '14px', color: '#E91E8C', textDecoration: 'none' }}>
+          <a href={`${import.meta.env.BASE_URL}#/opportunities`} style={{ fontSize: '14px', color: '#E91E8C', textDecoration: 'none' }}>
             Click here for opportunities to work with us →
           </a>
         </div>

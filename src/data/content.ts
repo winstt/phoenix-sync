@@ -2,6 +2,9 @@
 // ALL SITE CONTENT — edit this file to update any text, links, or data.
 // ─────────────────────────────────────────────────────────────────────────────
 
+const B = import.meta.env.BASE_URL // e.g. '/phoenix-sync/'
+const img = (name: string) => `${B}images/${name}`
+
 export const siteContent = {
   // ── BRAND ──────────────────────────────────────────────────────────────────
   brand: {
@@ -31,7 +34,7 @@ export const siteContent = {
     primaryCta: { label: 'Join our community', href: '/opportunities' },
     secondaryCta: { label: 'Our impact', href: '/our-impact' },
     // Replace with your hero image URL. Use null to show a gradient placeholder.
-    imageUrl: '/phoenix/images/homepage.jpeg' as string | null,
+    imageUrl: img('homepage.jpeg') as string | null,
   },
 
   // ── WHO STRIP (orange banner below hero) ───────────────────────────────────
@@ -64,12 +67,12 @@ export const siteContent = {
   // ── SCROLL TICKER PANELS ───────────────────────────────────────────────────
   // Add image URLs to replace gradient placeholders.
   tickerPanels: [
-    { imageUrl: '/phoenix/images/homepage.jpeg', gradient: 'linear-gradient(135deg, #E8570A22, #1a1a1a)' },
-    { imageUrl: '/phoenix/images/about-us.jpeg', gradient: 'linear-gradient(135deg, #C2185B22, #1a1a1a)' },
-    { imageUrl: '/phoenix/images/grants.jpeg', gradient: 'linear-gradient(135deg, #E8570A33, #222)' },
-    { imageUrl: '/phoenix/images/impact.jpeg', gradient: 'linear-gradient(135deg, #C2185B33, #1a1a1a)' },
-    { imageUrl: '/phoenix/images/news.jpeg', gradient: 'linear-gradient(135deg, #FF6B1A22, #0d0d0d)' },
-    { imageUrl: '/phoenix/images/opportunities.jpeg', gradient: 'linear-gradient(135deg, #E91E8C22, #222)' },
+    { imageUrl: img('homepage.jpeg'), gradient: 'linear-gradient(135deg, #E8570A22, #1a1a1a)' },
+    { imageUrl: img('about-us.jpeg'), gradient: 'linear-gradient(135deg, #C2185B22, #1a1a1a)' },
+    { imageUrl: img('grants.jpeg'), gradient: 'linear-gradient(135deg, #E8570A33, #222)' },
+    { imageUrl: img('impact.jpeg'), gradient: 'linear-gradient(135deg, #C2185B33, #1a1a1a)' },
+    { imageUrl: img('news.jpeg'), gradient: 'linear-gradient(135deg, #FF6B1A22, #0d0d0d)' },
+    { imageUrl: img('opportunities.jpeg'), gradient: 'linear-gradient(135deg, #E91E8C22, #222)' },
   ],
 
   // ── VISION BLOCK ───────────────────────────────────────────────────────────

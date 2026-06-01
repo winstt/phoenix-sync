@@ -62,7 +62,7 @@ export default function Header() {
             style={{ height: '60px', marginLeft: '2rem' }}
           >
             <img
-              src="/phoenix/images/logo-header.png"
+              src={`${import.meta.env.BASE_URL}images/logo-header.png`}
               alt="The Phoenix Community Trust"
               style={{ height: '80px', width: 'auto', objectFit: 'contain' }}
               onError={e => { (e.target as HTMLImageElement).src = 'https://newphx.karrota.wtf/wp-content/uploads/2026/05/ThePhoenix-LogoPNG-1.png' }}

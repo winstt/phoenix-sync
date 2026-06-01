@@ -65,10 +65,10 @@ export default function Footer() {
         <div>
           {/* Logo */}
           <img
-            src="/phoenix/images/logo-footer.jpg"
+            src={`${import.meta.env.BASE_URL}images/logo-footer.jpg`}
             alt="The Phoenix Community Trust"
             style={{ height: '110px', width: 'auto', display: 'block', marginBottom: '0.5rem' }}
-            onError={e => { (e.target as HTMLImageElement).src = '/phoenix/images/logo-header.png' }}
+            onError={e => { (e.target as HTMLImageElement).src = `${import.meta.env.BASE_URL}images/logo-header.png` }}
           />
           <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', maxWidth: '240px', margin: '1rem 0' }}>
             {footer.tagline}

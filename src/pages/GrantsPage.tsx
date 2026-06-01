@@ -16,7 +16,7 @@ export default function GrantsPage() {
         eyebrow="Grants"
         heading="Funding justice in action."
         description="The Phoenix Community Trust is committed to redistributing power and resources to Global Majority communities across the UK — through grants, investment, and long-term community infrastructure."
-        imageUrl="/phoenix/images/grants.jpeg"
+        imageUrl={`${import.meta.env.BASE_URL}images/grants.jpeg`}
       />
 
       {/* Statement band */}

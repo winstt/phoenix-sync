@@ -17,7 +17,7 @@ export default function NewsPage() {
         eyebrow="News"
         heading="News & updates."
         description="Stories, updates and insights from our work — and from the communities and leaders at the heart of this movement."
-        imageUrl="/phoenix/images/news.jpeg"
+        imageUrl={`${import.meta.env.BASE_URL}images/news.jpeg`}
       />
 
       {/* Filters */}
@@ -57,7 +57,7 @@ export default function NewsPage() {
               >
                 <div style={{ height: '140px', overflow: 'hidden' }}>
                   <img
-                    src={`/phoenix/images/news-${(i % 3) + 1}.svg`}
+                    src={`${import.meta.env.BASE_URL}images/news-${(i % 3) + 1}.svg`}
                     alt=""
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     onError={e => { (e.target as HTMLImageElement).style.display = 'none' }}
