@@ -25,6 +25,7 @@ export default function ImpactPage() {
         eyebrow="Our impact"
         heading="Uniting people and organisations across the UK."
         description="We are linking communities and leaders across the UK to amplify collective strength in our communities — championing the leadership and innovation already thriving within Global Majority communities nationwide."
+        imageUrl="/phoenix/images/impact.jpeg"
       />
 
       {/* Stats bar */}

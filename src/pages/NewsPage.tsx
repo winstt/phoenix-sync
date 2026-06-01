@@ -17,6 +17,7 @@ export default function NewsPage() {
         eyebrow="News"
         heading="News & updates."
         description="Stories, updates and insights from our work — and from the communities and leaders at the heart of this movement."
+        imageUrl="/phoenix/images/news.jpeg"
       />
 
       {/* Filters */}

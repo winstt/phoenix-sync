@@ -31,7 +31,7 @@ export const siteContent = {
     primaryCta: { label: 'Join our community', href: '/opportunities' },
     secondaryCta: { label: 'Our impact', href: '/our-impact' },
     // Replace with your hero image URL. Use null to show a gradient placeholder.
-    imageUrl: null as string | null,
+    imageUrl: '/phoenix/images/homepage.jpeg' as string | null,
   },
 
   // ── WHO STRIP (orange banner below hero) ───────────────────────────────────
@@ -64,12 +64,12 @@ export const siteContent = {
   // ── SCROLL TICKER PANELS ───────────────────────────────────────────────────
   // Add image URLs to replace gradient placeholders.
   tickerPanels: [
-    { imageUrl: null, gradient: 'linear-gradient(135deg, #E8570A22, #1a1a1a)' },
-    { imageUrl: null, gradient: 'linear-gradient(135deg, #C2185B22, #1a1a1a)' },
-    { imageUrl: null, gradient: 'linear-gradient(135deg, #E8570A33, #222)' },
-    { imageUrl: null, gradient: 'linear-gradient(135deg, #C2185B33, #1a1a1a)' },
-    { imageUrl: null, gradient: 'linear-gradient(135deg, #FF6B1A22, #0d0d0d)' },
-    { imageUrl: null, gradient: 'linear-gradient(135deg, #E91E8C22, #222)' },
+    { imageUrl: '/phoenix/images/homepage.jpeg', gradient: 'linear-gradient(135deg, #E8570A22, #1a1a1a)' },
+    { imageUrl: '/phoenix/images/about-us.jpeg', gradient: 'linear-gradient(135deg, #C2185B22, #1a1a1a)' },
+    { imageUrl: '/phoenix/images/grants.jpeg', gradient: 'linear-gradient(135deg, #E8570A33, #222)' },
+    { imageUrl: '/phoenix/images/impact.jpeg', gradient: 'linear-gradient(135deg, #C2185B33, #1a1a1a)' },
+    { imageUrl: '/phoenix/images/news.jpeg', gradient: 'linear-gradient(135deg, #FF6B1A22, #0d0d0d)' },
+    { imageUrl: '/phoenix/images/opportunities.jpeg', gradient: 'linear-gradient(135deg, #E91E8C22, #222)' },
   ],
 
   // ── VISION BLOCK ───────────────────────────────────────────────────────────

@@ -7,6 +7,7 @@ export default function OpportunitiesPage() {
         eyebrow="Work with us"
         heading="Opportunities to join the mission."
         description="We are building a national movement for funding justice. If you share our commitment to amplifying community power and lasting change — we want to work with you."
+        imageUrl="/phoenix/images/opportunities.jpeg"
       />
 
       {/* Jobs */}

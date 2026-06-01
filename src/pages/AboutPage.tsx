@@ -29,7 +29,7 @@ export default function AboutPage() {
         eyebrow="About us"
         heading="Who we are & what we stand for."
         description="The Phoenix Way is a Global Majority movement for funding justice and systems change, rooted in lived experience and community-led decision making, ending funding inequity by redistributing power and resources to our communities."
-        imageUrl="/phoenix/images/extracted-1.png"
+        imageUrl="/phoenix/images/about-us.jpeg"
       />
 
       {/* Trustees */}
