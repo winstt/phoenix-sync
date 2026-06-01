@@ -15,6 +15,12 @@ import ImpactPage from './pages/ImpactPage'
 import NewsPage from './pages/NewsPage'
 import ContactPage from './pages/ContactPage'
 import OpportunitiesPage from './pages/OpportunitiesPage'
+import ArchivePage from './pages/ArchivePage'
+import AccessibilityPage from './pages/AccessibilityPage'
+import CookiePolicyPage from './pages/CookiePolicyPage'
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage'
+import TermsPage from './pages/TermsPage'
+import ComplaintsPage from './pages/ComplaintsPage'
 
 function HomePage() {
   return (
@@ -43,6 +49,12 @@ export default function App() {
         <Route path="/news" element={<main id="main-content"><NewsPage /></main>} />
         <Route path="/contact" element={<main id="main-content"><ContactPage /></main>} />
         <Route path="/opportunities" element={<main id="main-content"><OpportunitiesPage /></main>} />
+        <Route path="/archive" element={<main id="main-content"><ArchivePage /></main>} />
+        <Route path="/accessibility" element={<main id="main-content"><AccessibilityPage /></main>} />
+        <Route path="/cookie-policy" element={<main id="main-content"><CookiePolicyPage /></main>} />
+        <Route path="/privacy-policy" element={<main id="main-content"><PrivacyPolicyPage /></main>} />
+        <Route path="/terms" element={<main id="main-content"><TermsPage /></main>} />
+        <Route path="/complaints" element={<main id="main-content"><ComplaintsPage /></main>} />
       </Routes>
       <Footer />
     </HashRouter>

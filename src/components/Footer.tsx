@@ -13,6 +13,12 @@ const routeMap: Record<string, string> = {
   'Our leaders': '/about#trustees-h2',
   'Our network': '/our-impact#partners-section',
   'Join the community': '/opportunities',
+  'Archive': '/archive',
+  'Privacy policy': '/privacy-policy',
+  'Cookie policy': '/cookie-policy',
+  'Accessibility statement': '/accessibility',
+  'Terms & conditions': '/terms',
+  'Complaints policy': '/complaints',
 }
 
 const { footer } = siteContent
@@ -184,16 +190,16 @@ export default function Footer() {
         {/* Legal links */}
         <nav aria-label="Legal and policy links" style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
           {footer.legal.map((link) => (
-            <a
+            <Link
               key={link.label}
-              href={link.href}
+              to={routeMap[link.label] ?? link.href}
               className="no-underline transition-colors"
               style={{ fontSize: '12px', color: 'rgba(245,240,235,0.6)' }}
               onMouseEnter={(e) => (e.currentTarget.style.color = '#f5f0eb')}
               onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(245,240,235,0.6)')}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
