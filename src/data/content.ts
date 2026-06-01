@@ -28,8 +28,8 @@ export const siteContent = {
     headlineWhite: 'Redistributing Power and Resources to Communities Across the UK.',
     description:
       'The Phoenix Community Trust exists to dismantle structural racism and end funding inequity by consolidating, resourcing and reinforcing the collective power, capacity and infrastructure of Global Majority communities across the UK.',
-    primaryCta: { label: 'Join our community', href: '#' },
-    secondaryCta: { label: 'Our impact', href: '#' },
+    primaryCta: { label: 'Join our community', href: '/opportunities' },
+    secondaryCta: { label: 'Our impact', href: '/our-impact' },
     // Replace with your hero image URL. Use null to show a gradient placeholder.
     imageUrl: null as string | null,
   },
@@ -148,7 +148,7 @@ export const siteContent = {
   news: {
     label: 'Latest',
     title: 'News & updates',
-    allNewsCta: { label: 'All news', href: '#' },
+    allNewsCta: { label: 'All news', href: '/news' },
     cards: [
       {
         tag: 'Announcement',

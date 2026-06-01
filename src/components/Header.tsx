@@ -1,12 +1,22 @@
 import { useState, useEffect } from 'react'
 import { X, ArrowRight } from 'lucide-react'
+import { Link, useLocation } from 'react-router-dom'
 import { siteContent } from '../data/content'
 
 const { nav } = siteContent
 
+const routeMap: Record<string, string> = {
+  'About us': '/about',
+  'Grants': '/grants',
+  'Our impact': '/our-impact',
+  'News': '/news',
+  'Contact': '/contact',
+}
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [drawerOpen, setDrawerOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
@@ -45,18 +55,19 @@ export default function Header() {
           style={{ padding: '1.25rem 2.5rem 1.25rem 0', height: '90px' }}
         >
           {/* Logo */}
-          <a
-            href="#"
+          <Link
+            to="/"
             aria-label="The Phoenix Community Trust - home"
             className="flex items-center flex-shrink-0 no-underline"
             style={{ height: '60px', marginLeft: '2rem' }}
           >
             <img
-              src="https://newphx.karrota.wtf/wp-content/uploads/2026/05/ThePhoenix-LogoPNG-1.png"
+              src="/phoenix/images/logo-header.png"
               alt="The Phoenix Community Trust"
               style={{ height: '80px', width: 'auto', objectFit: 'contain' }}
+              onError={e => { (e.target as HTMLImageElement).src = 'https://newphx.karrota.wtf/wp-content/uploads/2026/05/ThePhoenix-LogoPNG-1.png' }}
             />
-          </a>
+          </Link>
 
           {/* Hamburger */}
           <button
@@ -112,26 +123,33 @@ export default function Header() {
 
         {/* Links */}
         <nav aria-label="Drawer navigation" className="flex flex-col">
-          {nav.links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => setDrawerOpen(false)}
-              className="text-cream no-underline font-semibold uppercase tracking-widest py-4 opacity-85 hover:opacity-100 hover:text-orange transition-all"
-              style={{
-                fontSize: '1.1rem',
-                letterSpacing: '0.06em',
-                borderBottom: '1px solid rgba(255,255,255,0.08)',
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
+          {nav.links.map((link) => {
+            const to = routeMap[link.label] ?? link.href
+            const isActive = location.pathname === to
+            return (
+              <Link
+                key={link.label}
+                to={to}
+                onClick={() => setDrawerOpen(false)}
+                className="no-underline font-semibold uppercase transition-all"
+                style={{
+                  fontSize: '1.1rem',
+                  letterSpacing: '0.06em',
+                  padding: '1rem 0',
+                  borderBottom: '1px solid rgba(255,255,255,0.08)',
+                  color: isActive ? '#E8570A' : '#f5f0eb',
+                  opacity: isActive ? 1 : 0.85,
+                }}
+              >
+                {link.label}
+              </Link>
+            )
+          })}
         </nav>
 
         {/* Drawer CTA */}
-        <a
-          href={nav.cta.href}
+        <Link
+          to="/opportunities"
           onClick={() => setDrawerOpen(false)}
           className="flex items-center justify-center gap-2 font-bold uppercase tracking-wider rounded text-white no-underline transition-colors"
           style={{
@@ -145,7 +163,7 @@ export default function Header() {
         >
           {nav.cta.label}
           <ArrowRight size={16} />
-        </a>
+        </Link>
       </aside>
     </>
   )

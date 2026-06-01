@@ -1,0 +1,102 @@
+import PageHero from '../components/PageHero'
+
+const trustees = [
+  { name: 'Amna Abdullatif', bio: 'Amna is a community psychologist with over 15 years\' experience in the voluntary sector, leading national and international work to support women and children. A Vital Voices Visionary, she is an international speaker and writer whose published work explores women\'s lived experience, social change, and cultures of silence around abuse. Amna was elected as a local Councillor in Manchester in 2019, becoming the first visibly Muslim woman of Arab heritage to serve in the city. She also co-founded The Three Hijabis, a platform tackling racism, Islamophobia and misogyny using football as a catalyst for wider change.' },
+  { name: 'Abdou Sidibe', bio: 'Abdou is Director of Grants at the Paul Hamlyn Foundation, where he oversees an annual portfolio exceeding £40 million. A steering group member of the Funders for Race Equality Alliance, Abdou worked at The National Lottery Community Fund during the landmark £50 million investment for racial justice whilst leading the England Partnerships team, making him uniquely placed to support our mission.' },
+  { name: 'Anish Saxena', bio: 'Anish is a Chartered Accountant, MBA and experienced Independent Non-Executive Director with a deep background in global risk management. Currently serving as Audit Lead at Moody\'s, he brings over 15 years of essential expertise in financial and corporate governance, audit, and compliance that will strengthen our stewardship of the £50 million investment.' },
+  { name: 'Bilal Malik', bio: 'Bilal is a UK diplomat with experience across East Africa, the multilateral system and Whitehall at the Foreign, Commonwealth & Development Office. He has worked on colonial legacy issues in Kenya, humanitarian and political engagement in Sudan, and international development policy, bringing a strong grounding in governance, political analysis and cross-sector coordination.' },
+  { name: 'Florence Nyasamo', bio: 'Florence is a systems change leader and founder and CEO of Lives of Colour, designing practical ways to shift power, resources and opportunity towards marginalised communities. Her work spans social and racial justice, community wealth building, ethical governance, sustainable finance and digitally enabled participation.' },
+  { name: 'Shelley Bishton', bio: 'Shelley is a multi-award-winning cultural transformation specialist with over 20 years of experience driving change where culture meets commerce. As former Head of Diversity, Equity and Inclusion at News UK and a trustee of the Black British Initiative, she brings exceptional expertise in inclusive organisational development and community partnership building.' },
+  { name: 'Tayshan Hayden-Smith', bio: 'Tayshan is a British community activist and garden designer. He co-founded the non-profit Grow to Know, which focuses on "horticultural activism" to make gardening more accessible to diverse and disadvantaged communities. A regular face on BBC\'s Your Garden Made Perfect and a published author, he continues to advocate for social justice and environmental equity.' },
+]
+
+const values = [
+  { title: 'Community Power', text: 'We believe Global Majority communities hold the expertise, knowledge and vision to direct their own futures. We shift power from traditional funders to communities, ensuring those closest to the challenges lead the solutions.' },
+  { title: 'Radical Trust and Transparency', text: 'We communicate openly and honestly, even when it\'s difficult. We share information early, explain our constraints clearly, and build and sustain trust through consistent action, presence, kind conflict, truth-telling and follow-through.' },
+  { title: 'Collective Accountability', text: 'We hold ourselves and our partners to high standards while recognising that we are accountable to communities first. We balance governance responsibilities with our commitment to do things differently, setting realistic and achievable goals.' },
+  { title: 'Intersectionality, Equity and Reciprocity', text: 'We recognise that racial justice cannot exist in isolation. Our partnerships are grounded in fairness, inclusivity and shared power, challenging extractive practices, meeting communities where they are, and ensuring independence and respect in every relationship.' },
+  { title: 'Innovation Through Learning', text: 'We test, learn and evolve, knowing we are building something unprecedented. We embrace experimentation and accept imperfection as part of progress. Reflection and iteration are core to how we grow.' },
+  { title: 'Sustainable Transformation', text: 'We work beyond traditional grant-making towards models that build community wealth, reduce dependency and create lasting economic power. We prioritise long-term sustainability over short-term cycles.' },
+  { title: 'Legacy and Liberation', text: 'We honour the work and relationships that created this movement, carrying their lessons forward as we build what comes next. We exist to change the structures that create inequality, not to manage their symptoms.' },
+]
+
+const partners = ['Anti Racist Cumbria', 'Inclusive North', 'Impact Hub Yorkshire', 'The Ubele Initiative', 'Black South West Network', 'South Asian Health Action', 'National Lottery Community Fund']
+
+export default function AboutPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="About us"
+        heading="Who we are & what we stand for."
+        description="The Phoenix Way is a Global Majority movement for funding justice and systems change, rooted in lived experience and community-led decision making, ending funding inequity by redistributing power and resources to our communities."
+        imageUrl="/phoenix/images/extracted-1.png"
+      />
+
+      {/* Trustees */}
+      <section id="trustees-h2" style={{ padding: '4rem 2.5rem', background: '#0d0d0d' }}>
+        <p className="font-semibold uppercase mb-4" style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#E8570A' }}>Our leaders</p>
+        <h2 className="font-bold uppercase mb-4" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: '#f5f0eb' }}>Board of Trustees</h2>
+        <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', maxWidth: '700px', marginBottom: '3rem' }}>
+          The Phoenix Community Trust is guided by leaders already shaping their fields, united by deep professional experience, lived insight, and a shared dedication to fostering meaningful collaboration across the UK.
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
+          {trustees.map(t => (
+            <div key={t.name} style={{ background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '1.75rem' }}>
+              <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: 'rgba(232,87,10,0.15)', border: '1px solid rgba(232,87,10,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem' }}>
+                <span style={{ fontSize: '18px', fontWeight: 700, color: '#E8570A' }}>{t.name[0]}</span>
+              </div>
+              <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#f5f0eb', marginBottom: '0.75rem' }}>{t.name}</h3>
+              <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.6' }}>{t.bio}</p>
+            </div>
+          ))}
+        </div>
+        <div style={{ marginTop: '2.5rem' }}>
+          <a href="/phoenix/#/opportunities" style={{ fontSize: '14px', color: '#E91E8C', textDecoration: 'none' }}>
+            Click here for opportunities to work with us →
+          </a>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section id="values" style={{ padding: '4rem 2.5rem', background: '#1a1a1a', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+        <p className="font-semibold uppercase mb-4" style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#E8570A' }}>What we stand for</p>
+        <h2 className="font-bold uppercase mb-10" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: '#f5f0eb' }}>Our values</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.5rem' }}>
+          {values.map((v, i) => (
+            <div key={v.title} style={{ background: '#0d0d0d', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '1.75rem' }}>
+              <p style={{ fontSize: '2rem', fontWeight: 800, color: '#E8570A', opacity: 0.3, lineHeight: 1, marginBottom: '1rem' }}>0{i + 1}</p>
+              <h3 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#f5f0eb', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.75rem' }}>{v.title}</h3>
+              <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.6' }}>{v.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Origin */}
+      <section style={{ padding: '4rem 2.5rem', background: '#0d0d0d', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+        <p className="font-semibold uppercase mb-4" style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#E8570A' }}>Our origin story</p>
+        <h2 className="font-bold uppercase mb-10" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: '#f5f0eb' }}>How Phoenix was born</h2>
+        <div style={{ maxWidth: '760px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          {[
+            'The Phoenix Community Trust emerged as a community-led response to the structural inequalities confronting Global Majority communities in the UK. In the midst of the COVID-19 pandemic, the Phoenix Fund mobilised emergency funding support for grassroots groups, getting resources to communities at pace, when they were needed most.',
+            'As the work grew from The Phoenix Fund with the National Lottery Community Fund, some of the partners came together as The Phoenix Way - working with a shared ambition to dismantle systemic racism in philanthropy and drive lasting, community-led, transformative change.',
+            'A new chapter began when Phoenix was incorporated as an independent Global Majority-led organisation, with a newly appointed independent Board, to steward the next phase of the work. The new structure lays the foundation for long term investment in community infrastructure and the development of a lasting model for change.',
+            'We honour the roots of The Phoenix Community Trust and the communities and partners who shaped its early momentum, while looking forward with renewed energy and excitement to what comes next.',
+          ].map((p, i) => (
+            <p key={i} style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.7)', lineHeight: '1.75' }}>{p}</p>
+          ))}
+        </div>
+      </section>
+
+      {/* Partners */}
+      <section style={{ padding: '4rem 2.5rem', background: '#1a1a1a', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+        <p className="font-semibold uppercase mb-6" style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#E8570A' }}>Our current partners and funders</p>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+          {partners.map(p => (
+            <span key={p} style={{ padding: '0.6rem 1.2rem', background: 'rgba(232,87,10,0.08)', border: '1px solid rgba(232,87,10,0.2)', borderRadius: '100px', fontSize: '13px', color: '#f5f0eb' }}>{p}</span>
+          ))}
+        </div>
+      </section>
+    </>
+  )
+}

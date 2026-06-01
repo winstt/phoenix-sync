@@ -1,5 +1,19 @@
 import { Instagram, Facebook, Youtube, Twitter, Linkedin } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { siteContent } from '../data/content'
+
+const routeMap: Record<string, string> = {
+  'About us': '/about',
+  'Grants': '/grants',
+  'Our impact': '/our-impact',
+  'News': '/news',
+  'Contact': '/contact',
+  'Work with us': '/opportunities',
+  'Our vision & mission': '/#vision-block',
+  'Our leaders': '/about#trustees-h2',
+  'Our network': '/our-impact#partners-section',
+  'Join the community': '/opportunities',
+}
 
 const { footer } = siteContent
 
@@ -45,9 +59,10 @@ export default function Footer() {
         <div>
           {/* Logo */}
           <img
-            src="https://newphx.karrota.wtf/wp-content/uploads/2026/05/ThePhoenix-LogoPNG-1.png"
+            src="/phoenix/images/logo-footer.jpg"
             alt="The Phoenix Community Trust"
             style={{ height: '110px', width: 'auto', display: 'block', marginBottom: '0.5rem' }}
+            onError={e => { (e.target as HTMLImageElement).src = '/phoenix/images/logo-header.png' }}
           />
           <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', maxWidth: '240px', margin: '1rem 0' }}>
             {footer.tagline}
@@ -65,15 +80,15 @@ export default function Footer() {
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
             {footer.columns.organisation.links.map((link) => (
               <li key={link.label}>
-                <a
-                  href={link.href}
+                <Link
+                  to={routeMap[link.label] ?? link.href}
                   className="no-underline transition-colors"
                   style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)' }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = '#E8570A')}
                   onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(245,240,235,0.6)')}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -90,15 +105,15 @@ export default function Footer() {
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
             {footer.columns.work.links.map((link) => (
               <li key={link.label}>
-                <a
-                  href={link.href}
+                <Link
+                  to={routeMap[link.label] ?? link.href}
                   className="no-underline transition-colors"
                   style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)' }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = '#E8570A')}
                   onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(245,240,235,0.6)')}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
