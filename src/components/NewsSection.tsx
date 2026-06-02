@@ -54,7 +54,7 @@ export default function NewsSection() {
           <h2
             id="news-heading"
             className="font-bold uppercase"
-            style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', letterSpacing: '-0.01em', color: '#f5f0eb' }}
+            style={{ fontSize: 'clamp(2.25rem, 4.5vw, 3.25rem)', letterSpacing: '-0.01em', color: '#f5f0eb' }}
           >
             {news.title}
           </h2>
