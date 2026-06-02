@@ -12,7 +12,7 @@ import funderImpactHub from '../assets/funders/impact_hub.png.asset.json'
 import funderUbele from '../assets/funders/the_ubele.png.asset.json'
 import funderBswn from '../assets/funders/bs_wn.png.asset.json'
 import funderSouthAsian from '../assets/funders/south_asian.png.asset.json'
-import funderInclusiveNorth from '../assets/funders/inclusive_north.png.asset.json'
+import funderInclusiveNorth from '../assets/funders/inclusive_north_funder2.png.asset.json'
 
 const funderLogos = [
   { name: 'Anti Racist Cumbria', url: funderAntiracist.url },
