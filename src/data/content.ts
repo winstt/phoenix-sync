@@ -222,9 +222,8 @@ export const siteContent = {
       { label: 'Privacy policy', href: '/privacy-policy' },
       { label: 'Cookie policy', href: '/cookie-policy' },
       { label: 'Accessibility statement', href: '/accessibility' },
-      { label: 'Terms & conditions', href: '/terms' },
-      { label: 'Complaints policy', href: '/complaints' },
     ],
+
     address: 'C/O Stone King LLP, Boundary House, 91 Charterhouse Street, London, EC1M 6HR',
     copyright: '© 2026 The Phoenix Community Trust. All rights reserved.',
     registeredCharityNumber: '[XXXXX]',
