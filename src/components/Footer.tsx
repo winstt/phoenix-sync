@@ -47,7 +47,7 @@ export default function Footer() {
       style={{
         background: '#080808',
         borderTop: '1px solid rgba(255,255,255,0.1)',
-        padding: '4rem 2.5rem 0',
+        padding: '4rem 1.5rem 0',
       }}
     >
       {/* Top grid */}
