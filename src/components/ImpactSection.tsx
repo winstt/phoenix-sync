@@ -20,7 +20,7 @@ export default function ImpactSection() {
   return (
     <section
       aria-labelledby="impact-heading"
-      style={{ padding: '4rem 2.5rem' }}
+      style={{ padding: '2rem 2.5rem' }}
     >
       <div
         style={{
