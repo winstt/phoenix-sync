@@ -49,7 +49,7 @@ export default function Hero() {
           id="hero-heading"
           className="font-extrabold uppercase leading-none mb-6 text-cream"
           style={{
-            fontSize: 'clamp(1.75rem, 3vw, 2.7rem)',
+            fontSize: 'clamp(2.5rem, 6vw, 4.25rem)',
             letterSpacing: '-0.02em',
           }}
         >
