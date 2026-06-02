@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
 import { siteContent } from '../data/content'
 
@@ -50,9 +51,9 @@ export default function NewsPage() {
         {filtered.length > 0 ? (
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.5rem' }}>
             {filtered.map((card, i) => (
-              <a
+              <Link
                 key={card.title}
-                href="#"
+                to={card.href}
                 className="news-card-link block no-underline"
                 style={{ background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', overflow: 'hidden', color: 'inherit' }}
               >
@@ -70,7 +71,7 @@ export default function NewsPage() {
                   <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.5' }}>{card.description}</p>
                   <p style={{ fontSize: '12px', color: 'rgba(245,240,235,0.4)', marginTop: '0.75rem' }}>{card.date}</p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         ) : (

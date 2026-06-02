@@ -14,6 +14,7 @@ import AboutPage from './pages/AboutPage'
 import GrantsPage from './pages/GrantsPage'
 import ImpactPage from './pages/ImpactPage'
 import NewsPage from './pages/NewsPage'
+import NewsArticlePage from './pages/NewsArticlePage'
 import ContactPage from './pages/ContactPage'
 import OpportunitiesPage from './pages/OpportunitiesPage'
 import ArchivePage from './pages/ArchivePage'
@@ -51,6 +52,7 @@ export default function App() {
         <Route path="/grants" element={<main id="main-content"><GrantsPage /></main>} />
         <Route path="/impact" element={<main id="main-content"><ImpactPage /></main>} />
         <Route path="/news" element={<main id="main-content"><NewsPage /></main>} />
+        <Route path="/news/:slug" element={<main id="main-content"><NewsArticlePage /></main>} />
         <Route path="/contact" element={<main id="main-content"><ContactPage /></main>} />
         <Route path="/opportunities" element={<main id="main-content"><OpportunitiesPage /></main>} />
         <Route path="/archive" element={<main id="main-content"><ArchivePage /></main>} />

@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { siteContent } from '../data/content'
 
 const { news } = siteContent
@@ -93,9 +94,9 @@ export default function NewsSection() {
         }}
       >
         {news.cards.map((card, i) => (
-          <a
+          <Link
             key={card.title}
-            href={card.href}
+            to={card.href}
             className="news-card-link block no-underline"
             style={{
               background: '#0d0d0d',
@@ -131,7 +132,7 @@ export default function NewsSection() {
                 {card.date}
               </p>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
