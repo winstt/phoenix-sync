@@ -51,9 +51,9 @@ export default function NewsPage() {
         {filtered.length > 0 ? (
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.5rem' }}>
             {filtered.map((card, i) => (
-              <a
+              <Link
                 key={card.title}
-                href="#"
+                to={card.href}
                 className="news-card-link block no-underline"
                 style={{ background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', overflow: 'hidden', color: 'inherit' }}
               >
