@@ -54,7 +54,7 @@ export default function AboutPage() {
           {trustees.map(t => (
             <div key={t.name} style={{ background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '1.75rem' }}>
               <div style={{ width: '100%', aspectRatio: '1 / 1', borderRadius: '12px', overflow: 'hidden', marginBottom: '1.25rem', background: '#0d0d0d' }}>
-                <img src={t.photo} alt={t.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                <img src={t.photo} alt={t.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: t.name === 'Shelley Bishton' ? 'center 20%' : 'center', display: 'block' }} />
               </div>
               <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#f5f0eb', marginBottom: '0.75rem' }}>{t.name}</h3>
               <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.6' }}>{t.bio}</p>
