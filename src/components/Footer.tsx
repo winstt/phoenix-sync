@@ -64,7 +64,7 @@ export default function Footer() {
           <img
             src={`${import.meta.env.BASE_URL}images/logo-header.png`}
             alt="The Phoenix Community Trust"
-            style={{ height: 'auto', width: '160px', maxWidth: '100%', objectFit: 'contain', display: 'block', marginBottom: '0.5rem' }}
+            style={{ height: 'auto', width: '240px', maxWidth: '100%', objectFit: 'contain', display: 'block', marginBottom: '0.75rem' }}
             onError={e => { (e.target as HTMLImageElement).src = 'https://newphx.karrota.wtf/wp-content/uploads/2026/05/ThePhoenix-LogoPNG-1.png' }}
           />
           <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', maxWidth: '240px', margin: '1rem 0' }}>
