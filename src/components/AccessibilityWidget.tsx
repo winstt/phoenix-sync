@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { X, Minus, Plus } from 'lucide-react'
-import phoenixIcon from '@/assets/phoenix-icon.png.asset.json'
+import phoenixIcon from '../assets/phoenix-icon.png.asset.json'
 
 type Settings = {
   textSize: number
