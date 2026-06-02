@@ -44,7 +44,7 @@ export default function App() {
     <HashRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/newsletter-home" element={<HomePage />} />
         <Route path="/about" element={<main id="main-content"><AboutPage /></main>} />
         <Route path="/grants" element={<main id="main-content"><GrantsPage /></main>} />
         <Route path="/impact" element={<main id="main-content"><ImpactPage /></main>} />
