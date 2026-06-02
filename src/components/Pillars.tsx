@@ -31,14 +31,6 @@ export default function Pillars() {
             role="listitem"
             style={{ background: '#1a1a1a', padding: '2rem' }}
           >
-            {/* Number */}
-            <p
-              className="font-extrabold leading-none mb-4"
-              style={{ fontSize: '3rem', color: '#E8570A', opacity: 0.3 }}
-              aria-hidden="true"
-            >
-              {pillar.num}
-            </p>
 
             {/* Title */}
             <h3
