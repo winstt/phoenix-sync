@@ -52,6 +52,7 @@ export default function App() {
         <Route path="/grants" element={<main id="main-content"><GrantsPage /></main>} />
         <Route path="/impact" element={<main id="main-content"><ImpactPage /></main>} />
         <Route path="/news" element={<main id="main-content"><NewsPage /></main>} />
+        <Route path="/news/:slug" element={<main id="main-content"><NewsArticlePage /></main>} />
         <Route path="/contact" element={<main id="main-content"><ContactPage /></main>} />
         <Route path="/opportunities" element={<main id="main-content"><OpportunitiesPage /></main>} />
         <Route path="/archive" element={<main id="main-content"><ArchivePage /></main>} />
