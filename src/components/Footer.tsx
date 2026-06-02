@@ -61,7 +61,7 @@ export default function Footer() {
         {/* Brand */}
         <div>
           {/* Logo */}
-          <div style={{ width: '240px', maxWidth: '100%', marginBottom: '0.75rem' }}>
+          <div style={{ width: '155px', maxWidth: '100%', marginBottom: '0.75rem' }}>
             <img
               src={`${import.meta.env.BASE_URL}images/logo-header.png`}
               alt="The Phoenix Community Trust"
