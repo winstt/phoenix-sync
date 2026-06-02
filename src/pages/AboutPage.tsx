@@ -72,15 +72,30 @@ export default function AboutPage() {
       <section id="values" style={{ padding: '4rem 2.5rem', background: '#1a1a1a', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <p className="font-semibold uppercase mb-4" style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#E8570A' }}>What we stand for</p>
         <h2 className="font-bold uppercase mb-10" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: '#f5f0eb' }}>Our values</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.5rem' }}>
-          {values.map((v, i) => (
-            <div key={v.title} style={{ background: '#0d0d0d', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '1.75rem' }}>
-              <p style={{ fontSize: '2rem', fontWeight: 800, color: '#E8570A', opacity: 0.3, lineHeight: 1, marginBottom: '1rem' }}>0{i + 1}</p>
-              <h3 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#f5f0eb', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.75rem' }}>{v.title}</h3>
-              <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.6' }}>{v.text}</p>
-            </div>
-          ))}
+        <div style={{ display: 'flex', flexDirection: 'column', borderTop: '1px solid rgba(255,255,255,0.12)' }}>
+          {values.map((v, i) => {
+            const isOpen = openValue === i
+            return (
+              <div key={v.title} style={{ borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
+                <button
+                  type="button"
+                  onClick={() => setOpenValue(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                  style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', padding: '1.4rem 0.25rem', background: 'transparent', border: 'none', cursor: 'pointer', textAlign: 'left', color: '#f5f0eb' }}
+                >
+                  <h3 style={{ fontSize: 'clamp(0.95rem, 1.4vw, 1.1rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#f5f0eb', margin: 0 }}>{v.title}</h3>
+                  <span aria-hidden style={{ fontSize: '1.5rem', fontWeight: 300, color: '#E8570A', transition: 'transform 0.3s ease', transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)', lineHeight: 1, flexShrink: 0 }}>+</span>
+                </button>
+                <div style={{ overflow: 'hidden', display: 'grid', gridTemplateRows: isOpen ? '1fr' : '0fr', transition: 'grid-template-rows 0.35s ease' }}>
+                  <div style={{ minHeight: 0 }}>
+                    <p style={{ fontSize: '14px', color: 'rgba(245,240,235,0.7)', lineHeight: '1.7', padding: '0 0 1.4rem', maxWidth: '760px' }}>{v.text}</p>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
         </div>
+
       </section>
 
       {/* Origin */}
