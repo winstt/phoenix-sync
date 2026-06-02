@@ -50,8 +50,10 @@ export default function ContactPage() {
               <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#f5f0eb', marginBottom: '1rem' }}>Follow us</h3>
               <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
                 {socialLinks.map(s => (
-                  <a key={s.label} href={s.href} aria-label={s.label}
-                    style={{ width: '40px', height: '40px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(245,240,235,0.6)', textDecoration: 'none', transition: 'all 0.2s' }}
+              <a key={s.label} href={s.href} aria-label={s.label}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ width: '40px', height: '40px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(245,240,235,0.6)', textDecoration: 'none', transition: 'all 0.2s' }}
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = '#E8570A'; (e.currentTarget as HTMLElement).style.color = '#E8570A' }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)'; (e.currentTarget as HTMLElement).style.color = 'rgba(245,240,235,0.6)' }}
                   >
