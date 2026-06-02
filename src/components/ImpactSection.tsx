@@ -42,7 +42,7 @@ export default function ImpactSection() {
             id="impact-heading"
             className="font-bold uppercase mb-5"
             style={{
-              fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+              fontSize: 'clamp(2.25rem, 4.5vw, 3.25rem)',
               letterSpacing: '-0.01em',
               color: '#f5f0eb',
             }}
