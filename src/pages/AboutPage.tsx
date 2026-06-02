@@ -37,7 +37,15 @@ const values = [
   { title: 'Legacy and Liberation', text: 'We honour the work and relationships that created this movement, carrying their lessons forward as we build what comes next. We exist to change the structures that create inequality, not to manage their symptoms.' },
 ]
 
-const partners = ['Anti Racist Cumbria', 'Inclusive North', 'Impact Hub Yorkshire', 'The Ubele Initiative', 'Black South West Network', 'South Asian Health Action', 'National Lottery Community Fund']
+const partners: { name: string; logo: string }[] = [
+  { name: 'Anti Racist Cumbria', logo: funderAntiracist.url },
+  { name: 'Inclusive North', logo: funderInclusiveNorth.url },
+  { name: 'Impact Hub Yorkshire', logo: funderImpactHub.url },
+  { name: 'The Ubele Initiative', logo: funderUbele.url },
+  { name: 'Black South West Network', logo: funderBswn.url },
+  { name: 'South Asian Health Action', logo: funderSouthAsian.url },
+  { name: 'National Lottery Community Fund', logo: funderComfun.url },
+]
 
 export default function AboutPage() {
   const [openValue, setOpenValue] = useState<number | null>(0)
