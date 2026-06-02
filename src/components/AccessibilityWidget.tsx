@@ -29,13 +29,13 @@ function Toggle({ checked, onChange, label }: { checked: boolean; onChange: (v: 
       aria-checked={checked}
       aria-label={label}
       onClick={() => onChange(!checked)}
-      className={`relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full transition-colors ${
+      className={`relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full transition-colors ${
         checked ? 'bg-[hsl(330_70%_50%)]' : 'bg-neutral-600'
       }`}
     >
       <span
-        className={`inline-block h-5 w-5 transform rounded-full bg-white transition-transform mt-1 ${
-          checked ? 'translate-x-6' : 'translate-x-1'
+        className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white transition-transform mt-[3px] ${
+          checked ? 'translate-x-[18px]' : 'translate-x-[3px]'
         }`}
       />
     </button>
