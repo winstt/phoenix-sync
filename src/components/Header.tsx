@@ -59,13 +59,13 @@ export default function Header() {
             to="/"
             aria-label="The Phoenix Community Trust - home"
             className="flex items-center flex-shrink-0 no-underline"
-            style={{ height: '55px' }}
+            style={{ height: '40px' }}
           >
             <img
               src={`${import.meta.env.BASE_URL}images/logo-header.png`}
               alt="The Phoenix Community Trust"
               className="object-fill"
-              style={{ height: '72px', width: 'auto', display: 'block' }}
+              style={{ height: '40px', width: 'auto', display: 'block' }}
               onError={e => { (e.target as HTMLImageElement).src = 'https://newphx.karrota.wtf/wp-content/uploads/2026/05/ThePhoenix-LogoPNG-1.png' }}
             />
           </Link>
@@ -76,7 +76,6 @@ export default function Header() {
             aria-label="Open navigation menu"
             aria-expanded={drawerOpen}
             className="ml-auto flex flex-col justify-center gap-[5px] p-2 bg-transparent border-none cursor-pointer"
-            style={{ marginRight: '-40px' }}
           >
             <span className="block w-7 h-[2px] bg-cream rounded" />
             <span className="block w-7 h-[2px] bg-cream rounded" />
