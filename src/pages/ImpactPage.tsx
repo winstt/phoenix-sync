@@ -100,8 +100,7 @@ export default function ImpactPage() {
           </div>
         </div>
       </section>
-        </div>
-      </section>
+
 
       {/* Funders */}
       <section style={{ padding: '4rem 2.5rem', background: '#0d0d0d', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
