@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import AccessibilityWidget from './components/AccessibilityWidget'
@@ -41,10 +41,10 @@ function HomePage() {
 
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<main id="main-content"><NewsletterPage /></main>} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<main id="main-content"><AboutPage /></main>} />
         <Route path="/grants" element={<main id="main-content"><GrantsPage /></main>} />
         <Route path="/impact" element={<main id="main-content"><ImpactPage /></main>} />
@@ -57,10 +57,10 @@ export default function App() {
         <Route path="/privacy-policy" element={<main id="main-content"><PrivacyPolicyPage /></main>} />
         <Route path="/terms" element={<main id="main-content"><TermsPage /></main>} />
         <Route path="/complaints" element={<main id="main-content"><ComplaintsPage /></main>} />
-        <Route path="/newsletter" element={<HomePage />} />
+        <Route path="/newsletter" element={<main id="main-content"><NewsletterPage /></main>} />
       </Routes>
       <Footer />
       <AccessibilityWidget />
-    </HashRouter>
+    </BrowserRouter>
   )
 }
