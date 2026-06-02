@@ -189,7 +189,6 @@ export const siteContent = {
         heading: 'Organisation',
         links: [
           { label: 'About us', href: '/about' },
-          { label: 'Our vision & mission', href: '/#vision-block' },
           { label: 'Our leaders', href: '/about#trustees-h2' },
           { label: 'Work with us', href: '/opportunities' },
           { label: 'News', href: '/news' },
