@@ -20,7 +20,7 @@ export default function CookiePolicyPage() {
         heading="Cookie policy."
         description="Last updated: 11 May 2026 · Next review: 11 May 2027"
       />
-      <section style={{ padding: '4rem 2.5rem', background: '#0d0d0d' }}>
+      <section style={{ padding: '2.5rem 2.5rem 4rem', background: '#0d0d0d', borderTop: '1px solid rgba(245,240,235,0.08)' }}>
         <div style={{ maxWidth: '760px' }}>
 
           {p('Cookies are small text files that are placed on your device when you visit a website. We use cookies to make our site function correctly and to understand how it is being used so we can improve it.')}
