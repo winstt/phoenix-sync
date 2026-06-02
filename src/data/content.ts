@@ -211,8 +211,8 @@ export const siteContent = {
       heading: 'Get in touch',
       email: 'info@phoenix-trust.co.uk',
       social: [
-        { label: 'Instagram', href: 'https://www.instagram.com/phoenixcommunitytrustuk/?utm_source=ig_web_button_share_sheet', icon: 'instagram' },
-        { label: 'Facebook', href: 'https://www.facebook.com/people/The-Phoenix-Community-Trust/61589475597509/?mibextid=wwXIfr&rdid=PfQ8PwbX89ArAI1V&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ECVV5eixA%2F%3Fmibextid%3DwwXIfr%26ref%3D1', icon: 'facebook' },
+        { label: 'Instagram', href: 'https://www.instagram.com/phoenixcommunitytrustuk/', icon: 'instagram' },
+        { label: 'Facebook', href: 'https://www.facebook.com/people/The-Phoenix-Community-Trust/61589475597509/?mibextid=wwXIfr&rdid=gpNaLbJCTXkxTGvk&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ECVV5eixA%2F%3Fmibextid%3DwwXIfr%26ref%3D1', icon: 'facebook' },
         { label: 'YouTube', href: 'https://youtube.com/@phoenixcommunitytrustuk?si=cyn3uT-Z511GlECm', icon: 'youtube' },
         { label: 'LinkedIn', href: 'https://www.linkedin.com/in/phoenix-way-uk?utm_source=share_via&utm_content=profile&utm_medium=member_ios', icon: 'linkedin' },
         { label: 'Bluesky', href: 'https://bsky.app/profile/phoenix-trust.bsky.social', icon: 'bluesky' },
