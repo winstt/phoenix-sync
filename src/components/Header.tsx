@@ -52,14 +52,14 @@ export default function Header() {
         <nav
           aria-label="Main navigation"
           className="flex items-center"
-          style={{ padding: '1.25rem 2.5rem 1.25rem 0', height: '110px' }}
+          style={{ padding: '1.25rem 1.5rem', height: '110px' }}
         >
           {/* Logo */}
           <Link
             to="/"
             aria-label="The Phoenix Community Trust - home"
             className="flex items-center flex-shrink-0 no-underline"
-            style={{ height: '85px', marginLeft: '2rem' }}
+            style={{ height: '85px' }}
           >
             <img
               src={`${import.meta.env.BASE_URL}images/logo-header.png`}
