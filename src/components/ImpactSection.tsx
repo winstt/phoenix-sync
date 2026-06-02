@@ -90,34 +90,36 @@ export default function ImpactSection() {
           </div>
         </div>
 
-        {/* Right — map placeholder + regions */}
+        {/* Right — regions box */}
         <div
           style={{
             background: '#1a1a1a',
             border: '1px solid rgba(255,255,255,0.1)',
             borderRadius: '12px',
             padding: '2rem',
-            minHeight: '320px',
             position: 'relative',
           }}
         >
           <p
             style={{
-              position: 'absolute',
-              top: '1rem',
-              left: '1rem',
               fontSize: '11px',
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
               color: 'rgba(245,240,235,0.6)',
+              marginBottom: '1rem',
             }}
           >
             Our regions
           </p>
 
-
           {/* Region list */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+              gap: '10px',
+            }}
+          >
             {impact.regions.map((region) => (
               <div
                 key={region}
@@ -125,13 +127,16 @@ export default function ImpactSection() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  padding: '0.5rem 0.75rem',
+                  padding: '0.6rem 0.85rem',
                   background: 'rgba(232,87,10,0.06)',
                   border: '1px solid rgba(232,87,10,0.15)',
                   borderRadius: '6px',
+                  minHeight: '44px',
                 }}
               >
-                <span style={{ fontSize: '13px', color: '#f5f0eb', fontWeight: 500 }}>{region}</span>
+                <span style={{ fontSize: '13px', color: '#f5f0eb', fontWeight: 500, lineHeight: '1.4' }}>
+                  {region}
+                </span>
                 <span
                   style={{
                     width: '6px',
@@ -139,6 +144,7 @@ export default function ImpactSection() {
                     borderRadius: '50%',
                     background: '#E8570A',
                     flexShrink: 0,
+                    marginLeft: '8px',
                   }}
                 />
               </div>
