@@ -24,7 +24,7 @@ export default function TermsPage() {
         heading="Terms & conditions."
         description="Last updated: May 2026"
       />
-      <section style={{ padding: '4rem 2.5rem', background: '#0d0d0d' }}>
+      <section style={{ padding: '2.5rem 2.5rem 4rem', background: '#0d0d0d', borderTop: '1px solid rgba(245,240,235,0.08)' }}>
         <div style={{ maxWidth: '760px' }}>
 
           {p('Please read these Terms and Conditions carefully before using the website at phoenix-trust.co.uk (the "Website") operated by The Phoenix Community Trust ("we", "us", "our"). By accessing or using our Website, you agree to be bound by these terms.')}
