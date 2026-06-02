@@ -23,6 +23,7 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage'
 import TermsPage from './pages/TermsPage'
 import ComplaintsPage from './pages/ComplaintsPage'
 import NewsletterPage from './pages/NewsletterPage'
+import ScrollToTop from './components/ScrollToTop'
 
 function HomePage() {
   return (
@@ -42,6 +43,7 @@ function HomePage() {
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
