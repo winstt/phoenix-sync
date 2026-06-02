@@ -1,6 +1,14 @@
 import { useState } from 'react'
 import PageHero from '../components/PageHero'
 
+import funderAntiracist from '../assets/funders/antiracist.png.asset.json'
+import funderComfun from '../assets/funders/comfun.png.asset.json'
+import funderImpactHub from '../assets/funders/impact_hub.png.asset.json'
+import funderUbele from '../assets/funders/the_ubele.png.asset.json'
+import funderBswn from '../assets/funders/bs_wn.png.asset.json'
+import funderSouthAsian from '../assets/funders/south_asian.png.asset.json'
+import funderInclusiveNorth from '../assets/funders/inclusive_north_funder2.png.asset.json'
+
 import amnaPhoto from '../assets/trustees/Amna-Abdullatif.jpg.asset.json'
 import abdouPhoto from '../assets/trustees/Abdou-Sidibe-scaled.jpeg.asset.json'
 import anishPhoto from '../assets/trustees/Anish-Saxena.png.asset.json'
@@ -29,7 +37,15 @@ const values = [
   { title: 'Legacy and Liberation', text: 'We honour the work and relationships that created this movement, carrying their lessons forward as we build what comes next. We exist to change the structures that create inequality, not to manage their symptoms.' },
 ]
 
-const partners = ['Anti Racist Cumbria', 'Inclusive North', 'Impact Hub Yorkshire', 'The Ubele Initiative', 'Black South West Network', 'South Asian Health Action', 'National Lottery Community Fund']
+const partners: { name: string; logo: string }[] = [
+  { name: 'Anti Racist Cumbria', logo: funderAntiracist.url },
+  { name: 'Inclusive North', logo: funderInclusiveNorth.url },
+  { name: 'Impact Hub Yorkshire', logo: funderImpactHub.url },
+  { name: 'The Ubele Initiative', logo: funderUbele.url },
+  { name: 'Black South West Network', logo: funderBswn.url },
+  { name: 'South Asian Health Action', logo: funderSouthAsian.url },
+  { name: 'National Lottery Community Fund', logo: funderComfun.url },
+]
 
 export default function AboutPage() {
   const [openValue, setOpenValue] = useState<number | null>(0)
@@ -119,7 +135,12 @@ export default function AboutPage() {
         <p className="font-semibold uppercase mb-6" style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#E8570A' }}>Our current partners and funders</p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
           {partners.map(p => (
-            <span key={p} style={{ padding: '0.6rem 1.2rem', background: 'rgba(232,87,10,0.08)', border: '1px solid rgba(232,87,10,0.2)', borderRadius: '100px', fontSize: '13px', color: '#f5f0eb' }}>{p}</span>
+            <span key={p.name} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', padding: '0.5rem 1.1rem 0.5rem 0.5rem', background: 'rgba(232,87,10,0.08)', border: '1px solid rgba(232,87,10,0.2)', borderRadius: '100px', fontSize: '13px', color: '#f5f0eb' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '28px', height: '28px', borderRadius: '999px', background: '#0d0d0d', flexShrink: 0 }}>
+                <img src={p.logo} alt="" loading="lazy" style={{ maxWidth: '20px', maxHeight: '20px', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+              </span>
+              {p.name}
+            </span>
           ))}
         </div>
       </section>
