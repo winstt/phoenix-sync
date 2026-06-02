@@ -132,7 +132,7 @@ export default function NewsSection() {
                 {card.date}
               </p>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
