@@ -45,7 +45,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<main id="main-content"><AboutPage /></main>} />
         <Route path="/grants" element={<main id="main-content"><GrantsPage /></main>} />
-        <Route path="/our-impact" element={<main id="main-content"><ImpactPage /></main>} />
+        <Route path="/impact" element={<main id="main-content"><ImpactPage /></main>} />
         <Route path="/news" element={<main id="main-content"><NewsPage /></main>} />
         <Route path="/contact" element={<main id="main-content"><ContactPage /></main>} />
         <Route path="/opportunities" element={<main id="main-content"><OpportunitiesPage /></main>} />

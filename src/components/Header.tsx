@@ -8,7 +8,7 @@ const { nav } = siteContent
 const routeMap: Record<string, string> = {
   'About us': '/about',
   'Grants': '/grants',
-  'Our impact': '/our-impact',
+  'Our impact': '/impact',
   'News': '/news',
   'Contact': '/contact',
 }

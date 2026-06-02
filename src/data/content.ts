@@ -17,7 +17,7 @@ export const siteContent = {
     links: [
       { label: 'About us', href: '/about' },
       { label: 'Grants', href: '/grants' },
-      { label: 'Our impact', href: '/our-impact' },
+      { label: 'Our impact', href: '/impact' },
       { label: 'News', href: '/news' },
       { label: 'Contact', href: '/contact' },
     ],
@@ -32,7 +32,7 @@ export const siteContent = {
     description:
       'The Phoenix Community Trust exists to dismantle structural racism and end funding inequity by consolidating, resourcing and reinforcing the collective power, capacity and infrastructure of Global Majority communities across the UK.',
     primaryCta: { label: 'Join our community', href: '/opportunities' },
-    secondaryCta: { label: 'Our impact', href: '/our-impact' },
+    secondaryCta: { label: 'Our impact', href: '/impact' },
     // Replace with your hero image URL. Use null to show a gradient placeholder.
     imageUrl: img('homepage.jpeg') as string | null,
   },
@@ -201,8 +201,8 @@ export const siteContent = {
         heading: 'Work',
         links: [
           { label: 'Grants', href: '/grants' },
-          { label: 'Our impact', href: '/our-impact' },
-          { label: 'Our network', href: '/our-impact#partners-section' },
+          { label: 'Our impact', href: '/impact' },
+          { label: 'Our network', href: '/impact#partners-section' },
           { label: 'Join the community', href: '/opportunities' },
         ],
       },
