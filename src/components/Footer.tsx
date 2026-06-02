@@ -12,7 +12,7 @@ const routeMap: Record<string, string> = {
   'Our vision & mission': '/#vision-block',
   'Our leaders': '/about#trustees-h2',
   'Our network': '/impact#partners-section',
-  'Join the community': '/opportunities',
+  'Join the community': '/newsletter',
   'Archive': '/archive',
   'Privacy policy': '/privacy-policy',
   'Cookie policy': '/cookie-policy',
