@@ -19,22 +19,6 @@ export default function Hero() {
           paddingBottom: '4rem',
         }}
       >
-        {/* Decorative circle */}
-        <div
-          aria-hidden="true"
-          style={{
-            position: 'absolute',
-            right: '-60px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            opacity: 0.06,
-            width: '500px',
-            height: '500px',
-            borderRadius: '50%',
-            border: '80px solid #E8570A',
-            pointerEvents: 'none',
-          }}
-        />
 
         {/* Eyebrow */}
         <p
