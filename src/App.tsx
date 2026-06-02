@@ -1,6 +1,7 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import AccessibilityWidget from './components/AccessibilityWidget'
 import Hero from './components/Hero'
 import WhoStrip from './components/WhoStrip'
 import Pillars from './components/Pillars'
@@ -57,6 +58,7 @@ export default function App() {
         <Route path="/complaints" element={<main id="main-content"><ComplaintsPage /></main>} />
       </Routes>
       <Footer />
+      <AccessibilityWidget />
     </HashRouter>
   )
 }

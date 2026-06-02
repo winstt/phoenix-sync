@@ -145,3 +145,35 @@ button:focus-visible {
 .nav-drawer {
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* Accessibility widget effects */
+.a11y-clear-font, .a11y-clear-font body, .a11y-clear-font * {
+  font-family: Arial, Verdana, sans-serif !important;
+  letter-spacing: 0.03em !important;
+  line-height: 1.7 !important;
+}
+.a11y-high-contrast {
+  filter: contrast(1.4);
+}
+.a11y-high-contrast body {
+  background: #000 !important;
+  color: #fff !important;
+}
+.a11y-reduce-motion *, .a11y-reduce-motion *::before, .a11y-reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+.a11y-focus *:focus {
+  outline: 3px solid #ffeb3b !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px rgba(255, 235, 59, 0.4) !important;
+}
+.a11y-highlight-links a {
+  text-decoration: underline !important;
+  background: rgba(255, 235, 59, 0.25) !important;
+  color: #ffeb3b !important;
+  padding: 0 2px !important;
+  border-radius: 2px !important;
+}
