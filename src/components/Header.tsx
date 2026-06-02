@@ -52,20 +52,20 @@ export default function Header() {
         <nav
           aria-label="Main navigation"
           className="flex items-center"
-          style={{ padding: '1.25rem 1.5rem', height: '110px' }}
+          style={{ padding: '1.25rem 1rem', height: '110px' }}
         >
           {/* Logo */}
           <Link
             to="/"
             aria-label="The Phoenix Community Trust - home"
             className="flex items-center flex-shrink-0 no-underline"
-            style={{ height: '85px' }}
+            style={{ height: '85px', marginLeft: '-3px' }}
           >
             <img
               src={`${import.meta.env.BASE_URL}images/logo-header.png`}
               alt="The Phoenix Community Trust"
               className="object-fill"
-              style={{ height: '110px', width: 'auto' }}
+              style={{ height: '110px', width: 'auto', display: 'block' }}
               onError={e => { (e.target as HTMLImageElement).src = 'https://newphx.karrota.wtf/wp-content/uploads/2026/05/ThePhoenix-LogoPNG-1.png' }}
             />
           </Link>
@@ -75,7 +75,7 @@ export default function Header() {
             onClick={() => setDrawerOpen(true)}
             aria-label="Open navigation menu"
             aria-expanded={drawerOpen}
-            className="ml-auto flex flex-col justify-center gap-[5px] p-2 bg-transparent border-none cursor-pointer"
+            className="ml-auto -mr-2 flex flex-col justify-center gap-[5px] p-2 bg-transparent border-none cursor-pointer"
           >
             <span className="block w-7 h-[2px] bg-cream rounded" />
             <span className="block w-7 h-[2px] bg-cream rounded" />
