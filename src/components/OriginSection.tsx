@@ -23,7 +23,7 @@ export default function OriginSection() {
               fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
               color: '#f5f0eb',
               lineHeight: '1.1',
-              marginBottom: '2.5rem',
+              marginBottom: '4rem',
             }}
           >
             {origin.title}
@@ -31,7 +31,7 @@ export default function OriginSection() {
         </div>
 
         {/* Right — timeline */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 0, marginTop: '1.5rem' }}>
           {origin.entries.map((entry, i) => (
             <div
               key={entry.year}
