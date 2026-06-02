@@ -23,6 +23,7 @@ export default function OriginSection() {
               fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
               color: '#f5f0eb',
               lineHeight: '1.1',
+              marginBottom: '2.5rem',
             }}
           >
             {origin.title}
