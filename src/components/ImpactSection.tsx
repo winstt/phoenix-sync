@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { ArrowRight } from 'lucide-react'
 import { siteContent } from '../data/content'
 
 const { impact } = siteContent
@@ -53,29 +52,6 @@ export default function ImpactSection() {
           <p style={{ color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', marginBottom: '1.5rem' }}>
             {impact.description}
           </p>
-          <a
-            href={impact.mapCta.href}
-            className="inline-flex items-center gap-2 font-semibold no-underline transition-all"
-            style={{
-              background: 'transparent',
-              color: '#f5f0eb',
-              padding: '14px 28px',
-              fontSize: '15px',
-              border: '1.5px solid rgba(255,255,255,0.1)',
-              borderRadius: '6px',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = '#E8570A'
-              e.currentTarget.style.color = '#E8570A'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
-              e.currentTarget.style.color = '#f5f0eb'
-            }}
-          >
-            {impact.mapCta.label}
-            <ArrowRight size={16} />
-          </a>
 
           {/* Stats */}
           <div
