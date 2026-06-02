@@ -123,10 +123,16 @@ button:focus-visible {
 }
 
 /* ── HERO GRID ── */
+.page-hero-image {
+  min-height: clamp(360px, 95vw, 520px);
+}
 @media (min-width: 900px) {
   .hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+  }
+  .page-hero-image {
     min-height: 100vh;
   }
 }
