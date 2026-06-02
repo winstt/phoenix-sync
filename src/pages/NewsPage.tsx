@@ -18,6 +18,7 @@ export default function NewsPage() {
         heading="News & updates."
         description="Stories, updates and insights from our work — and from the communities and leaders at the heart of this movement."
         imageUrl={`${import.meta.env.BASE_URL}images/news.jpeg`}
+        imagePosition="center 25%"
       />
 
       {/* Filters */}
