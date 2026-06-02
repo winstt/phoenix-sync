@@ -86,8 +86,8 @@ export default function ImpactPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 0, border: '1px solid rgba(255,255,255,0.12)', borderRadius: '18px', overflow: 'hidden', background: '#0d0d0d' }}>
             {partners.map(p => (
               <article key={p.name} style={{ background: '#0d0d0d', borderRight: '1px solid rgba(255,255,255,0.12)', borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
-                <div style={{ aspectRatio: '2.3 / 1', overflow: 'hidden', background: '#161616' }}>
-                  <img src={p.image} alt={p.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                <div style={{ aspectRatio: '4 / 3', overflow: 'hidden', background: '#161616' }}>
+                  <img src={p.image} alt={p.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
                 </div>
                 <div style={{ padding: '1.4rem 1.45rem 1.55rem' }}>
                   <p style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', color: '#E8570A', marginBottom: '0.45rem', textTransform: 'uppercase' }}>{p.name}</p>
