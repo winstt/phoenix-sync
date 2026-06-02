@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Youtube, Twitter, Linkedin } from 'lucide-react'
+import { Instagram, Facebook, Youtube, Linkedin } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { siteContent } from '../data/content'
 
@@ -36,7 +36,6 @@ const socialIconMap: Record<string, React.ReactNode> = {
   instagram: <Instagram size={18} />,
   facebook: <Facebook size={18} />,
   youtube: <Youtube size={18} />,
-  x: <Twitter size={18} />,
   linkedin: <Linkedin size={18} />,
   bluesky: <BlueSkyIcon size={18} />,
 }
@@ -152,6 +151,8 @@ export default function Footer() {
                 key={s.label}
                 href={s.href}
                 aria-label={s.label}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="no-underline transition-all flex items-center justify-center"
                 style={{
                   width: '36px',
