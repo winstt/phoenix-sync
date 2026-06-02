@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import PageHero from '../components/PageHero'
+
 import amnaPhoto from '../assets/trustees/Amna-Abdullatif.jpg.asset.json'
 import abdouPhoto from '../assets/trustees/Abdou-Sidibe-scaled.jpeg.asset.json'
 import anishPhoto from '../assets/trustees/Anish-Saxena.png.asset.json'
