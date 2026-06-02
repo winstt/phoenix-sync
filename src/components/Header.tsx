@@ -52,20 +52,20 @@ export default function Header() {
         <nav
           aria-label="Main navigation"
           className="flex items-center"
-          style={{ padding: '1.25rem 2.5rem 1.25rem 0', height: '90px' }}
+          style={{ padding: '1.25rem 2.5rem 1.25rem 0', height: '110px' }}
         >
           {/* Logo */}
           <Link
             to="/"
             aria-label="The Phoenix Community Trust - home"
             className="flex items-center flex-shrink-0 no-underline"
-            style={{ height: '60px', marginLeft: '2rem' }}
+            style={{ height: '85px', marginLeft: '2rem' }}
           >
             <img
               src={`${import.meta.env.BASE_URL}images/logo-header.png`}
               alt="The Phoenix Community Trust"
               className="object-fill"
-              style={{ height: '80px', width: 'auto' }}
+              style={{ height: '110px', width: 'auto' }}
               onError={e => { (e.target as HTMLImageElement).src = 'https://newphx.karrota.wtf/wp-content/uploads/2026/05/ThePhoenix-LogoPNG-1.png' }}
             />
           </Link>
