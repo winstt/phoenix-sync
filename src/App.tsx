@@ -44,7 +44,7 @@ export default function App() {
     <HashRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<main id="main-content"><NewsletterPage /></main>} />
         <Route path="/about" element={<main id="main-content"><AboutPage /></main>} />
         <Route path="/grants" element={<main id="main-content"><GrantsPage /></main>} />
         <Route path="/impact" element={<main id="main-content"><ImpactPage /></main>} />
@@ -57,7 +57,7 @@ export default function App() {
         <Route path="/privacy-policy" element={<main id="main-content"><PrivacyPolicyPage /></main>} />
         <Route path="/terms" element={<main id="main-content"><TermsPage /></main>} />
         <Route path="/complaints" element={<main id="main-content"><ComplaintsPage /></main>} />
-        <Route path="/newsletter" element={<main id="main-content"><NewsletterPage /></main>} />
+        <Route path="/newsletter" element={<HomePage />} />
       </Routes>
       <Footer />
       <AccessibilityWidget />
