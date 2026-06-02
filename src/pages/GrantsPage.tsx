@@ -1,14 +1,6 @@
-import { useState } from 'react'
 import PageHero from '../components/PageHero'
 
 export default function GrantsPage() {
-  const [submitted, setSubmitted] = useState(false)
-  const [form, setForm] = useState({ name: '', email: '', org: '' })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setSubmitted(true)
-  }
 
   return (
     <>
@@ -64,40 +56,14 @@ export default function GrantsPage() {
       <section style={{ padding: '4rem 2.5rem', background: '#1a1a1a', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <p className="font-semibold uppercase mb-4" style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#E8570A' }}>Register your interest</p>
         <h2 className="font-bold uppercase mb-4" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: '#f5f0eb' }}>Explore our latest grants</h2>
-        <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', maxWidth: '640px', marginBottom: '2.5rem' }}>
+        <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', maxWidth: '640px', marginBottom: '2rem' }}>
           Be part of a national movement strengthening leadership and collaboration across the UK. Register your interest to receive updates on upcoming grants, events, and opportunities to engage with The Phoenix Community Trust.
         </p>
-        {submitted ? (
-          <div style={{ background: 'rgba(232,87,10,0.1)', border: '1px solid rgba(232,87,10,0.3)', borderRadius: '12px', padding: '2rem', maxWidth: '520px' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#E8570A', marginBottom: '0.75rem' }}>Thank you for registering your interest</h3>
-            <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.6)', lineHeight: '1.6' }}>We will be in touch with updates on upcoming grants, events, and opportunities to engage with The Phoenix Community Trust.</p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} style={{ maxWidth: '520px', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            {[
-              { id: 'name', label: 'Your name', type: 'text', placeholder: 'Full name' },
-              { id: 'email', label: 'Email address', type: 'email', placeholder: 'you@organisation.org' },
-              { id: 'org', label: 'Organisation', type: 'text', placeholder: 'Your organisation' },
-            ].map(field => (
-              <div key={field.id}>
-                <label htmlFor={field.id} style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#f5f0eb', marginBottom: '0.4rem' }}>{field.label}</label>
-                <input
-                  id={field.id}
-                  type={field.type}
-                  required
-                  placeholder={field.placeholder}
-                  value={form[field.id as keyof typeof form]}
-                  onChange={e => setForm(f => ({ ...f, [field.id]: e.target.value }))}
-                  style={{ width: '100%', background: '#0d0d0d', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '6px', padding: '0.75rem 1rem', color: '#f5f0eb', fontSize: '14px', outline: 'none' }}
-                />
-              </div>
-            ))}
-            <p style={{ fontSize: '12px', color: 'rgba(245,240,235,0.4)', lineHeight: '1.5' }}>By submitting this form you agree to be contacted by The Phoenix Community Trust about upcoming grants and opportunities. We will never share your details with third parties.</p>
-            <button type="submit" style={{ background: '#C2185B', color: 'white', border: 'none', borderRadius: '6px', padding: '14px 28px', fontSize: '15px', fontWeight: 600, cursor: 'pointer', alignSelf: 'flex-start' }}>
-              Register your interest →
-            </button>
-          </form>
-        )}
+        <a href={`${import.meta.env.BASE_URL}#/newsletter`}
+          style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#C2185B', color: 'white', textDecoration: 'none', padding: '14px 28px', borderRadius: '6px', fontSize: '15px', fontWeight: 600 }}
+        >
+          Register your interest →
+        </a>
       </section>
     </>
   )

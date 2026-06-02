@@ -22,6 +22,7 @@ import CookiePolicyPage from './pages/CookiePolicyPage'
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage'
 import TermsPage from './pages/TermsPage'
 import ComplaintsPage from './pages/ComplaintsPage'
+import NewsletterPage from './pages/NewsletterPage'
 
 function HomePage() {
   return (
@@ -56,6 +57,7 @@ export default function App() {
         <Route path="/privacy-policy" element={<main id="main-content"><PrivacyPolicyPage /></main>} />
         <Route path="/terms" element={<main id="main-content"><TermsPage /></main>} />
         <Route path="/complaints" element={<main id="main-content"><ComplaintsPage /></main>} />
+        <Route path="/newsletter" element={<main id="main-content"><NewsletterPage /></main>} />
       </Routes>
       <Footer />
       <AccessibilityWidget />
