@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
         heading="Privacy policy."
         description="Last updated: 11 May 2026 · Next review: 11 May 2027"
       />
-      <section style={{ padding: '4rem 2.5rem', background: '#0d0d0d' }}>
+      <section style={{ padding: '2.5rem 2.5rem 4rem', background: '#0d0d0d', borderTop: '1px solid rgba(245,240,235,0.08)' }}>
         <div style={{ maxWidth: '760px' }}>
 
           {p('The Phoenix Community Trust is a Global Majority movement for funding justice and systems change, rooted in lived experience and community-led decision making, ending funding inequity by redistributing power and resources to our communities. We are the data controller for the personal information we collect. We operate under UK GDPR and the Data Protection Act 2018.')}
