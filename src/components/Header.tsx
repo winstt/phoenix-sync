@@ -64,7 +64,8 @@ export default function Header() {
             <img
               src={`${import.meta.env.BASE_URL}images/logo-header.png`}
               alt="The Phoenix Community Trust"
-              style={{ height: '80px', width: 'auto', objectFit: 'contain' }}
+              className="object-fill"
+              style={{ height: '80px', width: 'auto' }}
               onError={e => { (e.target as HTMLImageElement).src = 'https://newphx.karrota.wtf/wp-content/uploads/2026/05/ThePhoenix-LogoPNG-1.png' }}
             />
           </Link>
