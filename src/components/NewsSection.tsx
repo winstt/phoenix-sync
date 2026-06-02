@@ -28,7 +28,7 @@ export default function NewsSection() {
     <section
       aria-labelledby="news-heading"
       style={{
-        padding: '4rem 2.5rem',
+        padding: '2rem 2.5rem',
         background: '#1a1a1a',
         borderTop: '1px solid rgba(255,255,255,0.1)',
       }}
