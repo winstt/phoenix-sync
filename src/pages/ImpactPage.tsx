@@ -1,6 +1,6 @@
 import PageHero from '../components/PageHero'
 import antiRacistCumbriaPhoto from '../assets/impact-partners/anti_racistt_cumbriaa.png.asset.json'
-import inclusiveNorthPhoto from '../assets/impact-partners/inclusive_north2.png.asset.json'
+import inclusiveNorthPhoto from '../assets/impact-partners/inclusive_northh.png.asset.json'
 import impactHubYorkshirePhoto from '../assets/impact-partners/impact_hub_yorkshire.png.asset.json'
 import ubeleInitiativePhoto from '../assets/impact-partners/the_ubele_initiativee.png.asset.json'
 import blackSouthWestNetworkPhoto from '../assets/impact-partners/black_south_west_networkk.png.asset.json'
