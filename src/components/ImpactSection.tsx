@@ -136,7 +136,7 @@ export default function ImpactSection() {
               color: 'rgba(245,240,235,0.6)',
             }}
           >
-            Active across 9 regions
+            Our regions
           </p>
 
 

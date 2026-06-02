@@ -25,8 +25,8 @@ const funderLogos = [
 ]
 
 const stats = [
-  { num: '9', label: 'regions across the UK' },
-  { num: '100+', label: 'community organisations in our network' },
+  { num: '3000+', label: 'community members impacted' },
+  { num: '200+', label: 'community organisations in our network' },
   { num: '£4M', label: 'upcoming grants round in collaboration with TNLCF' },
   { num: '2026', label: 'upcoming opportunity for communities to get involved' },
 ]
