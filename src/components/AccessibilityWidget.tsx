@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { X, Minus, Plus, Accessibility } from 'lucide-react'
+import { X, Minus, Plus } from 'lucide-react'
+import phoenixIcon from '@/assets/phoenix-icon.png.asset.json'
 
 type Settings = {
   textSize: number
@@ -56,7 +57,8 @@ export default function AccessibilityWidget() {
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(settings))
     const root = document.documentElement
-    root.style.fontSize = `${settings.textSize}%`
+    // Scale text via CSS var that only targets text elements, leaving layout intact
+    root.style.setProperty('--a11y-text-scale', String(settings.textSize / 100))
     root.classList.toggle('a11y-clear-font', settings.clearFont)
     root.classList.toggle('a11y-high-contrast', settings.highContrast)
     root.classList.toggle('a11y-reduce-motion', settings.reduceMotion)
@@ -168,9 +170,9 @@ export default function AccessibilityWidget() {
         onClick={() => setOpen((o) => !o)}
         aria-label="Open accessibility settings"
         aria-expanded={open}
-        className="fixed bottom-6 right-6 z-[9999] h-14 w-14 rounded-full bg-[hsl(330_70%_50%)] hover:bg-[hsl(330_70%_45%)] text-white shadow-2xl flex items-center justify-center transition-colors"
+        className="a11y-no-scale fixed bottom-6 right-6 z-[9999] h-14 w-14 rounded-full bg-[hsl(330_70%_50%)] hover:bg-[hsl(330_70%_45%)] text-white shadow-2xl flex items-center justify-center transition-colors"
       >
-        <Accessibility size={28} strokeWidth={2.2} />
+        <img src={phoenixIcon.url} alt="" className="h-8 w-8 object-contain" />
       </button>
     </>
   )
