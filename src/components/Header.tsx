@@ -76,7 +76,7 @@ export default function Header() {
             aria-label="Open navigation menu"
             aria-expanded={drawerOpen}
             className="ml-auto flex flex-col justify-center gap-[5px] p-2 bg-transparent border-none cursor-pointer"
-            style={{ marginRight: '-8px' }}
+            style={{ marginRight: '-40px' }}
           >
             <span className="block w-7 h-[2px] bg-cream rounded" />
             <span className="block w-7 h-[2px] bg-cream rounded" />
