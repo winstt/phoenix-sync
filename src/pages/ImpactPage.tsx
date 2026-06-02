@@ -106,11 +106,14 @@ export default function ImpactPage() {
       <section style={{ padding: '4rem 2.5rem', background: '#0d0d0d', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
           <p className="font-semibold uppercase mb-10" style={{ fontSize: '12px', letterSpacing: '0.14em', color: '#E8570A' }}>Our current partners and funders</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))', gap: '2.5rem', alignItems: 'center', justifyItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1.25rem', alignItems: 'stretch', justifyItems: 'stretch' }}>
             {funderLogos.map(l => (
-              <img key={l.name} src={l.url} alt={l.name} loading="lazy" style={{ height: '70px', width: 'auto', maxWidth: '100%', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+              <div key={l.name} style={{ height: '140px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1.25rem', background: '#161616', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px' }}>
+                <img src={l.url} alt={l.name} loading="lazy" style={{ maxHeight: '100%', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+              </div>
             ))}
           </div>
+
         </div>
       </section>
     </>
