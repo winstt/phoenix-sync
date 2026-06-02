@@ -75,40 +75,40 @@ export default function AccessibilityWidget() {
     <>
       {open && (
         <div
-          className="fixed bottom-24 right-6 z-[9999] w-[360px] max-w-[calc(100vw-2rem)] rounded-2xl border border-neutral-700 bg-neutral-900 text-white shadow-2xl"
+          className="a11y-no-scale fixed bottom-20 right-6 z-[9999] w-[300px] max-w-[calc(100vw-2rem)] rounded-xl border border-neutral-700 bg-neutral-900 text-white shadow-2xl text-[13px]"
           role="dialog"
           aria-label="Accessibility settings"
         >
-          <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-700">
-            <h2 className="text-lg font-semibold">Accessibility</h2>
+          <div className="flex items-center justify-between px-4 py-3 border-b border-neutral-700">
+            <h2 className="text-sm font-semibold">Accessibility</h2>
             <button onClick={() => setOpen(false)} aria-label="Close accessibility panel" className="text-neutral-400 hover:text-white">
-              <X size={20} />
+              <X size={16} />
             </button>
           </div>
 
-          <div className="px-5 py-4 space-y-5 max-h-[70vh] overflow-y-auto">
+          <div className="px-4 py-3 space-y-3 max-h-[65vh] overflow-y-auto">
             <section>
-              <h3 className="text-xs tracking-widest text-neutral-400 mb-3">TEXT</h3>
-              <div className="flex items-center justify-between gap-3 mb-4">
+              <h3 className="text-[10px] tracking-widest text-neutral-400 mb-2">TEXT</h3>
+              <div className="flex items-center justify-between gap-3 mb-2">
                 <div>
-                  <div className="font-medium">Text size</div>
-                  <div className="text-sm text-neutral-400">Increase or decrease</div>
+                  <div className="font-medium text-[13px]">Text size</div>
+                  <div className="text-[11px] text-neutral-400">Increase or decrease</div>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5">
                   <button
                     onClick={() => update('textSize', Math.max(80, settings.textSize - 10))}
                     aria-label="Decrease text size"
-                    className="h-9 w-9 rounded-md border border-neutral-600 hover:bg-neutral-800 flex items-center justify-center"
+                    className="h-7 w-7 rounded-md border border-neutral-600 hover:bg-neutral-800 flex items-center justify-center"
                   >
-                    <Minus size={16} />
+                    <Minus size={12} />
                   </button>
-                  <span className="w-12 text-center font-semibold">{settings.textSize}%</span>
+                  <span className="w-10 text-center text-[12px] font-semibold">{settings.textSize}%</span>
                   <button
                     onClick={() => update('textSize', Math.min(150, settings.textSize + 10))}
                     aria-label="Increase text size"
-                    className="h-9 w-9 rounded-md border border-neutral-600 hover:bg-neutral-800 flex items-center justify-center"
+                    className="h-7 w-7 rounded-md border border-neutral-600 hover:bg-neutral-800 flex items-center justify-center"
                   >
-                    <Plus size={16} />
+                    <Plus size={12} />
                   </button>
                 </div>
               </div>
@@ -123,7 +123,7 @@ export default function AccessibilityWidget() {
             <div className="border-t border-neutral-700" />
 
             <section>
-              <h3 className="text-xs tracking-widest text-neutral-400 mb-3">DISPLAY</h3>
+              <h3 className="text-[10px] tracking-widest text-neutral-400 mb-2">DISPLAY</h3>
               <Row
                 title="High contrast"
                 desc="Increases colour contrast"
@@ -141,7 +141,7 @@ export default function AccessibilityWidget() {
             <div className="border-t border-neutral-700" />
 
             <section>
-              <h3 className="text-xs tracking-widest text-neutral-400 mb-3">NAVIGATION</h3>
+              <h3 className="text-[10px] tracking-widest text-neutral-400 mb-2">NAVIGATION</h3>
               <Row
                 title="Enhanced focus indicators"
                 desc="Bold outlines when navigating"
@@ -158,7 +158,7 @@ export default function AccessibilityWidget() {
 
             <button
               onClick={reset}
-              className="w-full py-3 rounded-lg border border-neutral-600 hover:bg-neutral-800 transition-colors"
+              className="w-full py-2 text-[12px] rounded-lg border border-neutral-600 hover:bg-neutral-800 transition-colors"
             >
               Reset all settings
             </button>
