@@ -11,12 +11,12 @@ export default function PageHero({ eyebrow, heading, description, imageUrl }: Pa
   return (
     <section
       className="hero-grid relative"
-      style={{ background: '#0d0d0d', minHeight: '52vh' }}
+      style={{ background: '#0d0d0d', minHeight: imageUrl ? '52vh' : undefined }}
     >
       {/* Left — text */}
       <div
         className="flex flex-col justify-end relative z-10"
-        style={{ padding: '2.5rem', paddingTop: 'calc(90px + 3rem)', paddingBottom: '4rem' }}
+        style={{ padding: '2.5rem', paddingTop: 'calc(90px + 3rem)', paddingBottom: imageUrl ? '4rem' : '2rem' }}
       >
         <p
           className="font-semibold uppercase mb-5"
