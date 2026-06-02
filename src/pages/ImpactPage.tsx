@@ -1,4 +1,10 @@
 import PageHero from '../components/PageHero'
+import antiRacistCumbriaPhoto from '../assets/impact-partners/anti_racistt_cumbriaa.png.asset.json'
+import inclusiveNorthPhoto from '../assets/impact-partners/inclusive_northh.png.asset.json'
+import impactHubYorkshirePhoto from '../assets/impact-partners/impact_hub_yorkshire.png.asset.json'
+import ubeleInitiativePhoto from '../assets/impact-partners/the_ubele_initiativee.png.asset.json'
+import blackSouthWestNetworkPhoto from '../assets/impact-partners/black_south_west_networkk.png.asset.json'
+import southAsianHealthActionPhoto from '../assets/impact-partners/south_asian_health_action.png.asset.json'
 
 const stats = [
   { num: '9', label: 'regions across the UK' },
@@ -10,12 +16,12 @@ const stats = [
 const regions = ['North East & Cumbria', 'Yorkshire & Humber', 'North West', 'East Midlands', 'West Midlands', 'East of England', 'South West', 'Greater London', 'South East']
 
 const partners = [
-  { name: 'Anti Racist Cumbria', region: 'North East & Cumbria', tagline: 'DISMANTLING RACISM, ADVANCING JUSTICE.', desc: 'Anti Racist Cumbria is a community-led network building collective power across Cumbria.' },
-  { name: 'Inclusive North', region: 'North West', tagline: 'CHAMPIONING RACIAL UNITY.', desc: 'Inclusive North is a community-led organisation driving change for Global Majority communities across Lancashire through research, policy innovation and investment.' },
-  { name: 'Impact Hub Yorkshire', region: 'Yorkshire & Humber', tagline: 'POWERING POSITIVE CHANGE IN YORKSHIRE.', desc: 'A collaborative community connecting entrepreneurs, innovators, and organisations driving positive social and environmental change across Yorkshire.' },
-  { name: 'The Ubele Initiative', region: 'Greater London, South East & East of England', tagline: 'ADVOCATING FOR EQUITY & JUSTICE IN COMMUNITIES.', desc: 'The Ubele Initiative empowers Global Majority communities in the UK to act as catalysts for social and economic change.' },
-  { name: 'Black South West Network', region: 'South West', tagline: 'BUILDING POWER. CREATING CHANGE.', desc: 'Black South West Network works across the South West to advance racial justice, amplify Black voices, and build lasting opportunities for equity.' },
-  { name: 'South Asian Health Action', region: 'East & West Midlands', tagline: 'IMPROVING HEALTH. ADVANCING EQUITY.', desc: 'South Asian Health Action works to improve health outcomes and reduce inequalities for South Asian communities through research, advocacy, and action.' },
+  { name: 'Anti Racist Cumbria', region: 'North East & Cumbria', tagline: 'DISMANTLING RACISM, ADVANCING JUSTICE.', desc: 'Anti Racist Cumbria is a community-led network building collective power across Cumbria.', image: antiRacistCumbriaPhoto.url },
+  { name: 'Inclusive North', region: 'North West', tagline: 'CHAMPIONING RACIAL UNITY.', desc: 'Inclusive North is a community-led organisation driving change for Global Majority communities across Lancashire through research, policy innovation and investment.', image: inclusiveNorthPhoto.url },
+  { name: 'Impact Hub Yorkshire', region: 'Yorkshire & Humber', tagline: 'POWERING POSITIVE CHANGE IN YORKSHIRE.', desc: 'A collaborative community connecting entrepreneurs, innovators, and organisations driving positive social and environmental change across Yorkshire.', image: impactHubYorkshirePhoto.url },
+  { name: 'The Ubele Initiative', region: 'Greater London, South East and East of England', tagline: 'ADVOCATING FOR EQUITY & JUSTICE IN COMMUNITIES.', desc: 'The Ubele Initiative empowers Global Majority communities in the UK to act as catalysts for social and economic change.', image: ubeleInitiativePhoto.url },
+  { name: 'Black South West Network', region: 'South West', tagline: 'BUILDING POWER. CREATING CHANGE.', desc: 'Black South West Network works across the South West to advance racial justice, amplify Black voices, and build lasting opportunities for equity.', image: blackSouthWestNetworkPhoto.url },
+  { name: 'South Asian Health Action', region: 'East & West Midlands', tagline: 'IMPROVING HEALTH. ADVANCING EQUITY.', desc: 'South Asian Health Action works to improve health outcomes and reduce inequalities for South Asian communities through research, advocacy, and action.', image: southAsianHealthActionPhoto.url },
 ]
 
 export default function ImpactPage() {
@@ -55,18 +61,25 @@ export default function ImpactPage() {
       </section>
 
       {/* Partners */}
-      <section id="partners-section" style={{ padding: '4rem 2.5rem', background: '#1a1a1a', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-        <p className="font-semibold uppercase mb-4" style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#E8570A' }}>Our network</p>
-        <h2 className="font-bold uppercase mb-10" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: '#f5f0eb' }}>Our current partners</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
-          {partners.map(p => (
-            <div key={p.name} style={{ background: '#0d0d0d', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '1.75rem' }}>
-              <p style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.1em', color: '#E8570A', marginBottom: '0.4rem' }}>{p.region}</p>
-              <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#f5f0eb', marginBottom: '0.4rem' }}>{p.name}</h3>
-              <p style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.06em', color: 'rgba(245,240,235,0.4)', marginBottom: '0.75rem' }}>{p.tagline}</p>
-              <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.6' }}>{p.desc}</p>
-            </div>
-          ))}
+      <section id="partners-section" style={{ padding: '4rem 2rem', background: '#1a1a1a', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+          <p className="font-semibold uppercase mb-4" style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#E8570A' }}>Our network</p>
+          <h2 className="font-bold uppercase mb-10" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', color: '#f5f0eb' }}>Our current partners</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 0, border: '1px solid rgba(255,255,255,0.12)', borderRadius: '18px', overflow: 'hidden', background: '#0d0d0d' }}>
+            {partners.map(p => (
+              <article key={p.name} style={{ background: '#0d0d0d', borderRight: '1px solid rgba(255,255,255,0.12)', borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
+                <div style={{ aspectRatio: '2.3 / 1', overflow: 'hidden', background: '#161616' }}>
+                  <img src={p.image} alt={p.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                </div>
+                <div style={{ padding: '1.4rem 1.45rem 1.55rem' }}>
+                  <p style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', color: '#E8570A', marginBottom: '0.45rem', textTransform: 'uppercase' }}>{p.name}</p>
+                  <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.12em', color: 'rgba(245,240,235,0.62)', marginBottom: '0.9rem', textTransform: 'uppercase' }}>{p.region}</p>
+                  <h3 style={{ fontSize: 'clamp(1rem, 1.3vw, 1.15rem)', fontWeight: 800, color: '#f5f0eb', marginBottom: '0.8rem', lineHeight: 1.35, textTransform: 'uppercase' }}>{p.tagline}</h3>
+                  <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.68)', lineHeight: '1.65', maxWidth: '62ch' }}>{p.desc}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </>
