@@ -41,7 +41,7 @@ export default function PageHero({ eyebrow, heading, description, imageUrl }: Pa
 
       {/* Right — image (only when provided) */}
       {imageUrl && (
-        <div className="relative overflow-hidden" style={{ minHeight: '40vw' }} aria-hidden="true">
+        <div className="relative overflow-hidden page-hero-image" aria-hidden="true">
           <img src={imageUrl} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #0d0d0d 0%, transparent 25%)' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, #0d0d0d 0%, transparent 30%)' }} />
