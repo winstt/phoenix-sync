@@ -5,9 +5,10 @@ interface PageHeroProps {
   heading: string
   description: string
   imageUrl?: string | null
+  imagePosition?: string
 }
 
-export default function PageHero({ eyebrow, heading, description, imageUrl }: PageHeroProps) {
+export default function PageHero({ eyebrow, heading, description, imageUrl, imagePosition = 'center' }: PageHeroProps) {
   return (
     <section
       className={imageUrl ? 'hero-grid relative' : 'relative'}
