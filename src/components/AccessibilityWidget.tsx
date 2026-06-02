@@ -170,9 +170,9 @@ export default function AccessibilityWidget() {
         onClick={() => setOpen((o) => !o)}
         aria-label="Open accessibility settings"
         aria-expanded={open}
-        className="a11y-no-scale fixed bottom-6 right-6 z-[9999] h-14 w-14 rounded-full bg-[hsl(330_70%_50%)] hover:bg-[hsl(330_70%_45%)] text-white shadow-2xl flex items-center justify-center transition-colors"
+        className="a11y-no-scale fixed bottom-6 right-6 z-[9999] h-12 w-12 rounded-full bg-[hsl(330_77%_42%)] hover:bg-[hsl(330_77%_38%)] text-white shadow-2xl flex items-center justify-center transition-colors"
       >
-        <img src={phoenixIcon.url} alt="" className="h-8 w-8 object-contain" />
+        <img src={phoenixIcon.url} alt="" className="h-7 w-7 object-contain" />
       </button>
     </>
   )
