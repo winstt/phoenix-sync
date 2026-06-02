@@ -1,13 +1,22 @@
 import { useState } from 'react'
-import { Instagram, Facebook, Youtube, Twitter, Linkedin } from 'lucide-react'
+import { Instagram, Facebook, Youtube, Linkedin } from 'lucide-react'
 import PageHero from '../components/PageHero'
 
+// Bluesky icon (not in lucide-react)
+function BlueSkyIcon({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C3.566 1.6 1.5 1.028 1.5 4.43c0 .661.375 5.551.6 6.34.8 2.685 3.72 3.558 6.32 3.193-.074.016-.149.034-.222.055-2.562.717-5.126 2.23-2.444 5.45 3.046 3.628 7.53-1.22 8.246-3.438.716 2.217 5.2 7.066 8.246 3.438 2.682-3.22.118-4.733-2.444-5.45-.073-.021-.148-.039-.222-.055 2.6.365 5.52-.508 6.32-3.193.225-.789.6-5.679.6-6.34 0-3.402-2.066-2.83-3.702-1.625C16.046 4.747 13.087 8.686 12 10.8Z" />
+    </svg>
+  )
+}
+
 const socialLinks = [
-  { label: 'Instagram', icon: <Instagram size={18} />, href: '#' },
-  { label: 'Facebook', icon: <Facebook size={18} />, href: '#' },
-  { label: 'YouTube', icon: <Youtube size={18} />, href: '#' },
-  { label: 'X', icon: <Twitter size={18} />, href: '#' },
-  { label: 'LinkedIn', icon: <Linkedin size={18} />, href: '#' },
+  { label: 'Instagram', icon: <Instagram size={18} />, href: 'https://www.instagram.com/phoenixcommunitytrustuk/?utm_source=ig_web_button_share_sheet' },
+  { label: 'Facebook', icon: <Facebook size={18} />, href: 'https://www.facebook.com/people/The-Phoenix-Community-Trust/61589475597509/?mibextid=wwXIfr&rdid=PfQ8PwbX89ArAI1V&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ECVV5eixA%2F%3Fmibextid%3DwwXIfr%26ref%3D1' },
+  { label: 'YouTube', icon: <Youtube size={18} />, href: 'https://youtube.com/@phoenixcommunitytrustuk?si=cyn3uT-Z511GlECm' },
+  { label: 'LinkedIn', icon: <Linkedin size={18} />, href: 'https://www.linkedin.com/in/phoenix-way-uk?utm_source=share_via&utm_content=profile&utm_medium=member_ios' },
+  { label: 'Bluesky', icon: <BlueSkyIcon size={18} />, href: 'https://bsky.app/profile/phoenix-trust.bsky.social' },
 ]
 
 export default function ContactPage() {
