@@ -12,8 +12,8 @@ function BlueSkyIcon({ size = 18 }: { size?: number }) {
 }
 
 const socialLinks = [
-  { label: 'Instagram', icon: <Instagram size={18} />, href: 'https://www.instagram.com/phoenixcommunitytrustuk/?utm_source=ig_web_button_share_sheet' },
-  { label: 'Facebook', icon: <Facebook size={18} />, href: 'https://www.facebook.com/people/The-Phoenix-Community-Trust/61589475597509/?mibextid=wwXIfr&rdid=PfQ8PwbX89ArAI1V&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ECVV5eixA%2F%3Fmibextid%3DwwXIfr%26ref%3D1' },
+  { label: 'Instagram', icon: <Instagram size={18} />, href: 'https://www.instagram.com/phoenixcommunitytrustuk/' },
+  { label: 'Facebook', icon: <Facebook size={18} />, href: 'https://www.facebook.com/people/The-Phoenix-Community-Trust/61589475597509/?mibextid=wwXIfr&rdid=gpNaLbJCTXkxTGvk&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ECVV5eixA%2F%3Fmibextid%3DwwXIfr%26ref%3D1' },
   { label: 'YouTube', icon: <Youtube size={18} />, href: 'https://youtube.com/@phoenixcommunitytrustuk?si=cyn3uT-Z511GlECm' },
   { label: 'LinkedIn', icon: <Linkedin size={18} />, href: 'https://www.linkedin.com/in/phoenix-way-uk?utm_source=share_via&utm_content=profile&utm_medium=member_ios' },
   { label: 'Bluesky', icon: <BlueSkyIcon size={18} />, href: 'https://bsky.app/profile/phoenix-trust.bsky.social' },
