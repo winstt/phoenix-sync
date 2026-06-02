@@ -54,8 +54,8 @@ export default function Footer() {
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: '1.5fr 1fr 1fr 1fr',
-          gap: '3rem',
+          gridTemplateColumns: '1fr',
+          gap: '2.5rem',
           paddingBottom: '3rem',
           borderBottom: '1px solid rgba(255,255,255,0.1)',
         }}
