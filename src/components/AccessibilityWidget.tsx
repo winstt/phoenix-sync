@@ -180,10 +180,10 @@ export default function AccessibilityWidget() {
 
 function Row({ title, desc, checked, onChange }: { title: string; desc: string; checked: boolean; onChange: (v: boolean) => void }) {
   return (
-    <div className="flex items-center justify-between gap-3 py-2">
+    <div className="flex items-center justify-between gap-3 py-1.5">
       <div className="flex-1">
-        <div className="font-medium">{title}</div>
-        <div className="text-sm text-neutral-400">{desc}</div>
+        <div className="font-medium text-[13px]">{title}</div>
+        <div className="text-[11px] text-neutral-400">{desc}</div>
       </div>
       <Toggle checked={checked} onChange={onChange} label={title} />
     </div>
