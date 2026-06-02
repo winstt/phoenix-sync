@@ -40,7 +40,7 @@ export default function OpportunitiesPage() {
         <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', maxWidth: '560px', marginBottom: '2rem' }}>
           Register your interest to be notified when new jobs or tenders are posted by The Phoenix Community Trust.
         </p>
-        <a href={`${import.meta.env.BASE_URL}#/contact`}
+        <a href={`${import.meta.env.BASE_URL}#/newsletter`}
           style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#C2185B', color: 'white', textDecoration: 'none', padding: '14px 28px', borderRadius: '6px', fontSize: '15px', fontWeight: 600 }}
         >
           Register interest →

@@ -21,7 +21,7 @@ export const siteContent = {
       { label: 'News', href: '/news' },
       { label: 'Contact', href: '/contact' },
     ],
-    cta: { label: 'Join our community', href: '/opportunities' },
+    cta: { label: 'Join our community', href: '/newsletter' },
   },
 
   // ── HERO ───────────────────────────────────────────────────────────────────
@@ -31,7 +31,7 @@ export const siteContent = {
     headlineWhite: 'Redistributing Power and Resources to Communities Across the UK.',
     description:
       'The Phoenix Community Trust exists to dismantle structural racism and end funding inequity by consolidating, resourcing and reinforcing the collective power, capacity and infrastructure of Global Majority communities across the UK.',
-    primaryCta: { label: 'Join our community', href: '/opportunities' },
+    primaryCta: { label: 'Join our community', href: '/newsletter' },
     secondaryCta: { label: 'Our impact', href: '/impact' },
     // Replace with your hero image URL. Use null to show a gradient placeholder.
     imageUrl: img('homepage.jpeg') as string | null,
