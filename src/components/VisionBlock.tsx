@@ -23,7 +23,7 @@ export default function VisionBlock() {
       aria-labelledby="vision-label"
       className="reveal-fade"
       style={{
-        padding: '4rem 2.5rem',
+        padding: '2rem 2.5rem',
         background: '#1a1a1a',
         borderTop: '1px solid rgba(255,255,255,0.1)',
         borderBottom: '1px solid rgba(255,255,255,0.1)',
