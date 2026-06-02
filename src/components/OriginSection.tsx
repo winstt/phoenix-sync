@@ -7,7 +7,7 @@ export default function OriginSection() {
     <section
       aria-labelledby="origin-heading"
       style={{
-        padding: '1.5rem 2.5rem 4rem',
+        padding: '0.5rem 2.5rem 4rem',
         borderTop: '1px solid rgba(255,255,255,0.1)',
         borderBottom: '1px solid rgba(255,255,255,0.1)',
         background: '#1a1a1a',
@@ -23,6 +23,7 @@ export default function OriginSection() {
               fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
               color: '#f5f0eb',
               lineHeight: '1.1',
+              marginBottom: '2.5rem',
             }}
           >
             {origin.title}
