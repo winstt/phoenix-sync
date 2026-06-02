@@ -35,21 +35,14 @@ export default function PageHero({ eyebrow, heading, description, imageUrl }: Pa
         </p>
       </div>
 
-      {/* Right — image */}
-      <div className="relative overflow-hidden" style={{ minHeight: '40vw' }} aria-hidden="true">
-        {imageUrl ? (
+      {/* Right — image (only when provided) */}
+      {imageUrl && (
+        <div className="relative overflow-hidden" style={{ minHeight: '40vw' }} aria-hidden="true">
           <img src={imageUrl} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
-        ) : (
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, #1a1a1a 0%, #2a1010 50%, #0d0d0d 100%)' }}>
-            <svg width="100%" height="100%" viewBox="0 0 400 400" style={{ opacity: 0.07 }}>
-              <circle cx="200" cy="200" r="180" stroke="#E8570A" strokeWidth="60" fill="none" />
-              <circle cx="200" cy="200" r="80" stroke="#C2185B" strokeWidth="30" fill="none" />
-            </svg>
-          </div>
-        )}
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #0d0d0d 0%, transparent 25%)' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, #0d0d0d 0%, transparent 30%)' }} />
-      </div>
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #0d0d0d 0%, transparent 25%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, #0d0d0d 0%, transparent 30%)' }} />
+        </div>
+      )}
     </section>
   )
 }
