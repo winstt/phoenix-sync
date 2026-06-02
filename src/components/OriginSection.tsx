@@ -16,12 +16,6 @@ export default function OriginSection() {
       <div className="origin-inner" style={{ maxWidth: '1200px', margin: '0 auto' }}>
         {/* Left — title */}
         <div>
-          <span
-            className="block font-semibold uppercase mb-4"
-            style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#E8570A' }}
-          >
-            {origin.label}
-          </span>
           <h2
             id="origin-heading"
             className="font-extrabold uppercase"
