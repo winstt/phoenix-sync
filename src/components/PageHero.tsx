@@ -10,23 +10,27 @@ interface PageHeroProps {
 export default function PageHero({ eyebrow, heading, description, imageUrl }: PageHeroProps) {
   return (
     <section
-      className="hero-grid relative"
+      className={imageUrl ? 'hero-grid relative' : 'relative'}
       style={{ background: '#0d0d0d', minHeight: imageUrl ? '52vh' : undefined }}
     >
       {/* Left — text */}
       <div
         className="flex flex-col justify-end relative z-10"
-        style={{ padding: '2.5rem', paddingTop: 'calc(90px + 3rem)', paddingBottom: imageUrl ? '4rem' : '2rem' }}
+        style={{
+          padding: '2.5rem',
+          paddingTop: imageUrl ? 'calc(90px + 3rem)' : 'calc(110px + 1.5rem)',
+          paddingBottom: imageUrl ? '4rem' : '1.5rem',
+        }}
       >
         <p
-          className="font-semibold uppercase mb-5"
+          className="font-semibold uppercase mb-3"
           style={{ fontSize: '11px', letterSpacing: '0.16em', color: '#E8570A' }}
         >
           {eyebrow}
         </p>
         <h1
-          className="font-extrabold uppercase leading-none mb-6 text-cream"
-          style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4rem)', letterSpacing: '-0.02em' }}
+          className="font-extrabold uppercase leading-none mb-4 text-cream"
+          style={{ fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', letterSpacing: '-0.02em' }}
         >
           {heading}
         </h1>
