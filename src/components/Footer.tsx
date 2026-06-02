@@ -211,8 +211,8 @@ export default function Footer() {
           <span style={{ fontSize: '11px', color: 'rgba(245,240,235,0.3)' }}>
             {footer.copyright}
           </span>
-          <span style={{ fontSize: '11px', color: 'rgba(245,240,235,0.25)' }}>
-            Registered charity number: {footer.registeredCharityNumber}&nbsp;|&nbsp;Company number: {footer.companyNumber}
+        <span style={{ fontSize: '11px', color: 'rgba(245,240,235,0.25)' }}>
+            Company number: {footer.companyNumber}
           </span>
         </div>
       </div>
