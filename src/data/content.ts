@@ -98,8 +98,8 @@ export const siteContent = {
         label: "upcoming opportunity for communities to get involved in Phoenix's strategic development",
         noCount: true,
       },
-      { num: '9', label: 'regions across the UK', noCount: false },
-      { num: '100+', label: 'community organisations in our network', noCount: true },
+      { num: '3000+', label: 'community members impacted', noCount: true },
+      { num: '200+', label: 'community organisations in our network', noCount: true },
       {
         num: '£4M',
         label: 'upcoming grants round in collaboration with The National Lottery Community Fund',
