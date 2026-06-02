@@ -64,10 +64,10 @@ export default function Footer() {
         <div>
           {/* Logo */}
           <img
-            src={`${import.meta.env.BASE_URL}images/logo-footer.jpg`}
+            src={`${import.meta.env.BASE_URL}images/logo-header.png`}
             alt="The Phoenix Community Trust"
-            style={{ height: '110px', width: 'auto', display: 'block', marginBottom: '0.5rem' }}
-            onError={e => { (e.target as HTMLImageElement).src = `${import.meta.env.BASE_URL}images/logo-header.png` }}
+            style={{ height: 'auto', width: '160px', maxWidth: '100%', objectFit: 'contain', display: 'block', marginBottom: '0.5rem' }}
+            onError={e => { (e.target as HTMLImageElement).src = 'https://newphx.karrota.wtf/wp-content/uploads/2026/05/ThePhoenix-LogoPNG-1.png' }}
           />
           <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', maxWidth: '240px', margin: '1rem 0' }}>
             {footer.tagline}
@@ -82,7 +82,7 @@ export default function Footer() {
           >
             {footer.columns.organisation.heading}
           </h4>
-          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {footer.columns.organisation.links.map((link) => (
               <li key={link.label}>
                 <Link
@@ -107,7 +107,7 @@ export default function Footer() {
           >
             {footer.columns.work.heading}
           </h4>
-          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {footer.columns.work.links.map((link) => (
               <li key={link.label}>
                 <Link
