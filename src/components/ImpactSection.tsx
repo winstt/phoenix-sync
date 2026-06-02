@@ -139,34 +139,6 @@ export default function ImpactSection() {
             Active across 9 regions
           </p>
 
-          {/* UK Map SVG outline */}
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.5rem', paddingTop: '1.5rem' }}>
-            <svg
-              width="120"
-              height="160"
-              viewBox="0 0 120 160"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M60 8 L72 20 L80 18 L85 30 L80 45 L88 55 L85 70 L75 80 L80 90 L75 105 L65 115 L60 130 L55 115 L45 105 L40 90 L45 80 L35 70 L32 55 L40 45 L35 30 L40 18 L48 20 Z"
-                stroke="#E8570A"
-                strokeWidth="2"
-                fill="rgba(232,87,10,0.08)"
-                strokeLinejoin="round"
-              />
-              <circle cx="60" cy="75" r="3" fill="#E8570A" opacity="0.6" />
-              <circle cx="55" cy="55" r="2.5" fill="#E8570A" opacity="0.5" />
-              <circle cx="65" cy="60" r="2" fill="#C2185B" opacity="0.6" />
-              <circle cx="50" cy="85" r="2.5" fill="#E8570A" opacity="0.4" />
-              <circle cx="70" cy="90" r="2" fill="#C2185B" opacity="0.5" />
-              <circle cx="60" cy="100" r="2" fill="#E8570A" opacity="0.4" />
-              <circle cx="58" cy="40" r="2" fill="#C2185B" opacity="0.4" />
-              <circle cx="45" cy="65" r="2" fill="#E8570A" opacity="0.5" />
-              <circle cx="72" cy="70" r="2" fill="#C2185B" opacity="0.4" />
-            </svg>
-          </div>
 
           {/* Region list */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
