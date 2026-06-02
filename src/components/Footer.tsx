@@ -80,7 +80,7 @@ export default function Footer() {
           >
             {footer.columns.organisation.heading}
           </h4>
-          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             {footer.columns.organisation.links.map((link) => (
               <li key={link.label}>
                 <Link
@@ -105,7 +105,7 @@ export default function Footer() {
           >
             {footer.columns.work.heading}
           </h4>
-          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             {footer.columns.work.links.map((link) => (
               <li key={link.label}>
                 <Link
