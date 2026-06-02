@@ -52,10 +52,8 @@ export default function Footer() {
     >
       {/* Top grid */}
       <div
+        className="grid grid-cols-1 md:grid-cols-[1.6fr_1fr_1fr_1.2fr] gap-10 md:gap-12"
         style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr',
-          gap: '2.5rem',
           paddingBottom: '3rem',
           borderBottom: '1px solid rgba(255,255,255,0.1)',
         }}
