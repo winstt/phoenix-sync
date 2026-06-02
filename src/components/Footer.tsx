@@ -202,18 +202,16 @@ export default function Footer() {
           ))}
         </nav>
 
-        {/* Copyright + address */}
+        {/* Address + company number */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px', textAlign: 'right' }}>
           <span style={{ fontSize: '11px', color: 'rgba(245,240,235,0.3)' }}>
             Registered address: {footer.address}
           </span>
-          <span style={{ fontSize: '11px', color: 'rgba(245,240,235,0.3)' }}>
-            {footer.copyright}
-          </span>
-        <span style={{ fontSize: '11px', color: 'rgba(245,240,235,0.25)' }}>
+          <span style={{ fontSize: '11px', color: 'rgba(245,240,235,0.25)' }}>
             Company number: {footer.companyNumber}
           </span>
         </div>
+
       </div>
     </footer>
   )
