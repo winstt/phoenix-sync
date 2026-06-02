@@ -6,6 +6,24 @@ import ubeleInitiativePhoto from '../assets/impact-partners/the_ubele_initiative
 import blackSouthWestNetworkPhoto from '../assets/impact-partners/black_south_west_networkk.png.asset.json'
 import southAsianHealthActionPhoto from '../assets/impact-partners/south_asian_health_action.png.asset.json'
 
+import funderAntiracist from '../assets/funders/antiracist.png.asset.json'
+import funderComfun from '../assets/funders/comfun.png.asset.json'
+import funderImpactHub from '../assets/funders/impact_hub.png.asset.json'
+import funderUbele from '../assets/funders/the_ubele.png.asset.json'
+import funderBswn from '../assets/funders/bs_wn.png.asset.json'
+import funderSouthAsian from '../assets/funders/south_asian.png.asset.json'
+import funderInclusiveNorth from '../assets/funders/inclusive_north.png.asset.json'
+
+const funderLogos = [
+  { name: 'Anti Racist Cumbria', url: funderAntiracist.url },
+  { name: 'Community Fund', url: funderComfun.url },
+  { name: 'Impact Hub Yorkshire', url: funderImpactHub.url },
+  { name: 'The Ubele Initiative', url: funderUbele.url },
+  { name: 'Black South West Network', url: funderBswn.url },
+  { name: 'South Asian Health Action', url: funderSouthAsian.url },
+  { name: 'Inclusive North', url: funderInclusiveNorth.url },
+]
+
 const stats = [
   { num: '9', label: 'regions across the UK' },
   { num: '100+', label: 'community organisations in our network' },
