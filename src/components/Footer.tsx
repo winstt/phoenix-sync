@@ -47,7 +47,7 @@ export default function Footer() {
       style={{
         background: '#080808',
         borderTop: '1px solid rgba(255,255,255,0.1)',
-        padding: '4rem 1.5rem 0',
+        padding: '4rem 1rem 0',
       }}
     >
       {/* Top grid */}
@@ -61,12 +61,14 @@ export default function Footer() {
         {/* Brand */}
         <div>
           {/* Logo */}
-          <img
-            src={`${import.meta.env.BASE_URL}images/logo-header.png`}
-            alt="The Phoenix Community Trust"
-            style={{ height: 'auto', width: '240px', maxWidth: '100%', objectFit: 'contain', display: 'block', marginBottom: '0.75rem' }}
-            onError={e => { (e.target as HTMLImageElement).src = 'https://newphx.karrota.wtf/wp-content/uploads/2026/05/ThePhoenix-LogoPNG-1.png' }}
-          />
+          <div style={{ width: '240px', maxWidth: '100%', marginLeft: '-3px', marginBottom: '0.75rem' }}>
+            <img
+              src={`${import.meta.env.BASE_URL}images/logo-header.png`}
+              alt="The Phoenix Community Trust"
+              style={{ height: 'auto', width: '100%', objectFit: 'contain', display: 'block' }}
+              onError={e => { (e.target as HTMLImageElement).src = 'https://newphx.karrota.wtf/wp-content/uploads/2026/05/ThePhoenix-LogoPNG-1.png' }}
+            />
+          </div>
           <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', maxWidth: '240px', margin: '1rem 0' }}>
             {footer.tagline}
           </p>
