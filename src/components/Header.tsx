@@ -59,7 +59,7 @@ export default function Header() {
             to="/"
             aria-label="The Phoenix Community Trust - home"
             className="flex items-center flex-shrink-0 no-underline"
-            style={{ height: '85px', marginLeft: '-3px' }}
+            style={{ height: '85px' }}
           >
             <img
               src={`${import.meta.env.BASE_URL}images/logo-header.png`}
@@ -75,7 +75,8 @@ export default function Header() {
             onClick={() => setDrawerOpen(true)}
             aria-label="Open navigation menu"
             aria-expanded={drawerOpen}
-            className="ml-auto -mr-2 flex flex-col justify-center gap-[5px] p-2 bg-transparent border-none cursor-pointer"
+            className="ml-auto flex flex-col justify-center gap-[5px] p-2 bg-transparent border-none cursor-pointer"
+            style={{ marginRight: '-8px' }}
           >
             <span className="block w-7 h-[2px] bg-cream rounded" />
             <span className="block w-7 h-[2px] bg-cream rounded" />
