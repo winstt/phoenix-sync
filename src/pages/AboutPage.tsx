@@ -1,6 +1,14 @@
 import { useState } from 'react'
 import PageHero from '../components/PageHero'
 
+import funderAntiracist from '../assets/funders/antiracist.png.asset.json'
+import funderComfun from '../assets/funders/comfun.png.asset.json'
+import funderImpactHub from '../assets/funders/impact_hub.png.asset.json'
+import funderUbele from '../assets/funders/the_ubele.png.asset.json'
+import funderBswn from '../assets/funders/bs_wn.png.asset.json'
+import funderSouthAsian from '../assets/funders/south_asian.png.asset.json'
+import funderInclusiveNorth from '../assets/funders/inclusive_north_funder2.png.asset.json'
+
 import amnaPhoto from '../assets/trustees/Amna-Abdullatif.jpg.asset.json'
 import abdouPhoto from '../assets/trustees/Abdou-Sidibe-scaled.jpeg.asset.json'
 import anishPhoto from '../assets/trustees/Anish-Saxena.png.asset.json'
