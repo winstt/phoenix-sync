@@ -71,7 +71,7 @@ export default function NewsPage() {
                   <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.5' }}>{card.description}</p>
                   <p style={{ fontSize: '12px', color: 'rgba(245,240,235,0.4)', marginTop: '0.75rem' }}>{card.date}</p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         ) : (
