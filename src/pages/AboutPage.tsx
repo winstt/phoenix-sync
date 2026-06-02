@@ -32,7 +32,9 @@ const values = [
 const partners = ['Anti Racist Cumbria', 'Inclusive North', 'Impact Hub Yorkshire', 'The Ubele Initiative', 'Black South West Network', 'South Asian Health Action', 'National Lottery Community Fund']
 
 export default function AboutPage() {
+  const [openValue, setOpenValue] = useState<number | null>(0)
   return (
+
     <>
       <PageHero
         eyebrow="About us"
