@@ -29,7 +29,7 @@ export default function Pillars() {
           <div
             key={pillar.num}
             role="listitem"
-            style={{ background: '#1a1a1a', padding: '2rem' }}
+            style={{ background: '#1a1a1a', padding: '2rem', display: 'flex', flexDirection: 'column' }}
           >
 
             {/* Title */}
