@@ -107,7 +107,7 @@ export default function ImpactPage() {
                 </div>
                 <div style={{ padding: '1.4rem 1.45rem 1.55rem' }}>
                   {p.href ? (
-                    <a href={p.href} target="_blank" rel="noopener noreferrer" style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', color: '#E8570A', marginBottom: '0.45rem', textTransform: 'uppercase', display: 'block', textDecoration: 'none' }}>{p.name}</a>
+                    <a href={p.href} target="_blank" rel="noopener noreferrer" style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', color: '#E8570A', marginBottom: '0.45rem', textTransform: 'uppercase', display: 'inline-block', textDecoration: 'underline', textDecorationColor: '#E8570A', textUnderlineOffset: '4px', textDecorationThickness: '2px' }}>{p.name}</a>
                   ) : (
                     <p style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', color: '#E8570A', marginBottom: '0.45rem', textTransform: 'uppercase' }}>{p.name}</p>
                   )}
