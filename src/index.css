@@ -215,6 +215,7 @@ body :is(p, h1, h2, h3, h4, h5, h6, li, a, span, blockquote, label, input, texta
   transition-duration: 0.001ms !important;
   scroll-behavior: auto !important;
 }
+html.a11y-focus :is(a[href], button, input, textarea, select, summary, [role="button"], [role="switch"], [tabindex]:not([tabindex="-1"])):focus,
 html.a11y-focus :is(a[href], button, input, textarea, select, summary, [role="button"], [role="switch"], [tabindex]:not([tabindex="-1"])):focus-visible {
   outline: 3px solid hsl(55 100% 62%) !important;
   outline-offset: 3px !important;
