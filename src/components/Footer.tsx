@@ -206,10 +206,10 @@ export default function Footer() {
 
         {/* Address + company number */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px', textAlign: 'right' }}>
-          <span style={{ fontSize: '2px', color: 'rgba(245,240,235,0.3)' }}>
+          <span style={{ fontSize: '10px', color: 'rgba(245,240,235,0.3)' }}>
             Registered address: {footer.address}
           </span>
-          <span style={{ fontSize: '2px', color: 'rgba(245,240,235,0.25)' }}>
+          <span style={{ fontSize: '10px', color: 'rgba(245,240,235,0.25)' }}>
             Company number: {footer.companyNumber}
           </span>
         </div>
