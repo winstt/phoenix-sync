@@ -66,7 +66,7 @@ export default function ImpactPage() {
                 borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none',
               }}
             >
-              <p style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: '#E8570A', lineHeight: 1 }}>{s.num}</p>
+              <CountUp value={s.num} style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4rem)', fontWeight: 800, color: '#E8570A', lineHeight: 1, display: 'block', fontVariantNumeric: 'tabular-nums' }} />
               <p style={{ fontSize: '14px', color: 'rgba(245,240,235,0.6)', marginTop: '14px', lineHeight: 1.4 }}>{s.label}</p>
             </div>
           ))}
