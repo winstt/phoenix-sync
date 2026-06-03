@@ -15,6 +15,10 @@ export default function CountUp({ value, duration = 1600, className, style, noCo
   const startedRef = useRef(false)
 
   useEffect(() => {
+    if (noCount) {
+      setDisplay(value)
+      return
+    }
     const el = ref.current
     if (!el) return
     const observer = new IntersectionObserver(
@@ -29,7 +33,7 @@ export default function CountUp({ value, duration = 1600, className, style, noCo
     observer.observe(el)
     return () => observer.disconnect()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [value, duration])
+  }, [value, duration, noCount])
 
   function animate() {
     const parsed = parseValue(value)
