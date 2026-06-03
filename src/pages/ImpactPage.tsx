@@ -1,4 +1,6 @@
 import PageHero from '../components/PageHero'
+import CountUp from '../components/CountUp'
+
 import antiRacistCumbriaPhoto from '../assets/impact-partners/anti_racistt_cumbriaa.png.asset.json'
 import inclusiveNorthPhoto from '../assets/impact-partners/inclusive_northh.png.asset.json'
 import impactHubYorkshirePhoto from '../assets/impact-partners/impact_hub_yorkshire.png.asset.json'
