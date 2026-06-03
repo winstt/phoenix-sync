@@ -205,11 +205,11 @@ export default function Footer() {
         </nav>
 
         {/* Address + company number */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px', textAlign: 'right' }}>
-          <span style={{ fontSize: '11px', color: 'rgba(245,240,235,0.5)' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '1px', textAlign: 'right' }}>
+          <span className="footer-registration-line" style={{ color: 'rgba(245,240,235,0.5)' }}>
             Registered address: {footer.address}
           </span>
-          <span style={{ fontSize: '11px', color: 'rgba(245,240,235,0.45)' }}>
+          <span className="footer-registration-line" style={{ color: 'rgba(245,240,235,0.45)' }}>
             Company number: {footer.companyNumber}
           </span>
         </div>
