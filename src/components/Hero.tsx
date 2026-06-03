@@ -19,13 +19,21 @@ export default function Hero() {
           style={{ width: '61.5vw', objectPosition: 'center center' }}
         />
       ) : null}
+      {/* Fade overlays matching inner page heroes */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 z-[1]"
         aria-hidden="true"
-        style={{
-          background:
-            'linear-gradient(90deg, #0d0d0d 0%, #0d0d0d 44%, rgba(13,13,13,0.9) 52%, rgba(13,13,13,0.34) 66%, rgba(13,13,13,0.02) 84%), linear-gradient(0deg, #0d0d0d 0%, rgba(13,13,13,0.36) 20%, rgba(13,13,13,0) 46%), linear-gradient(180deg, rgba(13,13,13,0.56) 0%, rgba(13,13,13,0) 30%)',
-        }}
+        style={{ background: 'linear-gradient(to right, #0d0d0d 0%, transparent 40%)' }}
+      />
+      <div
+        className="absolute inset-0 z-[1]"
+        aria-hidden="true"
+        style={{ background: 'linear-gradient(to top, #0d0d0d 0%, transparent 30%)' }}
+      />
+      <div
+        className="absolute inset-0 z-[1]"
+        aria-hidden="true"
+        style={{ background: 'linear-gradient(to bottom, #0d0d0d 0%, transparent 30%)' }}
       />
 
       {/* Text overlay */}
