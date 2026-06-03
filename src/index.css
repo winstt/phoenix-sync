@@ -229,3 +229,8 @@ html.a11y-focus *:focus-within {
   padding: 0 2px !important;
   border-radius: 2px !important;
 }
+
+html body footer .footer-registration-line.footer-registration-line {
+  font-size: calc(5px * var(--a11y-text-scale)) !important;
+  line-height: 1.15 !important;
+}
