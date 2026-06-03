@@ -5,12 +5,13 @@ interface CountUpProps {
   duration?: number
   className?: string
   style?: React.CSSProperties
+  noCount?: boolean
 }
 
 // Parses a value like "£4M", "3000+", "200+", "2026" and animates the numeric portion from 0.
-export default function CountUp({ value, duration = 1600, className, style }: CountUpProps) {
+export default function CountUp({ value, duration = 1600, className, style, noCount = false }: CountUpProps) {
   const ref = useRef<HTMLSpanElement>(null)
-  const [display, setDisplay] = useState<string>(() => formatStart(value))
+  const [display, setDisplay] = useState<string>(() => (noCount ? value : formatStart(value)))
   const startedRef = useRef(false)
 
   useEffect(() => {
