@@ -75,7 +75,7 @@ export default function NewsletterPage() {
         style={{
           background:
             'radial-gradient(circle at 0% 0%, rgba(194,24,91,0.18), transparent 60%), radial-gradient(circle at 100% 100%, rgba(232,87,10,0.12), transparent 55%), #0d0d0d',
-          padding: '6rem 2.5rem 5rem',
+          padding: '6rem 2.5rem 2.5rem',
         }}
       >
         <p
