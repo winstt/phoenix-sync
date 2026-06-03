@@ -33,7 +33,7 @@ export default function Hero() {
           id="hero-heading"
           className="font-extrabold uppercase leading-none mb-6 text-cream a11y-no-scale"
           style={{
-            fontSize: 'clamp(3rem, 8vw, 6rem)',
+            fontSize: 'clamp(2.25rem, 6vw, 4.5rem)',
             lineHeight: '0.95',
             letterSpacing: '-0.02em',
           }}
