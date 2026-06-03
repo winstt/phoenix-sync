@@ -4,26 +4,6 @@ import { siteContent } from '../data/content'
 
 const { news } = siteContent
 
-// Placeholder SVG images for news cards (matching original design)
-const cardSvgs = [
-  // Orange circle accent
-  <svg key="a" width="100%" height="140" viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect width="300" height="140" fill="#1a1a1a" />
-    <circle cx="60" cy="70" r="80" fill="none" stroke="#E8570A" strokeWidth="40" opacity="0.15" />
-  </svg>,
-  // Pink circle accent
-  <svg key="b" width="100%" height="140" viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect width="300" height="140" fill="#1a1a1a" />
-    <circle cx="240" cy="70" r="80" fill="none" stroke="#C2185B" strokeWidth="40" opacity="0.15" />
-  </svg>,
-  // Mixed accents
-  <svg key="c" width="100%" height="140" viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect width="300" height="140" fill="#1a1a1a" />
-    <circle cx="150" cy="140" r="100" fill="none" stroke="#E8570A" strokeWidth="30" opacity="0.12" />
-    <circle cx="50" cy="20" r="40" fill="none" stroke="#C2185B" strokeWidth="20" opacity="0.1" />
-  </svg>,
-]
-
 export default function NewsSection() {
   return (
     <section

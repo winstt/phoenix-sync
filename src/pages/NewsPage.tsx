@@ -1,17 +1,7 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
-import { siteContent } from '../data/content'
-
-const filters = ['All', 'Announcements', 'Community', 'Grants']
 
 export default function NewsPage() {
-  const [activeFilter, setActiveFilter] = useState('All')
-
-  const filtered = siteContent.news.cards.filter(card =>
-    activeFilter === 'All' || card.tag === activeFilter || card.tag === activeFilter.replace(/s$/, '')
-  )
-
   return (
     <>
       <PageHero
