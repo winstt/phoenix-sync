@@ -48,10 +48,11 @@ export default function Hero() {
         <p
           className="mb-10"
           style={{
-            fontSize: '0.9rem',
-            color: 'rgba(245,240,235,0.6)',
+            fontSize: '1.05rem',
+            color: 'rgba(245,240,235,0.7)',
             lineHeight: '1.7',
-            maxWidth: '480px',
+            maxWidth: '520px',
+
           }}
         >
           {hero.description}
