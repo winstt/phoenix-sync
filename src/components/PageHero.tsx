@@ -31,7 +31,7 @@ export default function PageHero({ eyebrow, heading, description, imageUrl, imag
         </p>
         <h1
           className="font-extrabold uppercase leading-none mb-4 text-cream a11y-no-scale"
-          style={{ fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', letterSpacing: '-0.02em' }}
+          style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)', lineHeight: '0.95', letterSpacing: '-0.02em' }}
         >
           {heading}
         </h1>
