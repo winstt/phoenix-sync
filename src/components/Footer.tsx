@@ -107,7 +107,7 @@ export default function Footer() {
           >
             {footer.columns.work.heading}
           </h4>
-          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.15rem', lineHeight: 1.4, margin: 0, padding: 0 }}>
             {footer.columns.work.links.map((link) => (
               <li key={link.label}>
                 <Link
