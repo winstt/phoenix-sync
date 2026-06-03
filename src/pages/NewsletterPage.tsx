@@ -86,7 +86,7 @@ export default function NewsletterPage() {
         <h1
           className="font-extrabold uppercase leading-none mb-4 text-cream a11y-no-scale"
           style={{
-            fontSize: 'clamp(2.25rem, 5vw, 3.5rem)',
+            fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)',
             letterSpacing: '-0.02em',
             marginBottom: '1.75rem',
             maxWidth: '900px',
