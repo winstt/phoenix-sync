@@ -106,7 +106,11 @@ export default function ImpactPage() {
                   )}
                 </div>
                 <div style={{ padding: '1.4rem 1.45rem 1.55rem' }}>
-                  <p style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', color: '#E8570A', marginBottom: '0.45rem', textTransform: 'uppercase' }}>{p.name}</p>
+                  {p.href ? (
+                    <a href={p.href} target="_blank" rel="noopener noreferrer" style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', color: '#E8570A', marginBottom: '0.45rem', textTransform: 'uppercase', display: 'block', textDecoration: 'none' }}>{p.name}</a>
+                  ) : (
+                    <p style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', color: '#E8570A', marginBottom: '0.45rem', textTransform: 'uppercase' }}>{p.name}</p>
+                  )}
                   <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.12em', color: 'rgba(245,240,235,0.62)', marginBottom: '0.9rem', textTransform: 'uppercase' }}>{p.region}</p>
                   <h3 style={{ fontSize: 'clamp(1rem, 1.3vw, 1.15rem)', fontWeight: 800, color: '#f5f0eb', marginBottom: '0.8rem', lineHeight: 1.35, textTransform: 'uppercase' }}>{p.tagline}</h3>
                   <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.68)', lineHeight: '1.65', maxWidth: '62ch' }}>{p.desc}</p>
