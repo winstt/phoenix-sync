@@ -46,21 +46,21 @@ export const siteContent = {
       num: '01',
       title: 'Join the community',
       description: 'A growing, community-powered movement shaping a just funding system in the UK.',
-      link: { label: 'Join the community', href: '#' },
+      link: { label: 'Join the community', href: '/newsletter' },
     },
     {
       num: '02',
       title: 'Our leaders',
       description:
         'Meet our Board of Trustees, passionate leaders and trusted advisors whose expertise, values, and commitment to social impact guide our mission, ensuring our work remains ambitious, accountable, and focused on lasting change.',
-      link: { label: 'Meet our leaders', href: '#' },
+      link: { label: 'Meet our leaders', href: '/about#trustees-h2' },
     },
     {
       num: '03',
       title: 'Our impact',
       description:
         'Linking communities and leaders across regions to reinforce collective strength - celebrating the leadership and innovation already thriving within Global Majority communities.',
-      link: { label: 'See our impact', href: '#' },
+      link: { label: 'See our impact', href: '/impact' },
     },
   ],
 
