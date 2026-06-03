@@ -150,7 +150,7 @@ button:focus-visible {
   .home-hero-image {
     position: absolute !important;
     right: 0 !important;
-    bottom: 0 !important;
+    bottom: -4rem !important;
     top: auto !important;
     width: 100% !important;
     height: min(48vh, 460px) !important;
@@ -190,6 +190,7 @@ button:focus-visible {
   .home-hero-image {
     height: 34vh !important;
     min-height: 220px;
+    bottom: 0 !important;
   }
 
   .home-hero-actions {
