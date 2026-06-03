@@ -47,7 +47,7 @@ export default function PrivacyPolicyPage() {
           {p('We use essential cookies to enable the website to function, and analytics cookies (with your consent) to understand how visitors use our site. Analytics data is aggregated and anonymised; IP addresses are anonymised. Our lawful basis for analytics is consent under PECR 2003. We retain analytics data for 26 months. See our Cookie Policy for more detail.')}
 
           {h3('Job applications')}
-          {p('We collect your name, contact details, CV, cover letter, and any other information you include in your application. We also collect equal opportunities monitoring data separately and voluntarily — understanding who applies to work with us matters to our commitment to Global Majority leadership. Our lawful basis is contract and legitimate interests. We retain applications from unsuccessful candidates for one year; for appointed candidates, seven years post-employment.')}
+          {p('We collect your name, contact details, CV, cover letter, and any other information you include in your application. We also collect equal opportunities monitoring data separately and voluntarily - understanding who applies to work with us matters to our commitment to Global Majority leadership. Our lawful basis is contract and legitimate interests. We retain applications from unsuccessful candidates for one year; for appointed candidates, seven years post-employment.')}
 
           {h3('Funding applications')}
           {p('We collect lead applicant and organisation contact details, organisational information, project details, and equality and diversity monitoring data. We use this to assess applications, make funding decisions, and meet reporting obligations to the National Lottery Community Fund. Our lawful basis is public task and legitimate interests. We retain successful applications for seven years; unsuccessful applications for two years.')}
@@ -65,13 +65,13 @@ export default function PrivacyPolicyPage() {
           {h2('Your rights')}
           {p('You can exercise any of the following rights by contacting info@phoenix-trust.co.uk. We will acknowledge your request within five working days and respond in full within one month.')}
           {li([
-            'Right to be informed — explained by this policy',
-            'Right of access — request a copy of your personal data',
-            'Right to rectification — correct inaccurate or incomplete data',
-            'Right to erasure — request deletion in certain circumstances',
-            'Right to restrict processing — limit how we use your data in specific situations',
-            'Right to data portability — receive your data in a machine-readable format where applicable',
-            'Right to object — you have an absolute right to object to direct marketing; you may also object to processing based on legitimate interests',
+            'Right to be informed - explained by this policy',
+            'Right of access - request a copy of your personal data',
+            'Right to rectification - correct inaccurate or incomplete data',
+            'Right to erasure - request deletion in certain circumstances',
+            'Right to restrict processing - limit how we use your data in specific situations',
+            'Right to data portability - receive your data in a machine-readable format where applicable',
+            'Right to object - you have an absolute right to object to direct marketing; you may also object to processing based on legitimate interests',
           ])}
           {p('We do not use solely automated decision-making with significant effects on individuals.')}
 

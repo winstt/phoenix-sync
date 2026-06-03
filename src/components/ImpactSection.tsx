@@ -39,7 +39,7 @@ export default function ImpactSection() {
           alignItems: 'start',
         }}
       >
-        {/* Left — text + stats */}
+        {/* Left - text + stats */}
         <div>
           <p
             className="font-semibold uppercase mb-4"
@@ -106,7 +106,7 @@ export default function ImpactSection() {
           </div>
         </div>
 
-        {/* Right — regions box */}
+        {/* Right - regions box */}
         <div
           style={{
             background: '#1a1a1a',

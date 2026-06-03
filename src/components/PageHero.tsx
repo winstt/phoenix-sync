@@ -1,4 +1,4 @@
-// Shared hero component for all inner pages — matches homepage hero style
+// Shared hero component for all inner pages - matches homepage hero style
 
 interface PageHeroProps {
   eyebrow: string
@@ -19,7 +19,7 @@ export default function PageHero({ eyebrow, heading, description, imageUrl, imag
       className={imageUrl ? 'hero-grid relative' : 'relative'}
       style={{ background: '#0d0d0d', minHeight: imageUrl ? '42vh' : undefined }}
     >
-      {/* Left — text */}
+      {/* Left - text */}
       <div
         className="flex flex-col justify-center relative z-10"
         style={{
@@ -47,7 +47,7 @@ export default function PageHero({ eyebrow, heading, description, imageUrl, imag
         </p>
       </div>
 
-      {/* Right — image (only when provided) */}
+      {/* Right - image (only when provided) */}
       {imageUrl && (
         <div className="relative overflow-hidden page-hero-image" aria-hidden="true">
           <img src={imageUrl} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: imagePosition }} />

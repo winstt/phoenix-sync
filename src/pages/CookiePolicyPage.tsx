@@ -37,12 +37,12 @@ export default function CookiePolicyPage() {
 
           {heading('Third-party cookies')}
           {tag('Third-party controlled')}
-          {p('Our website may include embedded content such as videos from YouTube or Vimeo, and links to our social media profiles on platforms including X/Twitter, Instagram, LinkedIn, Facebook, and Bluesky. These platforms may set their own cookies when you interact with their content. We do not control these cookies — please refer to each platform\'s privacy policy for more information.')}
+          {p('Our website may include embedded content such as videos from YouTube or Vimeo, and links to our social media profiles on platforms including X/Twitter, Instagram, LinkedIn, Facebook, and Bluesky. These platforms may set their own cookies when you interact with their content. We do not control these cookies - please refer to each platform\'s privacy policy for more information.')}
 
           {heading('Managing your cookies')}
           {p('You can manage or withdraw your cookie consent at any time through:')}
           <ul style={{ listStyle: 'disc', listStylePosition: 'outside', paddingLeft: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.4rem', marginBottom: '1rem' }}>
-            {['The cookie consent banner shown on your first visit', 'Your browser settings — most browsers allow you to refuse or delete cookies', 'Platform-specific opt-out tools for analytics providers'].map((item, i) => (
+            {['The cookie consent banner shown on your first visit', 'Your browser settings - most browsers allow you to refuse or delete cookies', 'Platform-specific opt-out tools for analytics providers'].map((item, i) => (
               <li key={i} style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.65)', lineHeight: '1.7' }}>{item}</li>
             ))}
           </ul>

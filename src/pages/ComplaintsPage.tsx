@@ -54,14 +54,14 @@ export default function ComplaintsPage() {
           {h2('How to make a complaint')}
           {p('You can submit a complaint by:')}
           {li([
-            'Email: info@phoenix-trust.co.uk — please use the subject line Formal Complaint',
+            'Email: info@phoenix-trust.co.uk - please use the subject line Formal Complaint',
             'Post: The Phoenix Community Trust, C/O Stone King LLP, Boundary House, 91 Charterhouse Street, London, EC1M 6HR',
           ])}
           {p('Please include: your full name and contact details, a clear description of the issue including relevant dates, any supporting evidence or documentation, and what outcome you are seeking.')}
 
           {h2('Our complaints process')}
 
-          {stageCard('Stage 1', 'Initial response', 'We will acknowledge receipt of your complaint within 5 working days. A member of our team will investigate the matter and provide a full response within 20 working days of receipt. If we need more time — for example, because the matter is complex — we will tell you and keep you informed of progress.')}
+          {stageCard('Stage 1', 'Initial response', 'We will acknowledge receipt of your complaint within 5 working days. A member of our team will investigate the matter and provide a full response within 20 working days of receipt. If we need more time - for example, because the matter is complex - we will tell you and keep you informed of progress.')}
           {stageCard('Stage 2', 'Review', 'If you are not satisfied with the Stage 1 response, you may request a review by writing to us within 28 days of receiving our Stage 1 response. Please explain why you are not satisfied and what outcome you are seeking. A senior member of staff or trustee not previously involved will review the matter and respond within 20 working days.')}
           {stageCard('Stage 3', 'Trustee panel', 'If you remain dissatisfied after Stage 2, you may request that your complaint be considered by the Board of Trustees within 28 days of the Stage 2 response. The trustees will consider your complaint at the next available board meeting and respond within 30 working days. The trustees\' decision is final under our internal process.')}
 

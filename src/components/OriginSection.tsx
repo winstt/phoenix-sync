@@ -14,7 +14,7 @@ export default function OriginSection() {
       }}
     >
       <div className="origin-inner" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        {/* Left — title */}
+        {/* Left - title */}
         <div>
           <h2
             id="origin-heading"
@@ -32,7 +32,7 @@ export default function OriginSection() {
           </h2>
         </div>
 
-        {/* Right — timeline */}
+        {/* Right - timeline */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 0, marginTop: '1.5rem' }}>
           {origin.entries.map((entry, i) => (
             <div

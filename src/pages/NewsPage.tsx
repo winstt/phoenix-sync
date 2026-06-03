@@ -6,7 +6,7 @@ export default function NewsPage() {
       <PageHero
         eyebrow="News"
         heading="News & updates."
-        description="Stories, updates and insights from our work — and from the communities and leaders at the heart of this movement."
+        description="Stories, updates and insights from our work - and from the communities and leaders at the heart of this movement."
         imageUrl={`${import.meta.env.BASE_URL}images/news.jpeg`}
         imagePosition="center top"
       />

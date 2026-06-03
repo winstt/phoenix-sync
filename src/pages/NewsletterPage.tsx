@@ -47,7 +47,7 @@ export default function NewsletterPage() {
     setStatus('loading')
 
     if (!mailchimpUrl) {
-      // No Mailchimp configured yet — still show success so the UI is testable
+      // No Mailchimp configured yet - still show success so the UI is testable
       setTimeout(() => setStatus('success'), 600)
       return
     }
@@ -103,7 +103,7 @@ export default function NewsletterPage() {
           }}
         >
           Be part of something bigger. Sign up to receive updates on Phoenix's journey, grants, events, and
-          insights from across the movement — plus opportunities to get involved.
+          insights from across the movement - plus opportunities to get involved.
         </p>
       </section>
 
