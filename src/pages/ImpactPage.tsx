@@ -66,7 +66,7 @@ export default function ImpactPage() {
                 borderTop: '1px solid rgba(255,255,255,0.06)',
               }}
             >
-              <CountUp value={s.num} noCount={s.num === '2026'} style={{ fontSize: 'clamp(3.25rem, 13vw, 6.5rem)', fontWeight: 800, color: '#E8570A', lineHeight: 1, display: 'block', fontVariantNumeric: 'tabular-nums' }} />
+              <CountUp value={s.num} noCount={s.num === '2026'} style={{ fontSize: 'clamp(4.5rem, 18vw, 7rem)', fontWeight: 800, color: '#E8570A', lineHeight: 1, display: 'block', fontVariantNumeric: 'tabular-nums' }} />
               <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', marginTop: '8px', lineHeight: 1.35 }}>{s.label}</p>
             </div>
           ))}
