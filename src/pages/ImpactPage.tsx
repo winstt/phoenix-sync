@@ -56,7 +56,7 @@ export default function ImpactPage() {
 
       {/* Stats bar - 2x2 grid */}
       <div style={{ background: '#1a1a1a', borderTop: '1px solid rgba(255,255,255,0.1)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
           {stats.map((s, i) => (
             <div
               key={s.num}
@@ -64,6 +64,7 @@ export default function ImpactPage() {
                 padding: '2.5rem 1.5rem',
                 minHeight: '200px',
                 borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none',
+                borderTop: '1px solid rgba(255,255,255,0.06)',
               }}
             >
               <CountUp value={s.num} noCount={s.num === '2026'} style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4rem)', fontWeight: 800, color: '#E8570A', lineHeight: 1, display: 'block', fontVariantNumeric: 'tabular-nums' }} />
