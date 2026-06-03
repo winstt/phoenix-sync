@@ -172,7 +172,17 @@ button:focus-visible {
 
 @media (max-width: 480px) {
   .home-hero-image {
-    height: 340px !important;
+    height: 300px !important;
+    margin-top: -0.5rem;
+  }
+
+  .home-hero-actions {
+    flex-direction: column;
+  }
+
+  .home-hero-actions a {
+    width: 100%;
+    justify-content: center;
   }
 }
 
