@@ -29,24 +29,25 @@ export default function ImpactSection() {
           </p>
           <h2
             id="impact-heading"
-            className="font-bold uppercase mb-5"
+            className="font-extrabold uppercase mb-5"
             style={{
-              fontSize: 'clamp(2.25rem, 4.5vw, 3.25rem)',
-              letterSpacing: '-0.01em',
+              fontSize: 'clamp(2.75rem, 7.5vw, 6rem)',
+              lineHeight: '0.95',
+              letterSpacing: '-0.02em',
               color: '#f5f0eb',
             }}
           >
             {impact.title}
           </h2>
-          <p style={{ color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', marginBottom: '1.5rem' }}>
+          <p style={{ color: 'rgba(245,240,235,0.7)', lineHeight: '1.7', marginBottom: '1.5rem', fontSize: '1.05rem', maxWidth: '560px' }}>
             {impact.description}
           </p>
 
           {/* Stats */}
           <div
-            ref={statsRef}
             aria-label="Impact statistics"
             className="counter-group"
+
             style={{
               display: 'grid',
               gridTemplateColumns: '1fr 1fr',
