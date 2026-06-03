@@ -20,6 +20,7 @@ export default function CookiePolicyPage() {
         eyebrow=""
         heading="Cookie policy."
         description="Last updated: 11 May 2026 · Next review: 11 May 2027"
+        size="compact"
       />
       <section style={{ padding: '2.5rem 2.5rem 4rem', background: '#0d0d0d', borderTop: '1px solid rgba(245,240,235,0.08)' }}>
         <div style={{ maxWidth: '760px' }}>
