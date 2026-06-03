@@ -6,9 +6,14 @@ interface PageHeroProps {
   description: string
   imageUrl?: string | null
   imagePosition?: string
+  size?: 'default' | 'compact'
 }
 
-export default function PageHero({ eyebrow, heading, description, imageUrl, imagePosition = 'center' }: PageHeroProps) {
+export default function PageHero({ eyebrow, heading, description, imageUrl, imagePosition = 'center', size = 'default' }: PageHeroProps) {
+  const headingFontSize =
+    size === 'compact'
+      ? 'clamp(1.75rem, 3.5vw, 2.75rem)'
+      : 'clamp(2.5rem, 5.5vw, 4.5rem)'
   return (
     <section
       className={imageUrl ? 'hero-grid relative' : 'relative'}
@@ -33,7 +38,7 @@ export default function PageHero({ eyebrow, heading, description, imageUrl, imag
         ) : null}
         <h1
           className="font-extrabold uppercase leading-none mb-4 text-cream a11y-no-scale"
-          style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)', lineHeight: '0.95', letterSpacing: '-0.02em' }}
+          style={{ fontSize: headingFontSize, lineHeight: '0.95', letterSpacing: '-0.02em' }}
         >
           {heading}
         </h1>
