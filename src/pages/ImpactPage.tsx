@@ -65,8 +65,8 @@ export default function ImpactPage() {
                 borderBottom: i < 2 ? '1px solid rgba(255,255,255,0.1)' : 'none',
               }}
             >
-              <p style={{ fontSize: 'clamp(2.4rem, 6vw, 3.4rem)', fontWeight: 800, color: '#E8570A', lineHeight: 1 }}>{s.num}</p>
-              <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', marginTop: '12px', lineHeight: 1.4 }}>{s.label}</p>
+              <p style={{ fontSize: 'clamp(2.8rem, 7vw, 4rem)', fontWeight: 800, color: '#E8570A', lineHeight: 1 }}>{s.num}</p>
+              <p style={{ fontSize: '16px', color: 'rgba(245,240,235,0.6)', marginTop: '14px', lineHeight: 1.4 }}>{s.label}</p>
             </div>
           ))}
         </div>
