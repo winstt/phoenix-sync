@@ -9,7 +9,7 @@ const p = (text: string) => (
 )
 
 const tag = (label: string, always?: boolean) => (
-  <span style={{ display: 'inline-block', fontSize: '7px', fontWeight: 600, letterSpacing: '0.03em', textTransform: 'uppercase', padding: '0px 4px', borderRadius: '100px', marginBottom: '0.5rem', background: always ? 'rgba(232,87,10,0.15)' : 'rgba(255,255,255,0.06)', border: always ? '1px solid rgba(232,87,10,0.3)' : '1px solid rgba(255,255,255,0.1)', color: always ? '#E8570A' : 'rgba(245,240,235,0.5)' }}>{label}</span>
+  <span style={{ display: 'inline-block', fontSize: '5px', fontWeight: 500, letterSpacing: '0.04em', textTransform: 'uppercase', padding: '0px 3px', borderRadius: '100px', marginBottom: '0.5rem', lineHeight: 1.4, background: always ? 'rgba(232,87,10,0.15)' : 'rgba(255,255,255,0.06)', border: always ? '1px solid rgba(232,87,10,0.3)' : '1px solid rgba(255,255,255,0.1)', color: always ? '#E8570A' : 'rgba(245,240,235,0.5)' }}>{label}</span>
 )
 
 export default function CookiePolicyPage() {
