@@ -33,7 +33,8 @@ export default function Hero() {
         className="home-hero-content relative z-10 flex min-h-screen flex-col justify-center"
         style={{
           padding: 'clamp(9rem, 18vh, 15rem) clamp(1.875rem, 3.2vw, 3.75rem) clamp(4rem, 8vh, 6rem)',
-          maxWidth: '56rem',
+          maxWidth: '58rem',
+          transform: 'translateY(-3rem)',
         }}
       >
 
@@ -50,7 +51,7 @@ export default function Hero() {
           id="hero-heading"
           className="font-extrabold uppercase mb-7 text-cream a11y-no-scale"
           style={{
-            fontSize: 'clamp(1.05rem, 1.14vw, 1.28rem)',
+            fontSize: 'clamp(1rem, 1.06vw, 1.2rem)',
             lineHeight: '1.25',
             letterSpacing: '0',
           }}
