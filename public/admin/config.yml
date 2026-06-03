@@ -1,0 +1,99 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Editorial workflow: Save as Draft → Review → Publish (merge to main)
+publish_mode: editorial_workflow
+
+# Where CMS-uploaded images are stored in the repo / served from
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  # ── NEWS ARTICLES ──────────────────────────────────────────────────────────
+  - name: "news"
+    label: "News Articles"
+    folder: "content/news"
+    create: true
+    format: json
+    extension: json
+    identifier_field: title
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Slug (URL path, no spaces)", name: "slug", widget: "string", hint: "e.g. my-article-title" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Category", name: "tag", widget: "select", options: ["Announcement", "Community", "Grants", "News", "Events"] }
+      - { label: "Date", name: "date", widget: "string", hint: "e.g. 'March 2026' or 'Coming soon'" }
+      - { label: "Short description (shown on cards)", name: "description", widget: "text" }
+      - label: "Article body"
+        name: "body"
+        widget: "list"
+        label_singular: "Paragraph"
+        field: { label: "Paragraph", name: "paragraph", widget: "text" }
+
+  # ── SITE SETTINGS (single-file collections) ──────────────────────────────
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      # Trustees
+      - label: "Board of Trustees"
+        name: "trustees"
+        file: "content/trustees.json"
+        fields:
+          - label: "Trustees"
+            name: "trustees"
+            widget: "list"
+            label_singular: "Trustee"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Full Name", name: "name", widget: "string" }
+              - { label: "Photo", name: "photo", widget: "image" }
+              - { label: "Biography", name: "bio", widget: "text" }
+
+      # Partners & funders
+      - label: "Partners & Funders"
+        name: "partners"
+        file: "content/partners.json"
+        fields:
+          - label: "Funders (logo strip)"
+            name: "funders"
+            widget: "list"
+            label_singular: "Funder"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Organisation name", name: "name", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Website URL (optional)", name: "href", widget: "string", required: false }
+          - label: "Network Partners (full cards)"
+            name: "networkPartners"
+            widget: "list"
+            label_singular: "Partner"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Organisation name", name: "name", widget: "string" }
+              - { label: "Region", name: "region", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+              - { label: "Card image", name: "image", widget: "image" }
+              - { label: "Website URL (optional)", name: "href", widget: "string", required: false }
+
+      # Homepage text
+      - label: "Homepage content"
+        name: "homepage"
+        file: "content/homepage.json"
+        fields:
+          - label: "Hero section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow text", name: "eyebrow", widget: "string" }
+              - { label: "Headline (orange part)", name: "headlineOrange", widget: "string" }
+              - { label: "Headline (white part)", name: "headlineWhite", widget: "string" }
+              - { label: "Description paragraph", name: "description", widget: "text" }
+          - label: "Impact statistics"
+            name: "stats"
+            widget: "list"
+            label_singular: "Stat"
+            fields:
+              - { label: "Number / value", name: "num", widget: "string" }
+              - { label: "Label", name: "label", widget: "text" }
