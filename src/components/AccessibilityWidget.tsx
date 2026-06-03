@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { X, Minus, Plus } from 'lucide-react'
 import phoenixIcon from '../assets/phoenix-icon.png.asset.json'
 
@@ -78,7 +78,7 @@ export default function AccessibilityWidget() {
   const [open, setOpen] = useState(false)
   const [settings, setSettings] = useState<Settings>(readSettings)
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     applySettings(settings)
     persistSettings(settings)
   }, [settings])
