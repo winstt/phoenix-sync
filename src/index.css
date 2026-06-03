@@ -143,18 +143,30 @@ button:focus-visible {
 }
 @media (max-width: 899px) {
   .home-hero {
-    min-height: 100svh !important;
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column;
   }
 
   .home-hero > img {
+    position: relative !important;
     width: 100% !important;
-    object-position: 68% center !important;
+    height: auto !important;
+    max-height: 55vh;
+    object-fit: cover;
+    object-position: center center !important;
+    order: 2;
+  }
+
+  .home-hero > div[aria-hidden="true"] {
+    display: none !important;
   }
 
   .home-hero-content {
-    justify-content: flex-end !important;
-    padding-top: 8rem !important;
-    padding-bottom: 3.5rem !important;
+    order: 1;
+    justify-content: flex-start !important;
+    padding-top: 7rem !important;
+    padding-bottom: 2rem !important;
     transform: none !important;
   }
 
@@ -162,6 +174,7 @@ button:focus-visible {
     white-space: normal;
   }
 }
+
 @media (min-width: 900px) {
   .hero-grid {
     display: grid;
