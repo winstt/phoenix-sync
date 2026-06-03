@@ -66,12 +66,12 @@ export default function ImpactSection() {
                   padding: '1.25rem',
                 }}
               >
-                <div
+                <CountUp
+                  value={stat.num}
                   className="font-extrabold"
-                  style={{ fontSize: '1.8rem', color: '#E8570A', fontVariantNumeric: 'tabular-nums' }}
-                >
-                  {stat.num}
-                </div>
+                  style={{ fontSize: '2rem', color: '#E8570A', fontVariantNumeric: 'tabular-nums', display: 'block' }}
+                />
+
                 <div style={{ fontSize: '12px', color: 'rgba(245,240,235,0.6)', marginTop: '4px', lineHeight: '1.4' }}>
                   {stat.label}
                 </div>
