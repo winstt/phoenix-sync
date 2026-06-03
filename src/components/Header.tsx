@@ -59,13 +59,13 @@ export default function Header() {
             to="/"
             aria-label="The Phoenix Community Trust - home"
             className="flex items-center flex-shrink-0 no-underline"
-            style={{ height: '40px' }}
+            style={{ height: 'clamp(40px, 5vw, 56px)' }}
           >
             <img
               src={`${import.meta.env.BASE_URL}images/logo-header.png`}
               alt="The Phoenix Community Trust"
               className="object-fill"
-              style={{ height: '40px', width: 'auto', display: 'block' }}
+              style={{ height: 'clamp(40px, 5vw, 56px)', width: 'auto', display: 'block' }}
               onError={e => { (e.target as HTMLImageElement).src = 'https://newphx.karrota.wtf/wp-content/uploads/2026/05/ThePhoenix-LogoPNG-1.png' }}
             />
           </Link>
