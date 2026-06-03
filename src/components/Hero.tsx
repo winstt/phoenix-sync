@@ -33,13 +33,12 @@ export default function Hero() {
           id="hero-heading"
           className="font-extrabold uppercase leading-none mb-6 text-cream a11y-no-scale"
           style={{
-            fontSize: 'clamp(4rem, 12vw, 9rem)',
+            fontSize: 'clamp(3rem, 8vw, 6rem)',
             lineHeight: '0.95',
-
             letterSpacing: '-0.02em',
           }}
         >
-          <span className="a11y-no-scale" style={{ color: '#E8570A', fontSize: '1.1em', display: 'inline-block', letterSpacing: '0.02em', marginBottom: '0.4em' }}>{hero.headlineOrange}</span>
+          <span className="a11y-no-scale" style={{ color: '#E8570A', fontSize: '0.8em', display: 'inline-block', letterSpacing: '0.02em', marginBottom: '0.4em' }}>{hero.headlineOrange}</span>
           <br />
           {hero.headlineWhite}
         </h1>
