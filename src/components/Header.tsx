@@ -52,7 +52,7 @@ export default function Header() {
         <nav
           aria-label="Main navigation"
           className="flex items-center"
-          style={{ padding: '1.25rem 1rem', height: '110px' }}
+          style={{ padding: '1.25rem 1rem 1.25rem 2.5rem', height: '110px' }}
         >
           {/* Logo */}
           <Link
