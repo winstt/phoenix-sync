@@ -16,13 +16,13 @@ import funderBswn from '../assets/funders/bs_wn.png.asset.json'
 import funderSouthAsian from '../assets/funders/south_asian.png.asset.json'
 import funderInclusiveNorth from '../assets/funders/inclusive_north_funder2.png.asset.json'
 
-const funderLogos = [
-  { name: 'Anti Racist Cumbria', url: funderAntiracist.url },
+const funderLogos: { name: string; url: string; href?: string }[] = [
+  { name: 'Anti Racist Cumbria', url: funderAntiracist.url, href: 'https://antiracistcumbria.org' },
   { name: 'Community Fund', url: funderComfun.url },
-  { name: 'Impact Hub Yorkshire', url: funderImpactHub.url },
-  { name: 'The Ubele Initiative', url: funderUbele.url },
-  { name: 'Black South West Network', url: funderBswn.url },
-  { name: 'South Asian Health Action', url: funderSouthAsian.url },
+  { name: 'Impact Hub Yorkshire', url: funderImpactHub.url, href: 'https://yorkshire.impacthub.net' },
+  { name: 'The Ubele Initiative', url: funderUbele.url, href: 'https://ubele.org' },
+  { name: 'Black South West Network', url: funderBswn.url, href: 'https://www.blacksouthwestnetwork.org' },
+  { name: 'South Asian Health Action', url: funderSouthAsian.url, href: 'https://www.sahauk.org' },
   { name: 'Inclusive North', url: funderInclusiveNorth.url },
 ]
 
