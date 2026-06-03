@@ -74,7 +74,7 @@ export default function NewsletterPage() {
       <section
         style={{
           background: '#0d0d0d',
-          padding: '6rem 2.5rem 2.5rem',
+          padding: '6rem 2.5rem 1.25rem',
         }}
       >
         <p
