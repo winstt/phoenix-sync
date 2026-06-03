@@ -12,11 +12,11 @@ export default function Hero() {
     >
       {/* Left — text */}
       <div
-        className="flex flex-col justify-end relative z-10"
+        className="flex flex-col justify-center relative z-10"
         style={{
           padding: '2.5rem',
-          paddingTop: 'calc(90px + 3rem)',
-          paddingBottom: '4rem',
+          paddingTop: 'calc(90px + 2rem)',
+          paddingBottom: '3rem',
         }}
       >
 
