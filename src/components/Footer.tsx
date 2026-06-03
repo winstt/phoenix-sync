@@ -195,7 +195,7 @@ export default function Footer() {
               key={link.label}
               to={routeMap[link.label] ?? link.href}
               className="no-underline transition-colors"
-              style={{ fontSize: '8px', color: 'rgba(245,240,235,0.6)' }}
+              style={{ fontSize: '6px', color: 'rgba(245,240,235,0.6)' }}
               onMouseEnter={(e) => (e.currentTarget.style.color = '#f5f0eb')}
               onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(245,240,235,0.6)')}
             >
@@ -206,10 +206,10 @@ export default function Footer() {
 
         {/* Address + company number */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px', textAlign: 'right' }}>
-          <span style={{ fontSize: '8px', color: 'rgba(245,240,235,0.3)' }}>
+          <span style={{ fontSize: '6px', color: 'rgba(245,240,235,0.3)' }}>
             Registered address: {footer.address}
           </span>
-          <span style={{ fontSize: '8px', color: 'rgba(245,240,235,0.25)' }}>
+          <span style={{ fontSize: '6px', color: 'rgba(245,240,235,0.25)' }}>
             Company number: {footer.companyNumber}
           </span>
         </div>
