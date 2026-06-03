@@ -134,8 +134,8 @@ button:focus-visible {
 .home-hero-heading-white {
   display: block;
   max-width: none;
-  white-space: nowrap;
 }
+
 
 .page-hero-image {
   min-height: clamp(360px, 95vw, 520px);
