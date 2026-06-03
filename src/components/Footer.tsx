@@ -206,10 +206,10 @@ export default function Footer() {
 
         {/* Address + company number */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '1px', textAlign: 'right' }}>
-          <span className="footer-registration-line" style={{ color: 'rgba(245,240,235,0.5)' }}>
+          <span className="footer-registration-line a11y-no-scale" style={{ fontSize: '8px', lineHeight: 1.25, color: 'rgba(245,240,235,0.5)' }}>
             Registered address: {footer.address}
           </span>
-          <span className="footer-registration-line" style={{ color: 'rgba(245,240,235,0.45)' }}>
+          <span className="footer-registration-line a11y-no-scale" style={{ fontSize: '8px', lineHeight: 1.25, color: 'rgba(245,240,235,0.45)' }}>
             Company number: {footer.companyNumber}
           </span>
         </div>
