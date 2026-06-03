@@ -16,13 +16,13 @@ import funderBswn from '../assets/funders/bs_wn.png.asset.json'
 import funderSouthAsian from '../assets/funders/south_asian.png.asset.json'
 import funderInclusiveNorth from '../assets/funders/inclusive_north_funder2.png.asset.json'
 
-const funderLogos = [
-  { name: 'Anti Racist Cumbria', url: funderAntiracist.url },
+const funderLogos: { name: string; url: string; href?: string }[] = [
+  { name: 'Anti Racist Cumbria', url: funderAntiracist.url, href: 'https://antiracistcumbria.org' },
   { name: 'Community Fund', url: funderComfun.url },
-  { name: 'Impact Hub Yorkshire', url: funderImpactHub.url },
-  { name: 'The Ubele Initiative', url: funderUbele.url },
-  { name: 'Black South West Network', url: funderBswn.url },
-  { name: 'South Asian Health Action', url: funderSouthAsian.url },
+  { name: 'Impact Hub Yorkshire', url: funderImpactHub.url, href: 'https://yorkshire.impacthub.net' },
+  { name: 'The Ubele Initiative', url: funderUbele.url, href: 'https://ubele.org' },
+  { name: 'Black South West Network', url: funderBswn.url, href: 'https://www.blacksouthwestnetwork.org' },
+  { name: 'South Asian Health Action', url: funderSouthAsian.url, href: 'https://www.sahauk.org' },
   { name: 'Inclusive North', url: funderInclusiveNorth.url },
 ]
 
@@ -35,13 +35,13 @@ const stats = [
 
 const regions = ['North East & Cumbria', 'Yorkshire & Humber', 'North West', 'East Midlands', 'West Midlands', 'East of England', 'South West', 'Greater London', 'South East']
 
-const partners = [
-  { name: 'Anti Racist Cumbria', region: 'North East & Cumbria', tagline: 'DISMANTLING RACISM, ADVANCING JUSTICE.', desc: 'Anti Racist Cumbria is a community-led network building collective power across Cumbria.', image: antiRacistCumbriaPhoto.url },
+const partners: { name: string; region: string; tagline: string; desc: string; image: string; href?: string }[] = [
+  { name: 'Anti Racist Cumbria', region: 'North East & Cumbria', tagline: 'DISMANTLING RACISM, ADVANCING JUSTICE.', desc: 'Anti Racist Cumbria is a community-led network building collective power across Cumbria.', image: antiRacistCumbriaPhoto.url, href: 'https://antiracistcumbria.org' },
   { name: 'Inclusive North', region: 'North West', tagline: 'CHAMPIONING RACIAL UNITY.', desc: 'Inclusive North is a community-led organisation driving change for Global Majority communities across Lancashire through research, policy innovation and investment.', image: inclusiveNorthPhoto.url },
-  { name: 'Impact Hub Yorkshire', region: 'Yorkshire & Humber', tagline: 'POWERING POSITIVE CHANGE IN YORKSHIRE.', desc: 'A collaborative community connecting entrepreneurs, innovators, and organisations driving positive social and environmental change across Yorkshire.', image: impactHubYorkshirePhoto.url },
-  { name: 'The Ubele Initiative', region: 'Greater London, South East and East of England', tagline: 'ADVOCATING FOR EQUITY & JUSTICE IN COMMUNITIES.', desc: 'The Ubele Initiative empowers Global Majority communities in the UK to act as catalysts for social and economic change.', image: ubeleInitiativePhoto.url },
-  { name: 'Black South West Network', region: 'South West', tagline: 'BUILDING POWER. CREATING CHANGE.', desc: 'Black South West Network works across the South West to advance racial justice, amplify Black voices, and build lasting opportunities for equity.', image: blackSouthWestNetworkPhoto.url },
-  { name: 'South Asian Health Action', region: 'East & West Midlands', tagline: 'IMPROVING HEALTH. ADVANCING EQUITY.', desc: 'South Asian Health Action works to improve health outcomes and reduce inequalities for South Asian communities through research, advocacy, and action.', image: southAsianHealthActionPhoto.url },
+  { name: 'Impact Hub Yorkshire', region: 'Yorkshire & Humber', tagline: 'POWERING POSITIVE CHANGE IN YORKSHIRE.', desc: 'A collaborative community connecting entrepreneurs, innovators, and organisations driving positive social and environmental change across Yorkshire.', image: impactHubYorkshirePhoto.url, href: 'https://yorkshire.impacthub.net' },
+  { name: 'The Ubele Initiative', region: 'Greater London, South East and East of England', tagline: 'ADVOCATING FOR EQUITY & JUSTICE IN COMMUNITIES.', desc: 'The Ubele Initiative empowers Global Majority communities in the UK to act as catalysts for social and economic change.', image: ubeleInitiativePhoto.url, href: 'https://ubele.org' },
+  { name: 'Black South West Network', region: 'South West', tagline: 'BUILDING POWER. CREATING CHANGE.', desc: 'Black South West Network works across the South West to advance racial justice, amplify Black voices, and build lasting opportunities for equity.', image: blackSouthWestNetworkPhoto.url, href: 'https://www.blacksouthwestnetwork.org' },
+  { name: 'South Asian Health Action', region: 'East & West Midlands', tagline: 'IMPROVING HEALTH. ADVANCING EQUITY.', desc: 'South Asian Health Action works to improve health outcomes and reduce inequalities for South Asian communities through research, advocacy, and action.', image: southAsianHealthActionPhoto.url, href: 'https://www.sahauk.org' },
 ]
 
 export default function ImpactPage() {
@@ -96,7 +96,13 @@ export default function ImpactPage() {
             {partners.map(p => (
               <article key={p.name} style={{ background: '#0d0d0d', borderRight: '1px solid rgba(255,255,255,0.12)', borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
                 <div style={{ aspectRatio: '4 / 3', overflow: 'hidden', background: '#161616' }}>
-                  <img src={p.image} alt={p.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: p.name === 'Impact Hub Yorkshire' ? '22% center' : 'center', display: 'block' }} />
+                  {p.href ? (
+                    <a href={p.href} target="_blank" rel="noopener noreferrer" aria-label={p.name} style={{ display: 'block', width: '100%', height: '100%', cursor: 'pointer' }}>
+                      <img src={p.image} alt={p.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: p.name === 'Impact Hub Yorkshire' ? '22% center' : 'center', display: 'block' }} />
+                    </a>
+                  ) : (
+                    <img src={p.image} alt={p.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
+                  )}
                 </div>
                 <div style={{ padding: '1.4rem 1.45rem 1.55rem' }}>
                   <p style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', color: '#E8570A', marginBottom: '0.45rem', textTransform: 'uppercase' }}>{p.name}</p>
@@ -116,11 +122,15 @@ export default function ImpactPage() {
         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
           <p className="font-semibold uppercase mb-10" style={{ fontSize: '12px', letterSpacing: '0.14em', color: '#E8570A' }}>Our current partners and funders</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '1rem', alignItems: 'stretch', justifyItems: 'stretch' }}>
-            {funderLogos.map(l => (
-              <div key={l.name} style={{ height: '100px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem', background: '#161616', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px' }}>
-                <img src={l.url} alt={l.name} loading="lazy" style={{ maxHeight: '100%', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
-              </div>
-            ))}
+            {funderLogos.map(l => {
+              const img = <img src={l.url} alt={l.name} loading="lazy" style={{ maxHeight: '100%', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+              const boxStyle = { height: '100px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem', background: '#161616', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px' } as const
+              return l.href ? (
+                <a key={l.name} href={l.href} target="_blank" rel="noopener noreferrer" aria-label={l.name} style={{ ...boxStyle, cursor: 'pointer' }}>{img}</a>
+              ) : (
+                <div key={l.name} style={boxStyle}>{img}</div>
+              )
+            })}
           </div>
 
         </div>
