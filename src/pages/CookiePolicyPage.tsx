@@ -40,7 +40,7 @@ export default function CookiePolicyPage() {
 
           {heading('Managing your cookies')}
           {p('You can manage or withdraw your cookie consent at any time through:')}
-          <ul style={{ paddingLeft: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.4rem', marginBottom: '1rem' }}>
+          <ul style={{ listStyle: 'disc', listStylePosition: 'outside', paddingLeft: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.4rem', marginBottom: '1rem' }}>
             {['The cookie consent banner shown on your first visit', 'Your browser settings — most browsers allow you to refuse or delete cookies', 'Platform-specific opt-out tools for analytics providers'].map((item, i) => (
               <li key={i} style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.65)', lineHeight: '1.7' }}>{item}</li>
             ))}
