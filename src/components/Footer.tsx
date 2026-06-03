@@ -205,11 +205,11 @@ export default function Footer() {
         </nav>
 
         {/* Address + company number */}
-        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '0.75rem', textAlign: 'right', flexWrap: 'nowrap', justifyContent: 'flex-end', whiteSpace: 'nowrap' }}>
-          <span className="footer-registration-line a11y-no-scale" style={{ fontSize: '8px', lineHeight: 1.25, color: 'rgba(245,240,235,0.5)' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.35rem', textAlign: 'left', width: '100%', minWidth: 0 }}>
+          <span className="footer-registration-line a11y-no-scale" style={{ fontSize: '10px', lineHeight: 1.35, color: 'rgba(245,240,235,0.55)', whiteSpace: 'normal', overflowWrap: 'anywhere', maxWidth: '100%' }}>
             Registered address: {footer.address}
           </span>
-          <span className="footer-registration-line a11y-no-scale" style={{ fontSize: '8px', lineHeight: 1.25, color: 'rgba(245,240,235,0.45)' }}>
+          <span className="footer-registration-line a11y-no-scale" style={{ fontSize: '10px', lineHeight: 1.35, color: 'rgba(245,240,235,0.5)', whiteSpace: 'normal', overflowWrap: 'anywhere', maxWidth: '100%' }}>
             Company number: {footer.companyNumber}
           </span>
         </div>
