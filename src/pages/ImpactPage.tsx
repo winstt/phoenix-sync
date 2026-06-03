@@ -65,7 +65,7 @@ export default function ImpactPage() {
       </div>
 
       {/* Regions */}
-      <section id="regions" style={{ padding: '4rem 2.5rem', background: '#0d0d0d' }}>
+      <section id="regions" style={{ padding: '4rem 2.5rem 2rem', background: '#0d0d0d' }}>
         <p className="font-semibold uppercase mb-4" style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#E8570A' }}>Where we work</p>
         <h2 className="font-bold uppercase mb-10" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: '#f5f0eb' }}>Our current active regions</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '1rem' }}>
