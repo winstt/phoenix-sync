@@ -37,13 +37,13 @@ const values = [
   { title: 'Legacy and Liberation', text: 'We honour the work and relationships that created this movement, carrying their lessons forward as we build what comes next. We exist to change the structures that create inequality, not to manage their symptoms.' },
 ]
 
-const partners: { name: string; logo: string }[] = [
-  { name: 'Anti Racist Cumbria', logo: funderAntiracist.url },
+const partners: { name: string; logo: string; href?: string }[] = [
+  { name: 'Anti Racist Cumbria', logo: funderAntiracist.url, href: 'https://antiracistcumbria.org' },
   { name: 'Inclusive North', logo: funderInclusiveNorth.url },
-  { name: 'Impact Hub Yorkshire', logo: funderImpactHub.url },
-  { name: 'The Ubele Initiative', logo: funderUbele.url },
-  { name: 'Black South West Network', logo: funderBswn.url },
-  { name: 'South Asian Health Action', logo: funderSouthAsian.url },
+  { name: 'Impact Hub Yorkshire', logo: funderImpactHub.url, href: 'https://yorkshire.impacthub.net' },
+  { name: 'The Ubele Initiative', logo: funderUbele.url, href: 'https://ubele.org' },
+  { name: 'Black South West Network', logo: funderBswn.url, href: 'https://www.blacksouthwestnetwork.org' },
+  { name: 'South Asian Health Action', logo: funderSouthAsian.url, href: 'https://www.sahauk.org' },
   { name: 'National Lottery Community Fund', logo: funderComfun.url },
 ]
 
