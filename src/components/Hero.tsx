@@ -39,7 +39,7 @@ export default function Hero() {
             letterSpacing: '-0.02em',
           }}
         >
-          <span style={{ color: '#E8570A', fontSize: '1.1em', display: 'inline-block', letterSpacing: '0.02em', marginBottom: '0.4em' }}>{hero.headlineOrange}</span>
+          <span className="a11y-no-scale" style={{ color: '#E8570A', fontSize: '1.1em', display: 'inline-block', letterSpacing: '0.02em', marginBottom: '0.4em' }}>{hero.headlineOrange}</span>
           <br />
           {hero.headlineWhite}
         </h1>
