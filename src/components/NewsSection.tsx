@@ -1,5 +1,4 @@
 import { ArrowRight } from 'lucide-react'
-import { Link } from 'react-router-dom'
 import { siteContent } from '../data/content'
 
 const { news } = siteContent

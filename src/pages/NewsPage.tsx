@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import PageHero from '../components/PageHero'
 
 export default function NewsPage() {
