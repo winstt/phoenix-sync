@@ -19,8 +19,8 @@ export default function PageHero({ eyebrow, heading, description, imageUrl, imag
         className="flex flex-col justify-center relative z-10"
         style={{
           padding: '2.5rem',
-          paddingTop: imageUrl ? 'calc(90px + 2rem)' : 'calc(110px + 1.5rem)',
-          paddingBottom: imageUrl ? '2rem' : '1.5rem',
+          paddingTop: imageUrl ? 'calc(90px + 1.5rem)' : 'calc(90px + 1rem)',
+          paddingBottom: imageUrl ? '1.5rem' : '1rem',
         }}
       >
         <p
