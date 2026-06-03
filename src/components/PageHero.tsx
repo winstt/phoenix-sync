@@ -23,12 +23,14 @@ export default function PageHero({ eyebrow, heading, description, imageUrl, imag
           paddingBottom: imageUrl ? '1.5rem' : '1rem',
         }}
       >
-        <p
-          className="font-semibold uppercase mb-3"
-          style={{ fontSize: '11px', letterSpacing: '0.16em', color: '#E8570A' }}
-        >
-          {eyebrow}
-        </p>
+        {eyebrow ? (
+          <p
+            className="font-semibold uppercase mb-3"
+            style={{ fontSize: '11px', letterSpacing: '0.16em', color: '#E8570A' }}
+          >
+            {eyebrow}
+          </p>
+        ) : null}
         <h1
           className="font-extrabold uppercase leading-none mb-4 text-cream a11y-no-scale"
           style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)', lineHeight: '0.95', letterSpacing: '-0.02em' }}
