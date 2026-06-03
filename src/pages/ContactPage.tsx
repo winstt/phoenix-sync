@@ -36,7 +36,7 @@ export default function ContactPage() {
         description="We welcome collaboration, conversation and connection. Reach out to learn more about our work and how you can be part of the movement."
       />
 
-      <section style={{ padding: '4rem 2.5rem', background: '#0d0d0d' }}>
+      <section style={{ padding: '1.5rem 2.5rem 3rem', background: '#0d0d0d' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'start' }}>
 
           {/* Left — info */}
@@ -143,7 +143,7 @@ const faqs = [
 function FAQSection() {
   const [open, setOpen] = useState<number | null>(0)
   return (
-    <section style={{ padding: '4rem 2.5rem 6rem', background: '#0d0d0d', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+    <section style={{ padding: '1.5rem 2.5rem 6rem', background: '#0d0d0d', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
       <div style={{ maxWidth: '820px', margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.75rem', fontWeight: 700, color: '#f5f0eb', marginBottom: '0.5rem' }}>Frequently asked questions</h2>
         <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.6)', marginBottom: '2.5rem' }}>Answers to some of the questions we hear most often.</p>
