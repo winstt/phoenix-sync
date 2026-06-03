@@ -122,9 +122,44 @@ button:focus-visible {
   border-radius: 4px;
 }
 
-/* ── HERO GRID ── */
+/* ── HERO ── */
+.home-hero > img {
+  object-position: center center;
+}
+
+.home-hero-content {
+  width: min(100%, 58rem);
+}
+
+.home-hero-heading-white {
+  display: block;
+  max-width: none;
+  white-space: nowrap;
+}
+
 .page-hero-image {
   min-height: clamp(360px, 95vw, 520px);
+}
+@media (max-width: 899px) {
+  .home-hero {
+    min-height: 100svh !important;
+  }
+
+  .home-hero > img {
+    width: 100% !important;
+    object-position: 68% center !important;
+  }
+
+  .home-hero-content {
+    justify-content: flex-end !important;
+    padding-top: 8rem !important;
+    padding-bottom: 3.5rem !important;
+    transform: none !important;
+  }
+
+  .home-hero-heading-white {
+    white-space: normal;
+  }
 }
 @media (min-width: 900px) {
   .hero-grid {

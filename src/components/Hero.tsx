@@ -6,17 +6,35 @@ const { hero } = siteContent
 export default function Hero() {
   return (
     <section
-      className="hero-grid relative"
+      className="home-hero relative overflow-hidden"
       aria-labelledby="hero-heading"
-      style={{ background: '#0d0d0d' }}
+      style={{ background: '#0d0d0d', minHeight: '100vh' }}
     >
-      {/* Left — text */}
+      {hero.imageUrl ? (
+        <img
+          src={hero.imageUrl}
+          alt=""
+          aria-hidden="true"
+          className="absolute right-0 top-0 h-full object-cover"
+          style={{ width: '61.5vw', objectPosition: 'center center' }}
+        />
+      ) : null}
       <div
-        className="flex flex-col justify-center relative z-10"
+        className="absolute inset-0"
+        aria-hidden="true"
         style={{
-          padding: '2.5rem',
-          paddingTop: 'calc(90px + 2rem)',
-          paddingBottom: '3rem',
+          background:
+            'linear-gradient(90deg, #0d0d0d 0%, #0d0d0d 44%, rgba(13,13,13,0.9) 52%, rgba(13,13,13,0.34) 66%, rgba(13,13,13,0.02) 84%), linear-gradient(0deg, #0d0d0d 0%, rgba(13,13,13,0.36) 20%, rgba(13,13,13,0) 46%), linear-gradient(180deg, rgba(13,13,13,0.56) 0%, rgba(13,13,13,0) 30%)',
+        }}
+      />
+
+      {/* Text overlay */}
+      <div
+        className="home-hero-content relative z-10 flex min-h-screen flex-col justify-center"
+        style={{
+          padding: 'clamp(9rem, 18vh, 15rem) clamp(1.875rem, 3.2vw, 3.75rem) clamp(4rem, 8vh, 6rem)',
+          maxWidth: '58rem',
+          transform: 'translateY(-3rem)',
         }}
       >
 
@@ -31,16 +49,16 @@ export default function Hero() {
         {/* Headline */}
         <h1
           id="hero-heading"
-          className="font-extrabold uppercase leading-none mb-6 text-cream a11y-no-scale"
+          className="font-extrabold uppercase mb-7 text-cream a11y-no-scale"
           style={{
-            fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)',
-            lineHeight: '0.95',
-            letterSpacing: '-0.02em',
+            fontSize: 'clamp(1rem, 1.06vw, 1.2rem)',
+            lineHeight: '1.25',
+            letterSpacing: '0',
           }}
         >
-          <span className="a11y-no-scale" style={{ color: '#E8570A', display: 'inline-block', letterSpacing: '0.02em', marginBottom: '0.4em' }}>{hero.headlineOrange}</span>
+          <span className="a11y-no-scale" style={{ color: '#E8570A', display: 'block', letterSpacing: '0' }}>{hero.headlineOrange}</span>
           <br />
-          {hero.headlineWhite}
+          <span className="home-hero-heading-white a11y-no-scale">{hero.headlineWhite}</span>
         </h1>
 
         {/* Description */}
@@ -65,8 +83,8 @@ export default function Hero() {
             style={{
               background: '#C2185B',
               color: 'white',
-              padding: '14px 28px',
-              fontSize: '15px',
+              padding: '20px 38px',
+              fontSize: '1.15rem',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.background = '#E91E8C')}
             onMouseLeave={(e) => (e.currentTarget.style.background = '#C2185B')}
@@ -80,8 +98,8 @@ export default function Hero() {
             style={{
               background: 'transparent',
               color: '#f5f0eb',
-              padding: '14px 28px',
-              fontSize: '15px',
+              padding: '20px 38px',
+              fontSize: '1.15rem',
               border: '1.5px solid rgba(255,255,255,0.1)',
             }}
             onMouseEnter={(e) => {
@@ -97,74 +115,6 @@ export default function Hero() {
             <ArrowRight size={16} />
           </a>
         </div>
-      </div>
-
-      {/* Right — image / gradient */}
-      <div
-        className="relative overflow-hidden"
-        style={{ minHeight: '46vw' }}
-        aria-hidden="true"
-      >
-        {hero.imageUrl ? (
-          <img
-            src={hero.imageUrl}
-            alt=""
-            style={{
-              position: 'absolute',
-              inset: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              objectPosition: 'center',
-            }}
-          />
-        ) : (
-          // Placeholder gradient — replace with real image
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              background:
-                'linear-gradient(135deg, #1a1a1a 0%, #2a1010 40%, #0d0d0d 100%)',
-            }}
-          >
-            {/* Phoenix graphic placeholder */}
-            <svg
-              width="100%"
-              height="100%"
-              viewBox="0 0 400 400"
-              style={{ opacity: 0.08 }}
-              aria-hidden="true"
-            >
-              <circle cx="200" cy="200" r="180" stroke="#E8570A" strokeWidth="60" fill="none" />
-              <circle cx="200" cy="200" r="80" stroke="#C2185B" strokeWidth="30" fill="none" />
-            </svg>
-          </div>
-        )}
-        {/* Fade overlay — left edge */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'linear-gradient(to right, #0d0d0d 0%, transparent 25%)',
-          }}
-        />
-        {/* Fade overlay — bottom (mobile) */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'linear-gradient(to top, #0d0d0d 0%, transparent 30%)',
-          }}
-        />
-        {/* Fade overlay — top (mobile) */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'linear-gradient(to bottom, #0d0d0d 0%, transparent 20%)',
-          }}
-        />
       </div>
     </section>
   )
