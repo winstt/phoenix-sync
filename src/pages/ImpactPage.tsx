@@ -30,7 +30,7 @@ const stats = [
   { num: '3000+', label: 'community members impacted' },
   { num: '200+', label: 'community organisations in our network' },
   { num: '£4M', label: 'upcoming grants round in collaboration with TNLCF' },
-  { num: '2026', label: 'upcoming opportunity for communities to get involved' },
+  { num: '2026', label: 'upcoming opportunity for communities to get involved in our work' },
 ]
 
 const regions = ['North East & Cumbria', 'Yorkshire & Humber', 'North West', 'East Midlands', 'West Midlands', 'East of England', 'South West', 'Greater London', 'South East']
