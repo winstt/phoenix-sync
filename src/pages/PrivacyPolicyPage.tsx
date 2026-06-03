@@ -24,6 +24,7 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <PageHero
+        size="compact"
         eyebrow=""
         heading="Privacy policy."
         description="Last updated: 11 May 2026 · Next review: 11 May 2027"
