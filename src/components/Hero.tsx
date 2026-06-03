@@ -155,6 +155,14 @@ export default function Hero() {
             background: 'linear-gradient(to top, #0d0d0d 0%, transparent 30%)',
           }}
         />
+        {/* Fade overlay — top (mobile) */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(to bottom, #0d0d0d 0%, transparent 20%)',
+          }}
+        />
       </div>
     </section>
   )
