@@ -56,17 +56,18 @@ export default function ImpactPage() {
 
       {/* Stats bar - 2x2 grid */}
       <div style={{ background: '#1a1a1a', borderTop: '1px solid rgba(255,255,255,0.1)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))', width: '100%', overflow: 'hidden' }}>
           {stats.map((s, i) => (
             <div
               key={s.num}
               style={{
-                padding: 'clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2vw, 1.75rem)',
+                padding: 'clamp(1rem, 3vw, 2rem) clamp(0.9rem, 2vw, 1.5rem)',
                 borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none',
                 borderTop: '1px solid rgba(255,255,255,0.06)',
+                minWidth: 0,
               }}
             >
-              <CountUp value={s.num} noCount={s.num === '2026'} className="a11y-no-scale" style={{ fontSize: 'clamp(3.5rem, 12vw, 4.5rem)', fontWeight: 800, color: '#E8570A', lineHeight: 1, display: 'block', fontVariantNumeric: 'tabular-nums' }} />
+              <CountUp value={s.num} noCount={s.num === '2026'} className="a11y-no-scale" style={{ fontSize: 'clamp(2.5rem, 9vw, 3.75rem)', fontWeight: 800, color: '#E8570A', lineHeight: 1, display: 'block', fontVariantNumeric: 'tabular-nums' }} />
               <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', marginTop: '8px', lineHeight: 1.35 }}>{s.label}</p>
             </div>
           ))}
