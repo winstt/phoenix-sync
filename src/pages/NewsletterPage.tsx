@@ -111,7 +111,7 @@ export default function NewsletterPage() {
       <section
         style={{
           background: '#0d0d0d',
-          padding: '4rem 2.5rem 6rem',
+          padding: '1.5rem 2.5rem 6rem',
           borderTop: '1px solid rgba(255,255,255,0.06)',
         }}
       >
