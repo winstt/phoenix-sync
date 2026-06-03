@@ -19,11 +19,11 @@ export default function CountUp({ value, duration = 1600, className, style, noCo
       setDisplay(value)
       return
     }
-    const prefersReduced =
+    const isReduced = () =>
       typeof window !== 'undefined' &&
       (document.documentElement.classList.contains('a11y-reduce-motion') ||
         window.matchMedia?.('(prefers-reduced-motion: reduce)').matches)
-    if (prefersReduced) {
+    if (isReduced()) {
       setDisplay(value)
       startedRef.current = true
       return
@@ -33,6 +33,12 @@ export default function CountUp({ value, duration = 1600, className, style, noCo
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !startedRef.current) {
+          if (isReduced()) {
+            setDisplay(value)
+            startedRef.current = true
+            observer.disconnect()
+            return
+          }
           startedRef.current = true
           animate()
         }
@@ -40,7 +46,16 @@ export default function CountUp({ value, duration = 1600, className, style, noCo
       { threshold: 0.4 }
     )
     observer.observe(el)
-    return () => observer.disconnect()
+    const mo = new MutationObserver(() => {
+      if (isReduced()) {
+        setDisplay(value)
+        startedRef.current = true
+        observer.disconnect()
+        mo.disconnect()
+      }
+    })
+    mo.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+    return () => { observer.disconnect(); mo.disconnect() }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value, duration, noCount])
 
