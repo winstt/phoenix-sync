@@ -1,21 +1,10 @@
-import { useEffect, useRef } from 'react'
 import { siteContent } from '../data/content'
+import CountUp from './CountUp'
 
 const { impact } = siteContent
 
 export default function ImpactSection() {
-  const statsRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const el = statsRef.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) el.classList.add('in-view') },
-      { threshold: 0.15 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [])
 
   return (
     <section
@@ -40,24 +29,25 @@ export default function ImpactSection() {
           </p>
           <h2
             id="impact-heading"
-            className="font-bold uppercase mb-5"
+            className="font-extrabold uppercase mb-5"
             style={{
-              fontSize: 'clamp(2.25rem, 4.5vw, 3.25rem)',
-              letterSpacing: '-0.01em',
+              fontSize: 'clamp(2.75rem, 7.5vw, 6rem)',
+              lineHeight: '0.95',
+              letterSpacing: '-0.02em',
               color: '#f5f0eb',
             }}
           >
             {impact.title}
           </h2>
-          <p style={{ color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', marginBottom: '1.5rem' }}>
+          <p style={{ color: 'rgba(245,240,235,0.7)', lineHeight: '1.7', marginBottom: '1.5rem', fontSize: '1.05rem', maxWidth: '560px' }}>
             {impact.description}
           </p>
 
           {/* Stats */}
           <div
-            ref={statsRef}
             aria-label="Impact statistics"
             className="counter-group"
+
             style={{
               display: 'grid',
               gridTemplateColumns: '1fr 1fr',
@@ -76,12 +66,12 @@ export default function ImpactSection() {
                   padding: '1.25rem',
                 }}
               >
-                <div
+                <CountUp
+                  value={stat.num}
                   className="font-extrabold"
-                  style={{ fontSize: '1.8rem', color: '#E8570A', fontVariantNumeric: 'tabular-nums' }}
-                >
-                  {stat.num}
-                </div>
+                  style={{ fontSize: '2rem', color: '#E8570A', fontVariantNumeric: 'tabular-nums', display: 'block' }}
+                />
+
                 <div style={{ fontSize: '12px', color: 'rgba(245,240,235,0.6)', marginTop: '4px', lineHeight: '1.4' }}>
                   {stat.label}
                 </div>

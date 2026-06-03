@@ -33,7 +33,9 @@ export default function Hero() {
           id="hero-heading"
           className="font-extrabold uppercase leading-none mb-6 text-cream"
           style={{
-            fontSize: 'clamp(2.5rem, 6vw, 4.25rem)',
+            fontSize: 'clamp(2.75rem, 8vw, 6rem)',
+            lineHeight: '0.95',
+
             letterSpacing: '-0.02em',
           }}
         >
@@ -46,10 +48,11 @@ export default function Hero() {
         <p
           className="mb-10"
           style={{
-            fontSize: '0.9rem',
-            color: 'rgba(245,240,235,0.6)',
+            fontSize: '1.05rem',
+            color: 'rgba(245,240,235,0.7)',
             lineHeight: '1.7',
-            maxWidth: '480px',
+            maxWidth: '520px',
+
           }}
         >
           {hero.description}

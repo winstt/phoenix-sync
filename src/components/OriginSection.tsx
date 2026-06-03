@@ -20,9 +20,11 @@ export default function OriginSection() {
             id="origin-heading"
             className="font-extrabold uppercase"
             style={{
-              fontSize: 'clamp(2.25rem, 4.5vw, 3.25rem)',
+              fontSize: 'clamp(2.75rem, 7.5vw, 6rem)',
               color: '#f5f0eb',
-              lineHeight: '1.1',
+              lineHeight: '0.95',
+              letterSpacing: '-0.02em',
+
               marginBottom: '4rem',
             }}
           >
