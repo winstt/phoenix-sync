@@ -235,6 +235,6 @@ html.a11y-focus :is(a[href], button, input, textarea, select, summary, [role="bu
 }
 
 html body footer .footer-registration-line.footer-registration-line {
-  font-size: calc(8px * var(--a11y-text-scale)) !important;
-  line-height: 1.25 !important;
+  font-size: 10px !important;
+  line-height: 1.35 !important;
 }
