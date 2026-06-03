@@ -90,6 +90,7 @@ export default function ImpactSection() {
               >
                 <CountUp
                   value={stat.num}
+                  noCount={stat.num === '2026'}
                   className="font-extrabold"
                   style={{ fontSize: '2rem', color: '#E8570A', fontVariantNumeric: 'tabular-nums', display: 'block' }}
                 />

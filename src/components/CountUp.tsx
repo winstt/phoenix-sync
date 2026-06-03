@@ -5,15 +5,20 @@ interface CountUpProps {
   duration?: number
   className?: string
   style?: React.CSSProperties
+  noCount?: boolean
 }
 
 // Parses a value like "£4M", "3000+", "200+", "2026" and animates the numeric portion from 0.
-export default function CountUp({ value, duration = 1600, className, style }: CountUpProps) {
+export default function CountUp({ value, duration = 1600, className, style, noCount = false }: CountUpProps) {
   const ref = useRef<HTMLSpanElement>(null)
-  const [display, setDisplay] = useState<string>(() => formatStart(value))
+  const [display, setDisplay] = useState<string>(() => (noCount ? value : formatStart(value)))
   const startedRef = useRef(false)
 
   useEffect(() => {
+    if (noCount) {
+      setDisplay(value)
+      return
+    }
     const el = ref.current
     if (!el) return
     const observer = new IntersectionObserver(
@@ -28,7 +33,7 @@ export default function CountUp({ value, duration = 1600, className, style }: Co
     observer.observe(el)
     return () => observer.disconnect()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [value, duration])
+  }, [value, duration, noCount])
 
   function animate() {
     const parsed = parseValue(value)
