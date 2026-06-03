@@ -29,12 +29,12 @@ export default function ImpactSection() {
   return (
     <section
       aria-labelledby="impact-heading"
-      style={{ padding: '2rem 2.5rem' }}
+      style={{ padding: '2rem clamp(1rem, 5vw, 2.5rem)' }}
     >
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))',
           gap: '4rem',
           alignItems: 'start',
         }}
@@ -72,8 +72,8 @@ export default function ImpactSection() {
 
             style={{
               display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '1rem',
+              gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+              gap: 'clamp(0.65rem, 2.5vw, 1rem)',
               marginTop: '2rem',
             }}
           >
@@ -85,14 +85,15 @@ export default function ImpactSection() {
                   background: '#1a1a1a',
                   border: '1px solid rgba(255,255,255,0.1)',
                   borderRadius: '8px',
-                  padding: '1.25rem',
+                  padding: 'clamp(0.85rem, 3vw, 1.25rem)',
+                  minWidth: 0,
                 }}
               >
                 <CountUp
                   value={stat.num}
                   noCount={stat.num === '2026'}
                   className="font-extrabold a11y-no-scale"
-                  style={{ fontSize: 'clamp(2.75rem, 7vw, 3.75rem)', color: '#E8570A', fontVariantNumeric: 'tabular-nums', display: 'block', lineHeight: 1 }}
+                  style={{ fontSize: 'clamp(2.15rem, 9vw, 3.1rem)', color: '#E8570A', fontVariantNumeric: 'tabular-nums', display: 'block', lineHeight: 1 }}
                 />
 
                 <div style={{ fontSize: '12px', color: 'rgba(245,240,235,0.6)', marginTop: '4px', lineHeight: '1.4' }}>
