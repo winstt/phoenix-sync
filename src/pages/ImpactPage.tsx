@@ -52,13 +52,21 @@ export default function ImpactPage() {
         imageUrl={`${import.meta.env.BASE_URL}images/impact.jpeg`}
       />
 
-      {/* Stats bar */}
-      <div style={{ background: '#1a1a1a', borderTop: '1px solid rgba(255,255,255,0.1)', borderBottom: '1px solid rgba(255,255,255,0.1)', padding: '2rem 2.5rem' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '2rem', maxWidth: '900px' }}>
-          {stats.map(s => (
-            <div key={s.num}>
-              <p style={{ fontSize: '2.4rem', fontWeight: 800, color: '#E8570A', lineHeight: 1 }}>{s.num}</p>
-              <p style={{ fontSize: '12px', color: 'rgba(245,240,235,0.6)', marginTop: '6px', lineHeight: 1.4 }}>{s.label}</p>
+      {/* Stats bar - 2x2 grid */}
+      <div style={{ background: '#1a1a1a', borderTop: '1px solid rgba(255,255,255,0.1)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}>
+          {stats.map((s, i) => (
+            <div
+              key={s.num}
+              style={{
+                padding: '2.5rem 1.75rem',
+                minHeight: '220px',
+                borderRight: i % 2 === 0 ? '1px solid rgba(255,255,255,0.1)' : 'none',
+                borderBottom: i < 2 ? '1px solid rgba(255,255,255,0.1)' : 'none',
+              }}
+            >
+              <p style={{ fontSize: 'clamp(2.4rem, 6vw, 3.4rem)', fontWeight: 800, color: '#E8570A', lineHeight: 1 }}>{s.num}</p>
+              <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', marginTop: '12px', lineHeight: 1.4 }}>{s.label}</p>
             </div>
           ))}
         </div>
