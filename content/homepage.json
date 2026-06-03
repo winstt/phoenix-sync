@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "eyebrow": "A Global Majority movement",
+    "headlineOrange": "Funding Justice.",
+    "headlineWhite": "Redistributing Power and Resources to Communities Across the UK.",
+    "description": "The Phoenix Community Trust exists to dismantle structural racism and end funding inequity by consolidating, resourcing and reinforcing the collective power, capacity and infrastructure of Global Majority communities across the UK."
+  },
+  "stats": [
+    {
+      "num": "2026",
+      "label": "upcoming opportunity for communities to get involved in Phoenix's strategic development in our work"
+    },
+    {
+      "num": "3000+",
+      "label": "community members impacted"
+    },
+    {
+      "num": "200+",
+      "label": "community organisations in our network"
+    },
+    {
+      "num": "\u00a34M",
+      "label": "upcoming grants round in collaboration with The National Lottery Community Fund"
+    }
+  ]
+}
