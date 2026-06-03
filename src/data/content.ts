@@ -224,7 +224,7 @@ export const siteContent = {
           { label: 'Grants', href: '/grants' },
           { label: 'Our impact', href: '/impact' },
           { label: 'Our network', href: '/impact#partners-section' },
-          { label: 'Join the community', href: '/opportunities' },
+          { label: 'Join the community', href: '/newsletter' },
         ],
       },
     },

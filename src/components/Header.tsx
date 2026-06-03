@@ -150,7 +150,7 @@ export default function Header() {
 
         {/* Drawer CTA */}
         <Link
-          to="/opportunities"
+          to={nav.cta.href}
           onClick={() => setDrawerOpen(false)}
           className="flex items-center justify-center gap-2 font-bold uppercase tracking-wider rounded text-white no-underline transition-colors"
           style={{
