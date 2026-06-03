@@ -74,7 +74,7 @@ export default function AccessibilityPage() {
           {section('Enforcement procedure', <>
             {p('If you contact us with a complaint and you are not happy with our response, you can contact the Equality and Human Rights Commission (EHRC), which enforces accessibility regulations in England, Scotland and Wales.')}
             {p('Equality Advisory and Support Service (EASS)')}
-            {p('Website: www.equalityadvisoryservice.com · Freephone: 0808 800 0082')}
+            {p(<>Website: <a href="https://www.equalityadvisoryservice.com" target="_blank" rel="noopener noreferrer" style={{ color: '#E8570A', textDecoration: 'underline', textUnderlineOffset: '4px', textDecorationThickness: '2px' }}>www.equalityadvisoryservice.com</a> · Freephone: 0808 800 0082</>)}
           </>)}
 
         </div>
