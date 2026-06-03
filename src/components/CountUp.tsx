@@ -19,6 +19,15 @@ export default function CountUp({ value, duration = 1600, className, style, noCo
       setDisplay(value)
       return
     }
+    const prefersReduced =
+      typeof window !== 'undefined' &&
+      (document.documentElement.classList.contains('a11y-reduce-motion') ||
+        window.matchMedia?.('(prefers-reduced-motion: reduce)').matches)
+    if (prefersReduced) {
+      setDisplay(value)
+      startedRef.current = true
+      return
+    }
     const el = ref.current
     if (!el) return
     const observer = new IntersectionObserver(
