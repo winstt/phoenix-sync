@@ -75,6 +75,8 @@ export default function ImpactSection() {
               gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
               gap: 'clamp(0.65rem, 2.5vw, 1rem)',
               marginTop: '2rem',
+              width: '100%',
+              overflow: 'hidden',
             }}
           >
             {impact.stats.map((stat, i) => (
