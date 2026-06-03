@@ -5,7 +5,7 @@ import antiRacistCumbriaPhoto from '../assets/impact-partners/anti_racistt_cumbr
 import inclusiveNorthPhoto from '../assets/impact-partners/inclusive_northh.png.asset.json'
 import impactHubYorkshirePhoto from '../assets/impact-partners/impact_hub_yorkshire.png.asset.json'
 import ubeleInitiativePhoto from '../assets/impact-partners/the_ubele_initiativee.png.asset.json'
-import blackSouthWestNetworkPhoto from '../assets/impact-partners/black_south_west_networkk.png.asset.json'
+import blackSouthWestNetworkPhoto from '../assets/impact-partners/black_south_west_network_new.png.asset.json'
 import southAsianHealthActionPhoto from '../assets/impact-partners/south_asian_health_action.png.asset.json'
 
 import funderAntiracist from '../assets/funders/antiracist.png.asset.json'
