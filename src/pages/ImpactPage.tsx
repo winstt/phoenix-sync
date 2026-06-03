@@ -124,20 +124,17 @@ export default function ImpactPage() {
 
       {/* Funders */}
       <section style={{ padding: '4rem 2.5rem', background: '#0d0d0d', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-        <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-          <p className="font-semibold uppercase mb-10" style={{ fontSize: '12px', letterSpacing: '0.14em', color: '#E8570A' }}>Our current partners and funders</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '1rem', alignItems: 'stretch', justifyItems: 'stretch' }}>
-            {funderLogos.map(l => {
-              const img = <img src={l.url} alt={l.name} loading="lazy" style={{ maxHeight: '100%', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
-              const boxStyle = { height: '100px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem', background: '#161616', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px' } as const
-              return l.href ? (
-                <a key={l.name} href={l.href} target="_blank" rel="noopener noreferrer" aria-label={l.name} style={{ ...boxStyle, cursor: 'pointer' }}>{img}</a>
-              ) : (
-                <div key={l.name} style={boxStyle}>{img}</div>
-              )
-            })}
-          </div>
-
+        <p className="font-semibold uppercase mb-10" style={{ fontSize: '12px', letterSpacing: '0.14em', color: '#E8570A' }}>Our current partners and funders</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '1rem', alignItems: 'stretch', justifyItems: 'stretch' }}>
+          {funderLogos.map(l => {
+            const img = <img src={l.url} alt={l.name} loading="lazy" style={{ maxHeight: '100%', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+            const boxStyle = { height: '100px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem', background: '#161616', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px' } as const
+            return l.href ? (
+              <a key={l.name} href={l.href} target="_blank" rel="noopener noreferrer" aria-label={l.name} style={{ ...boxStyle, cursor: 'pointer' }}>{img}</a>
+            ) : (
+              <div key={l.name} style={boxStyle}>{img}</div>
+            )
+          })}
         </div>
       </section>
     </>
