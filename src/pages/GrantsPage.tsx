@@ -7,7 +7,7 @@ export default function GrantsPage() {
       <PageHero
         eyebrow="Grants"
         heading="Funding justice in action."
-        description="The Phoenix Community Trust is committed to redistributing power and resources to Global Majority communities across the UK — through grants, investment, and long-term community infrastructure."
+        description="The Phoenix Community Trust is committed to redistributing power and resources to Global Majority communities across the UK - through grants, investment, and long-term community infrastructure."
         imageUrl={`${import.meta.env.BASE_URL}images/grants.jpeg`}
       />
 
@@ -27,7 +27,7 @@ export default function GrantsPage() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'start' }}>
           <div>
             <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.6)', lineHeight: '1.75', marginBottom: '1.25rem' }}>
-              We are working with The National Lottery Community Fund (TNLCF) — one of the UK's largest funders of community projects that help people connect and build a better future — to deliver our 2026 grants round.
+              We are working with The National Lottery Community Fund (TNLCF) - one of the UK's largest funders of community projects that help people connect and build a better future - to deliver our 2026 grants round.
             </p>
             <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.6)', lineHeight: '1.75' }}>
               This collaboration reflects our commitment to redistributing power and resources to Global Majority communities, and to building a funding system that truly reflects the communities it serves.
@@ -36,12 +36,12 @@ export default function GrantsPage() {
           {/* Grant card */}
           <div style={{ background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '2rem' }}>
             <p style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#E8570A', marginBottom: '0.75rem' }}>2026 Grants Round</p>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#f5f0eb', marginBottom: '1rem' }}>New grants round — coming soon</h3>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#f5f0eb', marginBottom: '1rem' }}>New grants round - coming soon</h3>
             <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.6', marginBottom: '1.5rem' }}>
               Details of our 2026 grants round with TNLCF will be announced soon. Register your interest below to be among the first to hear when applications open.
             </p>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-              {['Applications opening 2026 — register interest now', 'Open to organisations across all UK regions', 'Targeted at Global Majority community-led organisations', '£4M available in collaboration with TNLCF'].map(item => (
+              {['Applications opening 2026 - register interest now', 'Open to organisations across all UK regions', 'Targeted at Global Majority community-led organisations', '£4M available in collaboration with TNLCF'].map(item => (
                 <li key={item} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                   <span style={{ color: '#E8570A', flexShrink: 0, marginTop: '2px' }}>✓</span>
                   <span style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)' }}>{item}</span>

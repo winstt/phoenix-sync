@@ -39,7 +39,7 @@ export default function ContactPage() {
       <section style={{ padding: '1.5rem 2.5rem 3rem', background: '#0d0d0d' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'start' }}>
 
-          {/* Left — info */}
+          {/* Left - info */}
           <div>
             <div style={{ marginBottom: '2.5rem' }}>
               <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#f5f0eb', marginBottom: '0.75rem' }}>Email us</h3>
@@ -73,7 +73,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right — form */}
+          {/* Right - form */}
           <div>
             <h2 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#f5f0eb', marginBottom: '1.75rem' }}>Send us a message</h2>
             {sent ? (
@@ -124,11 +124,11 @@ export default function ContactPage() {
 const faqs = [
   {
     q: 'Why has the name of the organisation changed?',
-    a: "Our new name marks the beginning of an exciting new chapter. As we move into this next phase of our journey, we wanted a name that truly reflects who we are — honouring the deep roots of everything that came before, while capturing the renewed energy and ambition we have for the future. The Phoenix Community Trust feels like us: it puts community front and centre. Exactly where it should be.",
+    a: "Our new name marks the beginning of an exciting new chapter. As we move into this next phase of our journey, we wanted a name that truly reflects who we are - honouring the deep roots of everything that came before, while capturing the renewed energy and ambition we have for the future. The Phoenix Community Trust feels like us: it puts community front and centre. Exactly where it should be.",
   },
   {
     q: 'Who does The Phoenix Community Trust serve?',
-    a: "We serve socially and economically marginalised Black and Global Majority communities across the UK — communities that hold the expertise and vision to direct their own futures, who have been systematically underfunded and underserved.\n\nOur work is about redistributing power and resources, building community infrastructure, and dismantling the structural barriers that have kept funding from flowing where it's needed most. We exist not to manage inequality, but to change the conditions that create it.",
+    a: "We serve socially and economically marginalised Black and Global Majority communities across the UK - communities that hold the expertise and vision to direct their own futures, who have been systematically underfunded and underserved.\n\nOur work is about redistributing power and resources, building community infrastructure, and dismantling the structural barriers that have kept funding from flowing where it's needed most. We exist not to manage inequality, but to change the conditions that create it.",
   },
   {
     q: 'Who leads The Phoenix Community Trust?',
@@ -136,7 +136,7 @@ const faqs = [
   },
   {
     q: 'How do communities shape your decisions?',
-    a: "Community-led decision making isn't an aspiration for us, it's a founding commitment. Our board of trustees is made up of people with deep roots in and alongside Black and Global Majority communities, bringing lived experience into the heart of our governance.\n\nWe're also honest that we're still building. As we grow, we are actively developing the structures and processes that ensure communities don't just inform our decisions — they direct them. We'll be sharing more about how that takes shape as we move forward.",
+    a: "Community-led decision making isn't an aspiration for us, it's a founding commitment. Our board of trustees is made up of people with deep roots in and alongside Black and Global Majority communities, bringing lived experience into the heart of our governance.\n\nWe're also honest that we're still building. As we grow, we are actively developing the structures and processes that ensure communities don't just inform our decisions - they direct them. We'll be sharing more about how that takes shape as we move forward.",
   },
 ]
 

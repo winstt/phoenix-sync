@@ -44,7 +44,7 @@ export default function TermsPage() {
           ])}
 
           {h2('3. Intellectual property')}
-          {p('All content on this Website — including but not limited to text, graphics, logos, photographs, and the overall design — is owned by or licensed to The Phoenix Community Trust and is protected by UK copyright and intellectual property law.')}
+          {p('All content on this Website - including but not limited to text, graphics, logos, photographs, and the overall design - is owned by or licensed to The Phoenix Community Trust and is protected by UK copyright and intellectual property law.')}
           {p('You may view and print content from this Website for your own personal, non-commercial use only. You must not reproduce, distribute, modify, or create derivative works of any content without our express written consent.')}
           {p('Trustee photographs are used with the permission of the individuals concerned and remain their own property.')}
 

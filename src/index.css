@@ -191,7 +191,7 @@ button:focus-visible {
 /* Accessibility widget effects */
 :root { --a11y-text-scale: 1; }
 
-/* Scale text content only — leave layout containers (widths/heights/padding) untouched.
+/* Scale text content only - leave layout containers (widths/heights/padding) untouched.
    Targets only inline/text elements; skips the widget itself via .a11y-no-scale. */
 body :is(p, h1, h2, h3, h4, h5, h6, li, a, span, blockquote, label, input, textarea, button, td, th, dd, dt, figcaption, cite, em, strong, small):not(.a11y-no-scale):not(.a11y-no-scale *) {
   font-size: calc(1em * var(--a11y-text-scale)) !important;
