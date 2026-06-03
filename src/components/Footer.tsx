@@ -69,7 +69,7 @@ export default function Footer() {
               onError={e => { (e.target as HTMLImageElement).src = 'https://newphx.karrota.wtf/wp-content/uploads/2026/05/ThePhoenix-LogoPNG-1.png' }}
             />
           </div>
-          <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', maxWidth: '240px', margin: '1rem 0' }}>
+          <p style={{ fontSize: '12px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', maxWidth: '240px', margin: '1rem 0' }}>
             {footer.tagline}
           </p>
         </div>
@@ -88,7 +88,7 @@ export default function Footer() {
                 <Link
                   to={routeMap[link.label] ?? link.href}
                   className="no-underline transition-colors"
-                  style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)' }}
+                  style={{ fontSize: '12px', color: 'rgba(245,240,235,0.6)' }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = '#E8570A')}
                   onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(245,240,235,0.6)')}
                 >
@@ -113,7 +113,7 @@ export default function Footer() {
                 <Link
                   to={routeMap[link.label] ?? link.href}
                   className="no-underline transition-colors"
-                  style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)' }}
+                  style={{ fontSize: '12px', color: 'rgba(245,240,235,0.6)' }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = '#E8570A')}
                   onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(245,240,235,0.6)')}
                 >
@@ -136,7 +136,7 @@ export default function Footer() {
             <a
               href={`mailto:${footer.getInTouch.email}`}
               className="no-underline transition-colors"
-              style={{ fontSize: '13px', color: '#E8570A' }}
+              style={{ fontSize: '12px', color: '#E8570A' }}
               onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
               onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
             >
