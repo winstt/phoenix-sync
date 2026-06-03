@@ -66,7 +66,9 @@ export default function ImpactSection() {
           {/* Stats */}
           <div
             aria-label="Impact statistics"
+            ref={groupRef}
             className="counter-group"
+
 
             style={{
               display: 'grid',
