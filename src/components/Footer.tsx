@@ -205,7 +205,7 @@ export default function Footer() {
         </nav>
 
         {/* Address + company number */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '1px', textAlign: 'right' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '0.75rem', textAlign: 'right', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
           <span className="footer-registration-line a11y-no-scale" style={{ fontSize: '8px', lineHeight: 1.25, color: 'rgba(245,240,235,0.5)' }}>
             Registered address: {footer.address}
           </span>
