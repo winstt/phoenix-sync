@@ -131,6 +131,11 @@ button:focus-visible {
   width: min(100%, 56rem);
 }
 
+.home-hero-heading-white {
+  display: block;
+  max-width: 52rem;
+}
+
 .page-hero-image {
   min-height: clamp(360px, 95vw, 520px);
 }
@@ -140,6 +145,7 @@ button:focus-visible {
   }
 
   .home-hero > img {
+    width: 100% !important;
     object-position: 68% center !important;
   }
 
