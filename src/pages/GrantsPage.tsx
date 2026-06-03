@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
 
 export default function GrantsPage() {
@@ -59,11 +60,11 @@ export default function GrantsPage() {
         <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', maxWidth: '640px', marginBottom: '2rem' }}>
           Be part of a national movement strengthening leadership and collaboration across the UK. Register your interest to receive updates on upcoming grants, events, and opportunities to engage with The Phoenix Community Trust.
         </p>
-        <a href={`${import.meta.env.BASE_URL}#/contact`}
+        <Link to="/newsletter"
           style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#C2185B', color: 'white', textDecoration: 'none', padding: '14px 28px', borderRadius: '6px', fontSize: '15px', fontWeight: 600 }}
         >
           Register your interest →
-        </a>
+        </Link>
       </section>
     </>
   )
