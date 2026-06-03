@@ -83,7 +83,7 @@ export default function PrivacyPolicyPage() {
 
           {h2('Contact & complaints')}
           {p('If you have concerns about how we handle your data, please contact us at info@phoenix-trust.co.uk. You also have the right to lodge a complaint with the Information Commissioner\'s Office (ICO):')}
-          {p('Website: ico.org.uk · Helpline: 0303 123 1113 · Post: Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF')}
+          {p(<>Website: <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" style={{ color: '#E8570A', textDecoration: 'underline', textUnderlineOffset: '4px', textDecorationThickness: '2px' }}>ico.org.uk</a> · Helpline: 0303 123 1113 · Post: Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF</>)}
 
         </div>
       </section>
