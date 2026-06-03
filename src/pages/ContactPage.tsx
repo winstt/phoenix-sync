@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Instagram, Facebook, Youtube, Linkedin } from 'lucide-react'
+import { Instagram, Facebook, Youtube, Linkedin, ChevronDown } from 'lucide-react'
 import PageHero from '../components/PageHero'
 
 // Bluesky icon (not in lucide-react)
@@ -115,6 +115,66 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection />
     </>
+  )
+}
+
+const faqs = [
+  {
+    q: 'Why has the name of the organisation changed?',
+    a: "Our new name marks the beginning of an exciting new chapter. As we move into this next phase of our journey, we wanted a name that truly reflects who we are — honouring the deep roots of everything that came before, while capturing the renewed energy and ambition we have for the future. The Phoenix Community Trust feels like us: it puts community front and centre. Exactly where it should be.",
+  },
+  {
+    q: 'Who does The Phoenix Community Trust serve?',
+    a: "We serve socially and economically marginalised Black and Global Majority communities across the UK — communities that hold the expertise and vision to direct their own futures, who have been systematically underfunded and underserved.\n\nOur work is about redistributing power and resources, building community infrastructure, and dismantling the structural barriers that have kept funding from flowing where it's needed most. We exist not to manage inequality, but to change the conditions that create it.",
+  },
+  {
+    q: 'Who leads The Phoenix Community Trust?',
+    a: "We're guided by an incredible and passionate team of trustees who bring a wealth of expertise and lived experience to everything we do. They are the heart of our governance and the backbone of our mission. You can find out more about each of them on the Our Impact page.",
+  },
+  {
+    q: 'How do communities shape your decisions?',
+    a: "Community-led decision making isn't an aspiration for us, it's a founding commitment. Our board of trustees is made up of people with deep roots in and alongside Black and Global Majority communities, bringing lived experience into the heart of our governance.\n\nWe're also honest that we're still building. As we grow, we are actively developing the structures and processes that ensure communities don't just inform our decisions — they direct them. We'll be sharing more about how that takes shape as we move forward.",
+  },
+]
+
+function FAQSection() {
+  const [open, setOpen] = useState<number | null>(0)
+  return (
+    <section style={{ padding: '4rem 2.5rem 6rem', background: '#0d0d0d', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+      <div style={{ maxWidth: '820px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.75rem', fontWeight: 700, color: '#f5f0eb', marginBottom: '0.5rem' }}>Frequently asked questions</h2>
+        <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.6)', marginBottom: '2.5rem' }}>Answers to some of the questions we hear most often.</p>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+          {faqs.map((item, i) => {
+            const isOpen = open === i
+            return (
+              <div key={i} style={{ background: '#1a1a1a', border: `1px solid ${isOpen ? 'rgba(232,87,10,0.4)' : 'rgba(255,255,255,0.1)'}`, borderRadius: '12px', overflow: 'hidden', transition: 'border-color 0.25s ease' }}>
+                <button
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                  style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', padding: '1.25rem 1.5rem', background: 'transparent', border: 'none', cursor: 'pointer', textAlign: 'left', color: '#f5f0eb', fontSize: '1rem', fontWeight: 600, transition: 'background 0.2s' }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.03)' }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'transparent' }}
+                >
+                  <span>{item.q}</span>
+                  <ChevronDown size={20} style={{ flexShrink: 0, color: '#E8570A', transition: 'transform 0.3s ease', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }} />
+                </button>
+                <div style={{ display: 'grid', gridTemplateRows: isOpen ? '1fr' : '0fr', transition: 'grid-template-rows 0.3s ease' }}>
+                  <div style={{ overflow: 'hidden' }}>
+                    <div style={{ padding: '0 1.5rem 1.5rem', color: 'rgba(245,240,235,0.75)', fontSize: '0.95rem', lineHeight: 1.7, whiteSpace: 'pre-line' }}>
+                      {item.a}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    </section>
   )
 }
