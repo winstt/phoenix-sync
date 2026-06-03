@@ -100,7 +100,7 @@ export default function Hero() {
       {/* Right — image / gradient */}
       <div
         className="relative overflow-hidden"
-        style={{ minHeight: '60vw' }}
+        style={{ minHeight: '46vw' }}
         aria-hidden="true"
       >
         {hero.imageUrl ? (
