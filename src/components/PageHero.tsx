@@ -30,8 +30,8 @@ export default function PageHero({ eyebrow, heading, description, imageUrl, imag
           {eyebrow}
         </p>
         <h1
-          className="font-extrabold uppercase leading-none mb-4 text-cream"
-          style={{ fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', letterSpacing: '-0.02em' }}
+          className="font-extrabold uppercase leading-none mb-4 text-cream a11y-no-scale"
+          style={{ fontSize: 'clamp(3rem, 7vw, 5.5rem)', letterSpacing: '-0.02em' }}
         >
           {heading}
         </h1>

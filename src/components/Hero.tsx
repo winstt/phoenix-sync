@@ -31,9 +31,9 @@ export default function Hero() {
         {/* Headline */}
         <h1
           id="hero-heading"
-          className="font-extrabold uppercase leading-none mb-6 text-cream"
+          className="font-extrabold uppercase leading-none mb-6 text-cream a11y-no-scale"
           style={{
-            fontSize: 'clamp(2.75rem, 8vw, 6rem)',
+            fontSize: 'clamp(4rem, 12vw, 9rem)',
             lineHeight: '0.95',
 
             letterSpacing: '-0.02em',
