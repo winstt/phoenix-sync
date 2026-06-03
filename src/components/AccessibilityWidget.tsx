@@ -53,7 +53,9 @@ const applySettings = (settings: Settings) => {
   const root = document.documentElement
   root.style.setProperty('--a11y-text-scale', String(settings.textSize / 100))
   CLASS_SETTINGS.forEach(([key, className]) => {
-    root.classList.toggle(className, settings[key] === true)
+    const enabled = settings[key] === true
+    root.classList.toggle(className, enabled)
+    root.toggleAttribute(`data-${className}`, enabled)
   })
 }
 
