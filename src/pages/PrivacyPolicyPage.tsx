@@ -13,7 +13,7 @@ const p = (text: React.ReactNode) => (
 )
 
 const li = (items: string[]) => (
-  <ul style={{ paddingLeft: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.4rem', marginBottom: '0.75rem' }}>
+  <ul style={{ listStyle: 'disc', listStylePosition: 'outside', paddingLeft: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.4rem', marginBottom: '0.75rem' }}>
     {items.map((item, i) => (
       <li key={i} style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.65)', lineHeight: '1.7' }}>{item}</li>
     ))}
