@@ -1,9 +1,29 @@
+import { useEffect, useRef } from 'react'
 import { siteContent } from '../data/content'
 import CountUp from './CountUp'
 
 const { impact } = siteContent
 
 export default function ImpactSection() {
+  const groupRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const el = groupRef.current
+    if (!el) return
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add('in-view')
+          obs.disconnect()
+        }
+      },
+      { threshold: 0.15 }
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [])
+
+
 
 
   return (
@@ -46,7 +66,9 @@ export default function ImpactSection() {
           {/* Stats */}
           <div
             aria-label="Impact statistics"
+            ref={groupRef}
             className="counter-group"
+
 
             style={{
               display: 'grid',
