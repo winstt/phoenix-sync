@@ -73,8 +73,7 @@ export default function NewsletterPage() {
       {/* Hero */}
       <section
         style={{
-          background:
-            'radial-gradient(circle at 0% 0%, rgba(194,24,91,0.18), transparent 60%), radial-gradient(circle at 100% 100%, rgba(232,87,10,0.12), transparent 55%), #0d0d0d',
+          background: '#0d0d0d',
           padding: '6rem 2.5rem 2.5rem',
         }}
       >
@@ -85,11 +84,10 @@ export default function NewsletterPage() {
           Newsletter
         </p>
         <h1
-          className="font-bold uppercase"
+          className="font-extrabold uppercase leading-none mb-4 text-cream a11y-no-scale"
           style={{
-            fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
-            color: '#f5f0eb',
-            lineHeight: 1,
+            fontSize: 'clamp(2.25rem, 5vw, 3.5rem)',
+            letterSpacing: '-0.02em',
             marginBottom: '1.75rem',
             maxWidth: '900px',
           }}
