@@ -54,11 +54,12 @@ export default function NewsSection() {
           </p>
           <h2
             id="news-heading"
-            className="font-bold uppercase"
-            style={{ fontSize: 'clamp(2.25rem, 4.5vw, 3.25rem)', letterSpacing: '-0.01em', color: '#f5f0eb' }}
+            className="font-extrabold uppercase"
+            style={{ fontSize: 'clamp(2.75rem, 7.5vw, 6rem)', lineHeight: '0.95', letterSpacing: '-0.02em', color: '#f5f0eb' }}
           >
             {news.title}
           </h2>
+
         </div>
         <a
           href={news.allNewsCta.href}
