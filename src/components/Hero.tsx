@@ -12,9 +12,9 @@ export default function Hero() {
     >
       {hero.imageUrl ? (
         <div
-          className="absolute right-0 top-0 h-full overflow-hidden home-hero-image"
+          className="home-hero-image absolute right-0 top-0 h-full overflow-hidden"
           aria-hidden="true"
-          style={{ width: '61.5vw' }}
+          style={{ width: '58vw' }}
         >
           <img
             src={hero.imageUrl}
@@ -22,9 +22,9 @@ export default function Hero() {
             style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center' }}
           />
           {/* Fade overlays matching inner page heroes */}
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #0d0d0d 0%, transparent 25%)' }} />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, #0d0d0d 0%, transparent 30%)' }} />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #0d0d0d 0%, transparent 30%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #0d0d0d 0%, #0d0d0d 18%, transparent 52%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, #0d0d0d 0%, transparent 32%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #0d0d0d 0%, transparent 28%)' }} />
         </div>
       ) : null}
 
