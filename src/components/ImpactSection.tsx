@@ -93,7 +93,7 @@ export default function ImpactSection() {
                   value={stat.num}
                   noCount={stat.num === '2026'}
                   className="font-extrabold a11y-no-scale"
-                  style={{ fontSize: 'clamp(2.15rem, 9vw, 3.1rem)', color: '#E8570A', fontVariantNumeric: 'tabular-nums', display: 'block', lineHeight: 1 }}
+                  style={{ fontSize: 'clamp(1.9rem, 8.4vw, 3rem)', color: '#E8570A', fontVariantNumeric: 'tabular-nums', display: 'block', lineHeight: 1 }}
                 />
 
                 <div style={{ fontSize: '12px', color: 'rgba(245,240,235,0.6)', marginTop: '4px', lineHeight: '1.4' }}>
