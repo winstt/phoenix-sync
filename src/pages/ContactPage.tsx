@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Instagram, Facebook, Youtube, Linkedin } from 'lucide-react'
+import { Instagram, Facebook, Youtube, Linkedin, ChevronDown } from 'lucide-react'
 import PageHero from '../components/PageHero'
 
 // Bluesky icon (not in lucide-react)
