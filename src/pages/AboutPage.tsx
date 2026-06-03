@@ -77,7 +77,7 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-        <div style={{ marginTop: '2.5rem' }}>
+        <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
           <a href={`${import.meta.env.BASE_URL}#/opportunities`} style={{ fontSize: '14px', color: '#E91E8C', textDecoration: 'none' }}>
             Click here for opportunities to work with us →
           </a>
