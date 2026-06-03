@@ -49,7 +49,7 @@ export default function Pillars() {
             <a
               href={pillar.link.href}
               className="inline-flex items-center gap-1 font-semibold no-underline mt-5 transition-colors"
-              style={{ fontSize: '13px', color: '#E91E8C' }}
+              style={{ fontSize: '13px', color: '#E91E8C', whiteSpace: 'nowrap' }}
               onMouseEnter={(e) => (e.currentTarget.style.color = 'white')}
               onMouseLeave={(e) => (e.currentTarget.style.color = '#E91E8C')}
             >
