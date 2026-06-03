@@ -40,8 +40,9 @@ export default function VisionBlock() {
         <blockquote
           className="font-semibold"
           style={{
-            fontSize: 'clamp(2rem, 4vw, 2.75rem)',
-            lineHeight: '1.5',
+            fontSize: 'clamp(2.25rem, 5vw, 3.75rem)',
+            lineHeight: '1.25',
+
             color: '#f5f0eb',
             border: 'none',
             padding: 0,
