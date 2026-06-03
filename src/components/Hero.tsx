@@ -12,19 +12,19 @@ export default function Hero() {
     >
       {hero.imageUrl ? (
         <div
-          className="absolute right-0 top-0 h-full overflow-hidden home-hero-image"
+          className="home-hero-image absolute right-0 top-0 h-full overflow-hidden"
           aria-hidden="true"
-          style={{ width: '61.5vw' }}
+          style={{ width: '54vw' }}
         >
           <img
             src={hero.imageUrl}
             alt=""
-            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center' }}
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '58% center' }}
           />
           {/* Fade overlays matching inner page heroes */}
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #0d0d0d 0%, transparent 25%)' }} />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, #0d0d0d 0%, transparent 30%)' }} />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #0d0d0d 0%, transparent 30%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #0d0d0d 0%, #0d0d0d 32%, rgba(13,13,13,0.9) 46%, transparent 78%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, #0d0d0d 0%, transparent 32%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #0d0d0d 0%, transparent 28%)' }} />
         </div>
       ) : null}
 
@@ -76,7 +76,7 @@ export default function Hero() {
         </p>
 
         {/* CTA buttons */}
-        <div className="flex gap-4 flex-wrap">
+        <div className="home-hero-actions flex gap-4 flex-wrap">
           <a
             href={hero.primaryCta.href}
             className="inline-flex items-center gap-2 font-semibold rounded no-underline transition-colors"
