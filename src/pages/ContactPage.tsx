@@ -36,7 +36,7 @@ export default function ContactPage() {
         description="We welcome collaboration, conversation and connection. Reach out to learn more about our work and how you can be part of the movement."
       />
 
-      <section style={{ padding: '4rem 2.5rem', background: '#0d0d0d' }}>
+      <section style={{ padding: '1.5rem 2.5rem 3rem', background: '#0d0d0d' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'start' }}>
 
           {/* Left — info */}
