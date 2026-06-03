@@ -7,7 +7,7 @@ const section = (heading: string, children: React.ReactNode) => (
   </div>
 )
 
-const p = (text: string) => (
+const p = (text: React.ReactNode) => (
   <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.65)', lineHeight: '1.8', marginBottom: '0.75rem' }}>{text}</p>
 )
 
