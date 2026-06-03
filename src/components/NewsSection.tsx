@@ -86,55 +86,29 @@ export default function NewsSection() {
         </a>
       </div>
 
-      {/* Card grid */}
+      {/* Placeholder banner */}
       <div
         style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-          gap: '1.5rem',
+          textAlign: 'center',
+          padding: '3.5rem 1.5rem',
+          background: '#0d0d0d',
+          border: '1px solid rgba(255,255,255,0.1)',
+          borderRadius: '12px',
         }}
       >
-        {news.cards.map((card, i) => (
-          <Link
-            key={card.title}
-            to={card.href}
-            className="news-card-link block no-underline"
-            style={{
-              background: '#0d0d0d',
-              border: '1px solid rgba(255,255,255,0.1)',
-              borderRadius: '12px',
-              overflow: 'hidden',
-              color: 'inherit',
-            }}
-          >
-            {/* Card image */}
-            <div style={{ height: '140px', overflow: 'hidden' }}>
-              {cardSvgs[i % cardSvgs.length]}
-            </div>
-
-            {/* Card body */}
-            <div style={{ padding: '1.25rem' }}>
-              <p
-                className="font-semibold uppercase mb-2"
-                style={{ fontSize: '11px', letterSpacing: '0.08em', color: '#E8570A' }}
-              >
-                {card.tag}
-              </p>
-              <h3
-                className="font-semibold mb-2"
-                style={{ fontSize: '0.95rem', lineHeight: '1.4', color: '#f5f0eb' }}
-              >
-                {card.title}
-              </h3>
-              <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.5' }}>
-                {card.description}
-              </p>
-              <p style={{ fontSize: '12px', color: 'rgba(245,240,235,0.6)', marginTop: '0.75rem' }}>
-                {card.date}
-              </p>
-            </div>
-          </Link>
-        ))}
+        <h3
+          style={{
+            fontSize: 'clamp(1.1rem, 2vw, 1.4rem)',
+            fontWeight: 700,
+            color: '#f5f0eb',
+            marginBottom: '1rem',
+          }}
+        >
+          More stories & updates coming soon
+        </h3>
+        <p style={{ color: 'rgba(245,240,235,0.6)', fontSize: '0.95rem', maxWidth: '500px', margin: '0 auto' }}>
+          We are building our archive of updates, stories and insights from communities across the UK. Check back soon.
+        </p>
       </div>
     </section>
   )
