@@ -34,7 +34,15 @@ const readSettings = (): Settings => {
   if (typeof window === 'undefined') return DEFAULTS
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    return raw ? { ...DEFAULTS, ...JSON.parse(raw) } : DEFAULTS
+    const saved = raw ? JSON.parse(raw) : {}
+    return {
+      textSize: typeof saved.textSize === 'number' ? Math.min(150, Math.max(80, saved.textSize)) : DEFAULTS.textSize,
+      clearFont: saved.clearFont === true,
+      highContrast: saved.highContrast === true,
+      reduceMotion: saved.reduceMotion === true,
+      focusIndicators: saved.focusIndicators === true,
+      highlightLinks: saved.highlightLinks === true,
+    }
   } catch {
     return DEFAULTS
   }
@@ -45,7 +53,7 @@ const applySettings = (settings: Settings) => {
   const root = document.documentElement
   root.style.setProperty('--a11y-text-scale', String(settings.textSize / 100))
   CLASS_SETTINGS.forEach(([key, className]) => {
-    root.classList.toggle(className, Boolean(settings[key]))
+    root.classList.toggle(className, settings[key] === true)
   })
 }
 
