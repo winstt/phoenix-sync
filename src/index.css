@@ -148,18 +148,13 @@ button:focus-visible {
     flex-direction: column;
   }
 
-  .home-hero > img {
+  .home-hero-image {
     position: relative !important;
-    width: 100% !important;
-    height: auto !important;
-    max-height: 55vh;
-    object-fit: cover;
-    object-position: center center !important;
     order: 2;
-  }
-
-  .home-hero > div[aria-hidden="true"] {
-    display: none !important;
+    width: 100% !important;
+    height: clamp(300px, 58vw, 520px) !important;
+    min-height: 300px;
+    flex-shrink: 0;
   }
 
   .home-hero-content {
@@ -172,6 +167,12 @@ button:focus-visible {
 
   .home-hero-heading-white {
     white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero-image {
+    height: 340px !important;
   }
 }
 
