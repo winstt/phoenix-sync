@@ -22,6 +22,48 @@ const DEFAULTS: Settings = {
 
 const STORAGE_KEY = 'a11y-settings'
 
+const CLASS_SETTINGS: Array<[keyof Settings, string]> = [
+  ['clearFont', 'a11y-clear-font'],
+  ['highContrast', 'a11y-high-contrast'],
+  ['reduceMotion', 'a11y-reduce-motion'],
+  ['focusIndicators', 'a11y-focus'],
+  ['highlightLinks', 'a11y-highlight-links'],
+]
+
+const readSettings = (): Settings => {
+  if (typeof window === 'undefined') return DEFAULTS
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY)
+    const saved = raw ? JSON.parse(raw) : {}
+    return {
+      textSize: typeof saved.textSize === 'number' ? Math.min(150, Math.max(80, saved.textSize)) : DEFAULTS.textSize,
+      clearFont: saved.clearFont === true,
+      highContrast: saved.highContrast === true,
+      reduceMotion: saved.reduceMotion === true,
+      focusIndicators: saved.focusIndicators === true,
+      highlightLinks: saved.highlightLinks === true,
+    }
+  } catch {
+    return DEFAULTS
+  }
+}
+
+const applySettings = (settings: Settings) => {
+  if (typeof document === 'undefined') return
+  const root = document.documentElement
+  root.style.setProperty('--a11y-text-scale', String(settings.textSize / 100))
+  CLASS_SETTINGS.forEach(([key, className]) => {
+    const enabled = settings[key] === true
+    root.classList.toggle(className, enabled)
+    root.toggleAttribute(`data-${className}`, enabled)
+  })
+}
+
+const persistSettings = (settings: Settings) => {
+  if (typeof window === 'undefined') return
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(settings))
+}
+
 function Toggle({ checked, onChange, label }: { checked: boolean; onChange: (v: boolean) => void; label: string }) {
   return (
     <button
@@ -44,32 +86,26 @@ function Toggle({ checked, onChange, label }: { checked: boolean; onChange: (v: 
 
 export default function AccessibilityWidget() {
   const [open, setOpen] = useState(false)
-  const [settings, setSettings] = useState<Settings>(() => {
-    if (typeof window === 'undefined') return DEFAULTS
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY)
-      return raw ? { ...DEFAULTS, ...JSON.parse(raw) } : DEFAULTS
-    } catch {
-      return DEFAULTS
-    }
-  })
+  const [settings, setSettings] = useState<Settings>(readSettings)
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(settings))
-    const root = document.documentElement
-    // Scale text via CSS var that only targets text elements, leaving layout intact
-    root.style.setProperty('--a11y-text-scale', String(settings.textSize / 100))
-    root.classList.toggle('a11y-clear-font', settings.clearFont)
-    root.classList.toggle('a11y-high-contrast', settings.highContrast)
-    root.classList.toggle('a11y-reduce-motion', settings.reduceMotion)
-    root.classList.toggle('a11y-focus', settings.focusIndicators)
-    root.classList.toggle('a11y-highlight-links', settings.highlightLinks)
+    applySettings(settings)
+    persistSettings(settings)
   }, [settings])
 
   const update = <K extends keyof Settings>(k: K, v: Settings[K]) =>
-    setSettings((s) => ({ ...s, [k]: v }))
+    setSettings((s) => {
+      const next = { ...s, [k]: v }
+      applySettings(next)
+      persistSettings(next)
+      return next
+    })
 
-  const reset = () => setSettings(DEFAULTS)
+  const reset = () => {
+    applySettings(DEFAULTS)
+    persistSettings(DEFAULTS)
+    setSettings(DEFAULTS)
+  }
 
   return (
     <>
