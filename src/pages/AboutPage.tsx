@@ -39,7 +39,7 @@ const values = [
 
 const partners: { name: string; logo: string; href?: string }[] = [
   { name: 'Anti Racist Cumbria', logo: funderAntiracist.url, href: 'https://antiracistcumbria.org' },
-  { name: 'Inclusive North', logo: funderInclusiveNorth.url },
+  { name: 'Inclusive North', logo: funderInclusiveNorth.url, href: 'https://www.inclusivenorth.org.uk' },
   { name: 'Impact Hub Yorkshire', logo: funderImpactHub.url, href: 'https://yorkshire.impacthub.net' },
   { name: 'The Ubele Initiative', logo: funderUbele.url, href: 'https://ubele.org' },
   { name: 'Black South West Network', logo: funderBswn.url, href: 'https://www.blacksouthwestnetwork.org' },
