@@ -61,14 +61,13 @@ export default function ImpactPage() {
             <div
               key={s.num}
               style={{
-                padding: '2.5rem 1.5rem',
-                minHeight: '200px',
+                padding: '1.25rem 1rem',
                 borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none',
                 borderTop: '1px solid rgba(255,255,255,0.06)',
               }}
             >
-              <CountUp value={s.num} noCount={s.num === '2026'} style={{ fontSize: 'clamp(4rem, 9vw, 6rem)', fontWeight: 800, color: '#E8570A', lineHeight: 1, display: 'block', fontVariantNumeric: 'tabular-nums' }} />
-              <p style={{ fontSize: '14px', color: 'rgba(245,240,235,0.6)', marginTop: '14px', lineHeight: 1.4 }}>{s.label}</p>
+              <CountUp value={s.num} noCount={s.num === '2026'} className="a11y-no-scale" style={{ fontSize: 'clamp(4.5rem, 18vw, 7rem)', fontWeight: 800, color: '#E8570A', lineHeight: 1, display: 'block', fontVariantNumeric: 'tabular-nums' }} />
+              <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', marginTop: '8px', lineHeight: 1.35 }}>{s.label}</p>
             </div>
           ))}
         </div>
