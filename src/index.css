@@ -122,9 +122,32 @@ button:focus-visible {
   border-radius: 4px;
 }
 
-/* ── HERO GRID ── */
+/* ── HERO ── */
+.home-hero > img {
+  object-position: center center;
+}
+
+.home-hero-content {
+  width: min(100%, 56rem);
+}
+
 .page-hero-image {
   min-height: clamp(360px, 95vw, 520px);
+}
+@media (max-width: 899px) {
+  .home-hero {
+    min-height: 100svh !important;
+  }
+
+  .home-hero > img {
+    object-position: 68% center !important;
+  }
+
+  .home-hero-content {
+    justify-content: flex-end !important;
+    padding-top: 8rem !important;
+    padding-bottom: 3.5rem !important;
+  }
 }
 @media (min-width: 900px) {
   .hero-grid {
