@@ -29,7 +29,7 @@ export default function Pillars() {
           <div
             key={pillar.num}
             role="listitem"
-            style={{ background: '#1a1a1a', padding: '2rem' }}
+            style={{ background: '#1a1a1a', padding: '2rem', display: 'flex', flexDirection: 'column' }}
           >
 
             {/* Title */}
@@ -48,8 +48,8 @@ export default function Pillars() {
             {/* Link */}
             <a
               href={pillar.link.href}
-              className="inline-flex items-center gap-1 font-semibold no-underline mt-5 transition-colors"
-              style={{ fontSize: '13px', color: '#E91E8C' }}
+              className="inline-flex items-center gap-1 font-semibold no-underline transition-colors"
+              style={{ fontSize: '13px', color: '#E91E8C', whiteSpace: 'nowrap', marginTop: 'auto', paddingTop: '1.25rem', alignSelf: 'flex-start' }}
               onMouseEnter={(e) => (e.currentTarget.style.color = 'white')}
               onMouseLeave={(e) => (e.currentTarget.style.color = '#E91E8C')}
             >
