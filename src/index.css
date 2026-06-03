@@ -214,10 +214,13 @@ body :is(p, h1, h2, h3, h4, h5, h6, li, a, span, blockquote, label, input, texta
   transition-duration: 0.001ms !important;
   scroll-behavior: auto !important;
 }
-.a11y-focus *:focus {
+html.a11y-focus *:focus,
+html.a11y-focus *:focus-visible,
+html.a11y-focus *:focus-within {
   outline: 3px solid #ffeb3b !important;
   outline-offset: 2px !important;
-  box-shadow: 0 0 0 4px rgba(255, 235, 59, 0.4) !important;
+  box-shadow: 0 0 0 4px rgba(255, 235, 59, 0.5) !important;
+  border-radius: 2px;
 }
 .a11y-highlight-links a {
   text-decoration: underline !important;
