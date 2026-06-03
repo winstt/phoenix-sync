@@ -20,7 +20,7 @@ export default function PageHero({ eyebrow, heading, description, imageUrl, imag
         style={{
           padding: '2.5rem',
           paddingTop: imageUrl ? 'calc(90px + 3rem)' : 'calc(110px + 1.5rem)',
-          paddingBottom: imageUrl ? '4rem' : '1.5rem',
+          paddingBottom: imageUrl ? '2rem' : '1.5rem',
         }}
       >
         <p
