@@ -12,14 +12,14 @@ export default function PageHero({ eyebrow, heading, description, imageUrl, imag
   return (
     <section
       className={imageUrl ? 'hero-grid relative' : 'relative'}
-      style={{ background: '#0d0d0d', minHeight: imageUrl ? '52vh' : undefined }}
+      style={{ background: '#0d0d0d', minHeight: imageUrl ? '42vh' : undefined }}
     >
       {/* Left — text */}
       <div
-        className="flex flex-col justify-end relative z-10"
+        className="flex flex-col justify-center relative z-10"
         style={{
           padding: '2.5rem',
-          paddingTop: imageUrl ? 'calc(90px + 3rem)' : 'calc(110px + 1.5rem)',
+          paddingTop: imageUrl ? 'calc(90px + 2rem)' : 'calc(110px + 1.5rem)',
           paddingBottom: imageUrl ? '2rem' : '1.5rem',
         }}
       >
