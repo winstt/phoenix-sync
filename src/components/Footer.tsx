@@ -69,7 +69,7 @@ export default function Footer() {
               onError={e => { (e.target as HTMLImageElement).src = 'https://newphx.karrota.wtf/wp-content/uploads/2026/05/ThePhoenix-LogoPNG-1.png' }}
             />
           </div>
-          <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', maxWidth: '240px', margin: '1rem 0' }}>
+          <p style={{ fontSize: '12px', color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', maxWidth: '240px', margin: '1rem 0' }}>
             {footer.tagline}
           </p>
         </div>
