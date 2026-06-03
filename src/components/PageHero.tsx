@@ -12,7 +12,7 @@ interface PageHeroProps {
 export default function PageHero({ eyebrow, heading, description, imageUrl, imagePosition = 'center', size = 'default' }: PageHeroProps) {
   const headingFontSize =
     size === 'compact'
-      ? 'clamp(1.75rem, 3.5vw, 2.75rem)'
+      ? 'clamp(1.4rem, 2.6vw, 2rem)'
       : 'clamp(2.5rem, 5.5vw, 4.5rem)'
   return (
     <section
