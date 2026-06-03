@@ -30,13 +30,13 @@ export default function Hero() {
 
       {/* Text overlay */}
       <div
-        className="home-hero-content relative z-10 flex min-h-screen flex-col justify-center"
+        className="home-hero-content relative z-10 flex flex-col justify-start"
         style={{
-          padding: 'clamp(5rem, 10vh, 8rem) clamp(1.875rem, 3.2vw, 3.75rem) clamp(3rem, 6vh, 5rem)',
+          padding: 'clamp(2rem, 4vh, 3.5rem) clamp(1.875rem, 3.2vw, 3.75rem) clamp(3rem, 6vh, 5rem)',
           maxWidth: '58rem',
-          transform: 'translateY(-1rem)',
         }}
       >
+
 
         {/* Eyebrow */}
         <p
