@@ -16,7 +16,7 @@ export default function CookiePolicyPage() {
   return (
     <>
       <PageHero
-        eyebrow="Legal"
+        eyebrow=""
         heading="Cookie policy."
         description="Last updated: 11 May 2026 · Next review: 11 May 2027"
       />
