@@ -54,19 +54,18 @@ export default function ImpactPage() {
 
       {/* Stats bar - 2x2 grid */}
       <div style={{ background: '#1a1a1a', borderTop: '1px solid rgba(255,255,255,0.1)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
           {stats.map((s, i) => (
             <div
               key={s.num}
               style={{
-                padding: '2.5rem 1.75rem',
-                minHeight: '220px',
-                borderRight: i % 2 === 0 ? '1px solid rgba(255,255,255,0.1)' : 'none',
-                borderBottom: i < 2 ? '1px solid rgba(255,255,255,0.1)' : 'none',
+                padding: '2.5rem 1.5rem',
+                minHeight: '200px',
+                borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none',
               }}
             >
-              <p style={{ fontSize: 'clamp(2.8rem, 7vw, 4rem)', fontWeight: 800, color: '#E8570A', lineHeight: 1 }}>{s.num}</p>
-              <p style={{ fontSize: '16px', color: 'rgba(245,240,235,0.6)', marginTop: '14px', lineHeight: 1.4 }}>{s.label}</p>
+              <p style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: '#E8570A', lineHeight: 1 }}>{s.num}</p>
+              <p style={{ fontSize: '14px', color: 'rgba(245,240,235,0.6)', marginTop: '14px', lineHeight: 1.4 }}>{s.label}</p>
             </div>
           ))}
         </div>
