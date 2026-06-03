@@ -135,9 +135,9 @@ export default function AboutPage() {
         <p className="font-semibold uppercase mb-6" style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#E8570A' }}>Our current partners and funders</p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
           {partners.map(p => (
-            <span key={p.name} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', padding: '0.5rem 1.1rem 0.5rem 0.5rem', background: 'rgba(232,87,10,0.08)', border: '1px solid rgba(232,87,10,0.2)', borderRadius: '100px', fontSize: '13px', color: '#f5f0eb' }}>
-              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '28px', height: '28px', borderRadius: '999px', background: '#0d0d0d', flexShrink: 0 }}>
-                <img src={p.logo} alt="" loading="lazy" style={{ maxWidth: '20px', maxHeight: '20px', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+            <span key={p.name} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.35rem 0.85rem 0.35rem 0.4rem', background: 'rgba(232,87,10,0.08)', border: '1px solid rgba(232,87,10,0.2)', borderRadius: '100px', fontSize: '12px', color: '#f5f0eb' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '22px', height: '22px', borderRadius: '999px', background: '#0d0d0d', flexShrink: 0 }}>
+                <img src={p.logo} alt="" loading="lazy" style={{ maxWidth: '15px', maxHeight: '15px', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
               </span>
               {p.name}
             </span>
