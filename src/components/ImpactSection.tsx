@@ -1,21 +1,10 @@
-import { useEffect, useRef } from 'react'
 import { siteContent } from '../data/content'
+import CountUp from './CountUp'
 
 const { impact } = siteContent
 
 export default function ImpactSection() {
-  const statsRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const el = statsRef.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) el.classList.add('in-view') },
-      { threshold: 0.15 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [])
 
   return (
     <section
