@@ -11,30 +11,23 @@ export default function Hero() {
       style={{ background: '#0d0d0d', minHeight: '100vh' }}
     >
       {hero.imageUrl ? (
-        <img
-          src={hero.imageUrl}
-          alt=""
+        <div
+          className="absolute right-0 top-0 h-full overflow-hidden home-hero-image"
           aria-hidden="true"
-          className="absolute right-0 top-0 h-full object-cover"
-          style={{ width: '61.5vw', objectPosition: 'center center' }}
-        />
+          style={{ width: '61.5vw' }}
+        >
+          <img
+            src={hero.imageUrl}
+            alt=""
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center' }}
+          />
+          {/* Fade overlays matching inner page heroes */}
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #0d0d0d 0%, transparent 25%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, #0d0d0d 0%, transparent 30%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #0d0d0d 0%, transparent 30%)' }} />
+        </div>
       ) : null}
-      {/* Fade overlays matching inner page heroes */}
-      <div
-        className="absolute inset-0 z-[1]"
-        aria-hidden="true"
-        style={{ background: 'linear-gradient(to right, #0d0d0d 0%, transparent 40%)' }}
-      />
-      <div
-        className="absolute inset-0 z-[1]"
-        aria-hidden="true"
-        style={{ background: 'linear-gradient(to top, #0d0d0d 0%, transparent 30%)' }}
-      />
-      <div
-        className="absolute inset-0 z-[1]"
-        aria-hidden="true"
-        style={{ background: 'linear-gradient(to bottom, #0d0d0d 0%, transparent 30%)' }}
-      />
+
 
       {/* Text overlay */}
       <div
