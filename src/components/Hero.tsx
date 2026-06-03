@@ -41,7 +41,7 @@ export default function Hero() {
         {/* Eyebrow */}
         <p
           className="font-semibold uppercase tracking-widest mb-6"
-          style={{ fontSize: '11px', letterSpacing: '0.16em', color: '#E8570A', paddingLeft: 'clamp(7rem, 14vw, 11rem)' }}
+          style={{ fontSize: '11px', letterSpacing: '0.16em', color: '#E8570A', marginTop: '5.5rem' }}
         >
           {hero.eyebrow}
         </p>
