@@ -20,7 +20,7 @@ export default function TermsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Legal"
+        eyebrow=""
         heading="Terms & conditions."
         description="Last updated: May 2026"
       />

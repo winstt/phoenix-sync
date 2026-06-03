@@ -23,7 +23,7 @@ export default function AccessibilityPage() {
   return (
     <>
       <PageHero
-        eyebrow="Legal"
+        eyebrow=""
         heading="Accessibility statement."
         description="Last updated: 11 May 2026 · Next review: 11 May 2027"
       />

@@ -28,7 +28,7 @@ export default function ComplaintsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Legal"
+        eyebrow=""
         heading="Complaints policy."
         description="Last updated: May 2026"
       />
