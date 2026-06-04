@@ -129,7 +129,7 @@ const faqs: { q: string; a: React.ReactNode }[] = [
   },
   {
     q: 'Who does The Phoenix Community Trust serve?',
-    a: "We serve socially and economically marginalised Black and Global Majority communities across the UK - communities that hold the expertise and vision to direct their own futures, who have been systematically underfunded and underserved.\n\nOur work is about redistributing power and resources, building community infrastructure, and dismantling the structural barriers that have kept funding from flowing where it's needed most. We exist not to manage inequality, but to change the conditions that create it.",
+    a: "We serve socially and economically disadvantaged Black and Global Majority communities across the UK - communities that hold the expertise and vision to direct their own futures, who have been systematically underfunded and underserved.\n\nOur work is about redistributing power and resources, building community infrastructure, and dismantling the structural barriers that have kept funding from flowing where it's needed most. We exist not to manage inequality, but to change the conditions that create it.",
   },
   {
     q: 'Who leads The Phoenix Community Trust?',
