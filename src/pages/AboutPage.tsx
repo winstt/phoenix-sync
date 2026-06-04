@@ -1,31 +1,9 @@
 import { useState } from 'react'
 import PageHero from '../components/PageHero'
+import trusteesContent from '../../content/trustees.json'
+import partnersContent from '../../content/partners.json'
 
-import funderAntiracist from '../assets/funders/antiracist.png.asset.json'
-import funderComfun from '../assets/funders/comfun.png.asset.json'
-import funderImpactHub from '../assets/funders/impact_hub.png.asset.json'
-import funderUbele from '../assets/funders/the_ubele.png.asset.json'
-import funderBswn from '../assets/funders/bs_wn.png.asset.json'
-import funderSouthAsian from '../assets/funders/south_asian.png.asset.json'
-import funderInclusiveNorth from '../assets/funders/inclusive_north_funder2.png.asset.json'
-
-import amnaPhoto from '../assets/trustees/Amna-Abdullatif.jpg.asset.json'
-import abdouPhoto from '../assets/trustees/Abdou-Sidibe-scaled.jpeg.asset.json'
-import anishPhoto from '../assets/trustees/Anish-Saxena.png.asset.json'
-import bilalPhoto from '../assets/trustees/Bilal-Malik.jpeg.asset.json'
-import florencePhoto from '../assets/trustees/Florence-Nyasamo-e1779710467947.jpg.asset.json'
-import shelleyPhoto from '../assets/trustees/Shelley-Bishton-scaled.jpg.asset.json'
-import tayshanPhoto from '../assets/trustees/Tayshan-Hayden-Smith.avif.asset.json'
-
-const trustees = [
-  { name: 'Amna Abdullatif', photo: amnaPhoto.url, bio: 'Amna is a community psychologist with over 15 years\' experience in the voluntary sector, leading national and international work to support women and children. A Vital Voices Visionary, she is an international speaker and writer whose published work explores women\'s lived experience, social change, and cultures of silence around abuse. Amna was elected as a local Councillor in Manchester in 2019, becoming the first visibly Muslim woman of Arab heritage to serve in the city. She also co-founded The Three Hijabis, a platform tackling racism, Islamophobia and misogyny using football as a catalyst for wider change.' },
-  { name: 'Abdou Sidibe', photo: abdouPhoto.url, bio: 'Abdou is Director of Grants at the Paul Hamlyn Foundation, where he oversees an annual portfolio exceeding £40 million. A steering group member of the Funders for Race Equality Alliance, Abdou worked at The National Lottery Community Fund during the landmark £50 million investment for racial justice whilst leading the England Partnerships team, making him uniquely placed to support our mission.' },
-  { name: 'Anish Saxena', photo: anishPhoto.url, bio: 'Anish is a Chartered Accountant, MBA and experienced Independent Non-Executive Director with a deep background in global risk management. Currently serving as Audit Lead at Moody\'s, he brings over 15 years of essential expertise in financial and corporate governance, audit, and compliance that will strengthen our stewardship of the £50 million investment.' },
-  { name: 'Bilal Malik', photo: bilalPhoto.url, bio: 'Bilal is a UK diplomat with experience across East Africa, the multilateral system and Whitehall at the Foreign, Commonwealth & Development Office. He has worked on colonial legacy issues in Kenya, humanitarian and political engagement in Sudan, and international development policy, bringing a strong grounding in governance, political analysis and cross-sector coordination.' },
-  { name: 'Florence Nyasamo', photo: florencePhoto.url, bio: 'Florence is a systems change leader and founder and CEO of Lives of Colour, designing practical ways to shift power, resources and opportunity towards marginalised communities. Her work spans social and racial justice, community wealth building, ethical governance, sustainable finance and digitally enabled participation.' },
-  { name: 'Shelley Bishton', photo: shelleyPhoto.url, bio: 'Shelley is a multi-award-winning cultural transformation specialist with over 20 years of experience driving change where culture meets commerce. As former Head of Diversity, Equity and Inclusion at News UK and a trustee of the Black British Initiative, she brings exceptional expertise in inclusive organisational development and community partnership building.' },
-  { name: 'Tayshan Hayden-Smith', photo: tayshanPhoto.url, bio: 'Tayshan is a British community activist and garden designer. He co-founded the non-profit Grow to Know, which focuses on "horticultural activism" to make gardening more accessible to diverse and disadvantaged communities. A regular face on BBC\'s Your Garden Made Perfect and a published author, he continues to advocate for social justice and environmental equity.' },
-]
+const trustees = trusteesContent.trustees
 
 const values = [
   { title: 'Community Power', text: 'We believe Global Majority communities hold the expertise, knowledge and vision to direct their own futures. We shift power from traditional funders to communities, ensuring those closest to the challenges lead the solutions.' },
@@ -37,15 +15,7 @@ const values = [
   { title: 'Legacy and Liberation', text: 'We honour the work and relationships that created this movement, carrying their lessons forward as we build what comes next. We exist to change the structures that create inequality, not to manage their symptoms.' },
 ]
 
-const partners: { name: string; logo: string; href?: string }[] = [
-  { name: 'Anti Racist Cumbria', logo: funderAntiracist.url, href: 'https://antiracistcumbria.org' },
-  { name: 'Inclusive North', logo: funderInclusiveNorth.url, href: 'https://www.inclusivenorth.org.uk' },
-  { name: 'Impact Hub Yorkshire', logo: funderImpactHub.url, href: 'https://yorkshire.impacthub.net' },
-  { name: 'The Ubele Initiative', logo: funderUbele.url, href: 'https://ubele.org' },
-  { name: 'Black South West Network', logo: funderBswn.url, href: 'https://www.blacksouthwestnetwork.org' },
-  { name: 'South Asian Health Action', logo: funderSouthAsian.url, href: 'https://www.sahauk.org' },
-  { name: 'National Lottery Community Fund', logo: funderComfun.url },
-]
+const partners = partnersContent.funders
 
 export default function AboutPage() {
   const [openValue, setOpenValue] = useState<number | null>(0)
