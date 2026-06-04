@@ -79,7 +79,7 @@ export default function NewsletterPage() {
       >
         <p
           className="font-semibold uppercase mb-6"
-          style={{ fontSize: '11px', letterSpacing: '0.14em', color: 'rgba(245,240,235,0.55)' }}
+          style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#E8570A' }}
         >
           Newsletter
         </p>
