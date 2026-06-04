@@ -122,7 +122,7 @@ export default function ContactPage() {
   )
 }
 
-const faqs = [
+const faqs: { q: string; a: React.ReactNode }[] = [
   {
     q: 'Why has the name of the organisation changed?',
     a: "Our new name marks the beginning of an exciting new chapter. As we move into this next phase of our journey, we wanted a name that truly reflects who we are - honouring the deep roots of everything that came before, while capturing the renewed energy and ambition we have for the future. The Phoenix Community Trust feels like us: it puts community front and centre. Exactly where it should be.",
@@ -133,7 +133,12 @@ const faqs = [
   },
   {
     q: 'Who leads The Phoenix Community Trust?',
-    a: "We're guided by an incredible and passionate team of trustees who bring a wealth of expertise and lived experience to everything we do. They are the heart of our governance and the backbone of our mission. You can find out more about each of them on the Our Impact page.",
+    a: (
+      <>
+        We're guided by an incredible and passionate team of trustees who bring a wealth of expertise and lived experience to everything we do. They are the heart of our governance and the backbone of our mission. You can find out more about each of them on the{' '}
+        <Link to="/impact" style={{ color: '#E8570A', textDecoration: 'none' }}>Our Impact</Link> page.
+      </>
+    ),
   },
   {
     q: 'How do communities shape your decisions?',
