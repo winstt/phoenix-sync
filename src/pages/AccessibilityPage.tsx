@@ -60,6 +60,31 @@ export default function AccessibilityPage() {
             ])}
           </>)}
 
+          {section('Keyboard accessibility', <>
+            {p('We confirm that this website has been built with full keyboard compatibility. Every interactive element — including links, buttons, menus, form fields, and the accessibility settings panel — can be reached and operated using a keyboard alone, without the use of a mouse or trackpad.')}
+            {p('Specifically, users can:')}
+            {li([
+              'Move through all interactive elements in a logical order using the Tab key (and Shift + Tab to move backwards)',
+              'Activate links and buttons using Enter or the Space bar',
+              'Open and close the navigation menu and accessibility panel using the keyboard, and dismiss them with the Escape key',
+              'See a clearly visible focus indicator on the element they are currently on',
+              'Skip directly to the main content of each page using the "Skip to main content" link that appears on focus',
+            ])}
+            {p('We test keyboard navigation as part of our regular accessibility checks.')}
+          </>)}
+
+          {section('Voice recognition compatibility', <>
+            {p('We confirm that this website is compatible with voice recognition software such as Dragon NaturallySpeaking, Apple Voice Control, and Windows Speech Recognition. The site has been built so that users can navigate and interact with it entirely by voice.')}
+            {p('To support voice control we have ensured that:')}
+            {li([
+              'Every link and button has a clear, visible text label that matches its accessible name, so voice commands such as "click About us" or "click Apply for funding" work reliably',
+              'Icon-only controls (such as the menu, close, and accessibility buttons) include descriptive labels that voice software can recognise',
+              'Standard, semantic HTML elements are used for all interactive controls, so voice tools can identify them as links, buttons, or form fields',
+              'Form fields have associated labels that can be spoken to move focus directly to them',
+              'No interactions rely solely on mouse-only gestures such as hover, drag, or right-click',
+            ])}
+          </>)}
+
           {section('Known accessibility issues', <>
             {p('We are not currently aware of any specific accessibility issues on this website. If you experience any difficulties, please contact us using the details below and we will investigate as a priority.')}
           </>)}
