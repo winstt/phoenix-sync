@@ -68,6 +68,7 @@ export default function App() {
       <Footer />
       <AccessibilityWidget />
       <VoiceNavigation />
+      <KeyboardNavMode />
     </BrowserRouter>
   )
 }
