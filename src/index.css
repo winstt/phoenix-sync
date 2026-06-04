@@ -128,6 +128,12 @@ button:focus-visible {
   object-position: center center;
 }
 
+@media (min-width: 900px) {
+  .home-hero-photo {
+    object-position: 70% center !important;
+  }
+}
+
 .home-hero-content {
   width: min(100%, 58rem);
 }
