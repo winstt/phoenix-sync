@@ -111,7 +111,7 @@ export const siteContent = {
     stats: [
       {
         num: '2026',
-        label: "upcoming opportunity for communities to get involved in Phoenix's strategic development in our work",
+        label: "upcoming opportunity for communities to get involved in Phoenix's strategic development",
         noCount: true,
       },
       { num: '3000+', label: 'community members impacted', noCount: true },
