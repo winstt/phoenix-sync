@@ -2,6 +2,23 @@ import { useState } from 'react'
 import PageHero from '../components/PageHero'
 import trusteesContent from '../../content/trustees.json'
 import partnersContent from '../../content/partners.json'
+import antiracistLogo from '../assets/funders-new/antiracist.png.asset.json'
+import comfunLogo from '../assets/funders-new/comfun.png.asset.json'
+import impactHubLogo from '../assets/funders-new/impact_hub.png.asset.json'
+import bswnLogo from '../assets/funders-new/bs_wn.png.asset.json'
+import southAsianLogo from '../assets/funders-new/south_asian.png.asset.json'
+import ubeleLogo from '../assets/funders-new/the_ubele.png.asset.json'
+import inclusiveNorthLogo from '../assets/funders-new/inclusive_north.png.asset.json'
+
+const logoByName: Record<string, string> = {
+  'Anti Racist Cumbria': antiracistLogo.url,
+  'National Lottery Community Fund': comfunLogo.url,
+  'Impact Hub Yorkshire': impactHubLogo.url,
+  'The Ubele Initiative': ubeleLogo.url,
+  'Black South West Network': bswnLogo.url,
+  'South Asian Health Action': southAsianLogo.url,
+  'Inclusive North': inclusiveNorthLogo.url,
+}
 
 const trustees = trusteesContent.trustees
 
