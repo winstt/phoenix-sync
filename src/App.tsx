@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import AccessibilityWidget from './components/AccessibilityWidget'
 import VoiceNavigation from './components/VoiceNavigation'
+import KeyboardNavMode from './components/KeyboardNavMode'
 import Hero from './components/Hero'
 import WhoStrip from './components/WhoStrip'
 import Pillars from './components/Pillars'
@@ -67,6 +68,7 @@ export default function App() {
       <Footer />
       <AccessibilityWidget />
       <VoiceNavigation />
+      <KeyboardNavMode />
     </BrowserRouter>
   )
 }
