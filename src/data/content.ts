@@ -5,6 +5,22 @@
 const B = import.meta.env.BASE_URL // e.g. '/phoenix-sync/'
 const img = (name: string) => `${B}images/${name}`
 
+type NewsCard = {
+  slug: string
+  tag: string
+  title: string
+  description: string
+  date: string
+  href: string
+  body: string[]
+}
+
+const rawNewsModules = import.meta.glob<NewsCard>('/content/news/*.json', { eager: true })
+const newsCards: NewsCard[] = Object.values(rawNewsModules).map(m => ({
+  ...m,
+  href: `/news/${m.slug}`,
+}))
+
 export const siteContent = {
   // ── BRAND ──────────────────────────────────────────────────────────────────
   brand: {
@@ -95,7 +111,7 @@ export const siteContent = {
     stats: [
       {
         num: '2026',
-        label: "upcoming opportunity for communities to get involved in Phoenix's strategic development",
+        label: "upcoming opportunity for communities to get involved in Phoenix's strategic development in our work",
         noCount: true,
       },
       { num: '3000+', label: 'community members impacted', noCount: true },
@@ -152,53 +168,7 @@ export const siteContent = {
     label: 'Latest',
     title: 'News & updates',
     allNewsCta: { label: 'All news', href: '/news' },
-    cards: [
-      {
-        slug: '2026-strategy-development',
-        tag: 'Announcement',
-        title: '2026 Strategy Development',
-        description:
-          'Our strategic priorities for 2026 are taking shape. Find out how we are building the foundations for lasting systems change across the UK.',
-        date: '2026',
-        href: '/news/2026-strategy-development',
-        body: [
-          'Over the past year, The Phoenix Community Trust has been listening, convening and learning alongside Global Majority communities across the UK. Out of those conversations, a clear set of strategic priorities is emerging for 2026 - priorities rooted in lived experience, community leadership and a long-term commitment to funding justice.',
-          'Our 2026 strategy is being shaped around four pillars: redistributing power and resources, investing in community infrastructure, championing Global Majority leadership, and challenging the structural inequities that persist in UK philanthropy. Each pillar is grounded in what communities have told us they need to thrive - not what funders assume.',
-          'In the coming months we will share more detail on the consultations, partnerships and grant-making that will bring this strategy to life. We are also inviting community organisations, leaders and allies to take part in shaping the next chapter of this work.',
-          'If you would like to be part of the conversation, sign up to our newsletter and follow along as the strategy unfolds.',
-        ],
-      },
-      {
-        slug: 'cheltenham-partnership-event',
-        tag: 'Community',
-        title: 'Cheltenham Partnership Event - Key Insights',
-        description:
-          'Reflections and outcomes from the partnership convening that shaped our strategic direction and community-led decision making.',
-        date: 'February 2026',
-        href: '/news/cheltenham-partnership-event',
-        body: [
-          'In February, Phoenix brought together community leaders, funders and partners from across the UK for a two-day convening in Cheltenham. The event created space for honest conversation about the barriers Global Majority communities continue to face when accessing philanthropic funding - and what a more just system could look like.',
-          'Three themes stood out across the sessions: the need for long-term, unrestricted funding; the importance of trusting community-led decision making; and the urgency of building infrastructure that outlasts any single grant or initiative.',
-          'Participants spoke powerfully about the strength already present in their communities, and the value of being resourced to lead on their own terms. Those reflections will directly shape Phoenix\'s grant-making approach and partnership model in 2026.',
-          'We are deeply grateful to everyone who travelled to Cheltenham and shared their insight. The conversations sparked there will continue to guide our work in the months ahead.',
-        ],
-      },
-      {
-        slug: '2026-grants-round',
-        tag: 'Grants',
-        title: '2026 Grants Round - What to Expect',
-        description:
-          'Details on our first grants round in partnership with The National Lottery Community Fund, coming later this year.',
-        date: 'Coming soon',
-        href: '/news/2026-grants-round',
-        body: [
-          'Later this year, Phoenix will launch its first major grants round in partnership with The National Lottery Community Fund - a £4M programme designed to back Global Majority-led organisations doing transformative work in their communities.',
-          'The round will prioritise multi-year, flexible funding so that organisations can plan, build capacity and respond to the needs of their communities without being constrained by short funding cycles. Decision-making will be community-led, drawing on panels of trusted advisors with deep lived experience.',
-          'We are currently finalising the eligibility criteria, application process and timeline. Our aim is to make the experience as accessible, transparent and respectful of applicants\' time as possible.',
-          'Full details - including how to apply and the dates for information sessions - will be announced in the coming months. Join our newsletter to be the first to hear when applications open.',
-        ],
-      },
-    ],
+    cards: newsCards,
   },
 
 
