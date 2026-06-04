@@ -19,12 +19,13 @@ export default function Hero() {
           <img
             src={hero.imageUrl}
             alt=""
+            className="home-hero-photo"
             style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '58% center' }}
           />
           {/* Fade overlays matching inner page heroes */}
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #0d0d0d 0%, #0d0d0d 32%, rgba(13,13,13,0.9) 46%, transparent 78%)' }} />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, #0d0d0d 0%, transparent 32%)' }} />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #0d0d0d 0%, transparent 28%)' }} />
+          <div className="home-hero-fade-side" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #0d0d0d 0%, #0d0d0d 32%, rgba(13,13,13,0.9) 46%, transparent 78%)' }} />
+          <div className="home-hero-fade-bottom" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, #0d0d0d 0%, transparent 32%)' }} />
+          <div className="home-hero-fade-top" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #0d0d0d 0%, transparent 28%)' }} />
         </div>
       ) : null}
 
