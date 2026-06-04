@@ -22,11 +22,11 @@ export default function GrantsPage() {
       {/* TNLCF section */}
       <section style={{ padding: '4rem 2.5rem', background: '#0d0d0d' }}>
         <p className="font-semibold uppercase mb-4" style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#E8570A' }}>Our grants</p>
-        <h2 className="font-bold uppercase mb-8" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: '#f5f0eb' }}>
-          In collaboration with The National Lottery Community Fund
-        </h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'start' }}>
           <div>
+            <h2 className="font-bold uppercase mb-8" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: '#f5f0eb' }}>
+              In collaboration with The National Lottery Community Fund
+            </h2>
             <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.6)', lineHeight: '1.75', marginBottom: '1.25rem' }}>
               We are working with The National Lottery Community Fund (TNLCF) - one of the UK's largest funders of community projects that help people connect and build a better future - to deliver our 2026 grants round.
             </p>
