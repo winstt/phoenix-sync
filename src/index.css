@@ -143,26 +143,49 @@ button:focus-visible {
 }
 @media (max-width: 899px) {
   .home-hero {
-    min-height: 100vh !important;
-    display: block !important;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column;
   }
 
   .home-hero-image {
-    position: absolute !important;
-    right: 0 !important;
-    bottom: -4rem !important;
+    order: 2;
+    position: relative !important;
+    right: auto !important;
+    bottom: auto !important;
     top: auto !important;
     width: 100% !important;
-    height: min(48vh, 460px) !important;
-    min-height: 340px;
+    height: auto !important;
+    min-height: clamp(360px, 95vw, 520px);
     z-index: 0;
   }
 
+  .home-hero-photo {
+    object-position: center center !important;
+  }
+
+  .home-hero-fade-side {
+    background: linear-gradient(to right, #0d0d0d 0%, transparent 25%) !important;
+  }
+
+  .home-hero-fade-bottom {
+    background: linear-gradient(to top, #0d0d0d 0%, transparent 30%) !important;
+  }
+
+  .home-hero-fade-top {
+    background: linear-gradient(to bottom, #0d0d0d 0%, transparent 30%) !important;
+  }
+
   .home-hero-content {
+    order: 1;
     justify-content: flex-start !important;
-    padding-top: 7rem !important;
-    padding-bottom: min(31vh, 17rem) !important;
+    padding-top: calc(90px + 1.5rem) !important;
+    padding-bottom: 2rem !important;
     transform: none !important;
+  }
+
+  .home-hero-content > p:first-child {
+    margin-top: 0 !important;
   }
 
   .home-hero-heading-white {
@@ -172,7 +195,7 @@ button:focus-visible {
 
 @media (max-width: 480px) {
   .home-hero-content {
-    padding-top: 6rem !important;
+    padding-top: calc(90px + 1.25rem) !important;
     padding-bottom: 1rem !important;
   }
 
@@ -188,9 +211,7 @@ button:focus-visible {
   }
 
   .home-hero-image {
-    height: 34vh !important;
-    min-height: 220px;
-    bottom: 0 !important;
+    min-height: clamp(340px, 100vw, 460px);
   }
 
   .home-hero-actions {
