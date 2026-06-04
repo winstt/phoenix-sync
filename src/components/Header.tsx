@@ -29,6 +29,16 @@ export default function Header() {
     return () => { document.body.style.overflow = '' }
   }, [drawerOpen])
 
+  // Close drawer on Escape key for keyboard accessibility
+  useEffect(() => {
+    if (!drawerOpen) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setDrawerOpen(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [drawerOpen])
+
   return (
     <>
       {/* Skip link */}
