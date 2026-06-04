@@ -1,30 +1,8 @@
 import PageHero from '../components/PageHero'
 import CountUp from '../components/CountUp'
+import partnersContent from '../../content/partners.json'
 
-import antiRacistCumbriaPhoto from '../assets/impact-partners/anti_racistt_cumbriaa.png.asset.json'
-import inclusiveNorthPhoto from '../assets/impact-partners/inclusive_northh.png.asset.json'
-import impactHubYorkshirePhoto from '../assets/impact-partners/impact_hub_yorkshire.png.asset.json'
-import ubeleInitiativePhoto from '../assets/impact-partners/the_ubele_initiativee.png.asset.json'
-import blackSouthWestNetworkPhoto from '../assets/impact-partners/black_south_west_network_new.png.asset.json'
-import southAsianHealthActionPhoto from '../assets/impact-partners/south_asian_health_action.png.asset.json'
-
-import funderAntiracist from '../assets/funders/antiracist.png.asset.json'
-import funderComfun from '../assets/funders/comfun.png.asset.json'
-import funderImpactHub from '../assets/funders/impact_hub.png.asset.json'
-import funderUbele from '../assets/funders/the_ubele.png.asset.json'
-import funderBswn from '../assets/funders/bs_wn.png.asset.json'
-import funderSouthAsian from '../assets/funders/south_asian.png.asset.json'
-import funderInclusiveNorth from '../assets/funders/inclusive_north_funder2.png.asset.json'
-
-const funderLogos: { name: string; url: string; href?: string }[] = [
-  { name: 'Anti Racist Cumbria', url: funderAntiracist.url, href: 'https://antiracistcumbria.org' },
-  { name: 'Community Fund', url: funderComfun.url },
-  { name: 'Impact Hub Yorkshire', url: funderImpactHub.url, href: 'https://yorkshire.impacthub.net' },
-  { name: 'The Ubele Initiative', url: funderUbele.url, href: 'https://ubele.org' },
-  { name: 'Black South West Network', url: funderBswn.url, href: 'https://www.blacksouthwestnetwork.org' },
-  { name: 'South Asian Health Action', url: funderSouthAsian.url, href: 'https://www.sahauk.org' },
-  { name: 'Inclusive North', url: funderInclusiveNorth.url, href: 'https://www.inclusivenorth.org.uk' },
-]
+const funderLogos = partnersContent.funders.map(f => ({ name: f.name, url: f.logo, href: f.href }))
 
 const stats = [
   { num: '3000+', label: 'community members impacted' },
@@ -35,14 +13,7 @@ const stats = [
 
 const regions = ['North East & Cumbria', 'Yorkshire & Humber', 'North West', 'East Midlands', 'West Midlands', 'East of England', 'South West', 'Greater London', 'South East']
 
-const partners: { name: string; region: string; tagline: string; desc: string; image: string; href?: string }[] = [
-  { name: 'Anti Racist Cumbria', region: 'North East & Cumbria', tagline: 'DISMANTLING RACISM, ADVANCING JUSTICE.', desc: 'Anti Racist Cumbria is a community-led network building collective power across Cumbria.', image: antiRacistCumbriaPhoto.url, href: 'https://antiracistcumbria.org' },
-  { name: 'Inclusive North', region: 'North West', tagline: 'CHAMPIONING RACIAL UNITY.', desc: 'Inclusive North is a community-led organisation driving change for Global Majority communities across Lancashire through research, policy innovation and investment.', image: inclusiveNorthPhoto.url, href: 'https://www.inclusivenorth.org.uk' },
-  { name: 'Impact Hub Yorkshire', region: 'Yorkshire & Humber', tagline: 'POWERING POSITIVE CHANGE IN YORKSHIRE.', desc: 'A collaborative community connecting entrepreneurs, innovators, and organisations driving positive social and environmental change across Yorkshire.', image: impactHubYorkshirePhoto.url, href: 'https://yorkshire.impacthub.net' },
-  { name: 'The Ubele Initiative', region: 'Greater London, South East and East of England', tagline: 'ADVOCATING FOR EQUITY & JUSTICE IN COMMUNITIES.', desc: 'The Ubele Initiative empowers Global Majority communities in the UK to act as catalysts for social and economic change.', image: ubeleInitiativePhoto.url, href: 'https://ubele.org' },
-  { name: 'Black South West Network', region: 'South West', tagline: 'BUILDING POWER. CREATING CHANGE.', desc: 'Black South West Network works across the South West to advance racial justice, amplify Black voices, and build lasting opportunities for equity.', image: blackSouthWestNetworkPhoto.url, href: 'https://www.blacksouthwestnetwork.org' },
-  { name: 'South Asian Health Action', region: 'East & West Midlands', tagline: 'IMPROVING HEALTH. ADVANCING EQUITY.', desc: 'South Asian Health Action works to improve health outcomes and reduce inequalities for South Asian communities through research, advocacy, and action.', image: southAsianHealthActionPhoto.url, href: 'https://www.sahauk.org' },
-]
+const partners = partnersContent.networkPartners.map(p => ({ name: p.name, region: p.region, tagline: p.tagline, desc: p.desc, image: p.image, href: p.href }))
 
 export default function ImpactPage() {
   return (
