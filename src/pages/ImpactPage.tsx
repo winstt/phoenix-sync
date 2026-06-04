@@ -30,7 +30,13 @@ const stats = [
 
 const regions = ['North East & Cumbria', 'Yorkshire & Humber', 'North West', 'East Midlands', 'West Midlands', 'East of England', 'South West', 'Greater London', 'South East']
 
-const partners = partnersContent.networkPartners.map(p => ({ name: p.name, region: p.region, tagline: p.tagline, desc: p.desc, image: p.image, href: p.href }))
+import bswnPartnerImg from '../assets/impact-partners/black_south_west_network_new.png.asset.json'
+
+const partnerImageByName: Record<string, string> = {
+  'Black South West Network': bswnPartnerImg.url,
+}
+
+const partners = partnersContent.networkPartners.map(p => ({ name: p.name, region: p.region, tagline: p.tagline, desc: p.desc, image: partnerImageByName[p.name] ?? p.image, href: p.href }))
 
 export default function ImpactPage() {
   return (
