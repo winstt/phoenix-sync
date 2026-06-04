@@ -130,7 +130,7 @@ button:focus-visible {
 
 @media (min-width: 900px) {
   .home-hero-photo {
-    object-position: 70% center !important;
+    object-position: 30% center !important;
   }
 }
 
