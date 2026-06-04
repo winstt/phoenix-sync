@@ -20,7 +20,7 @@ export default function Hero() {
             src={hero.imageUrl}
             alt=""
             className="home-hero-photo"
-            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '58% center' }}
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center' }}
           />
           {/* Fade overlays matching inner page heroes */}
           <div className="home-hero-fade-side" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #0d0d0d 0%, #0d0d0d 32%, rgba(13,13,13,0.9) 46%, transparent 78%)' }} />
