@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import AccessibilityWidget from './components/AccessibilityWidget'
-import VoiceNavigation from './components/VoiceNavigation'
+
 import KeyboardNavMode from './components/KeyboardNavMode'
 import Hero from './components/Hero'
 import WhoStrip from './components/WhoStrip'
@@ -67,7 +67,6 @@ export default function App() {
       </Routes>
       <Footer />
       <AccessibilityWidget />
-      <VoiceNavigation />
       <KeyboardNavMode />
     </BrowserRouter>
   )
