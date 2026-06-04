@@ -15,7 +15,7 @@ type NewsCard = {
   body: string[]
 }
 
-const rawNewsModules = import.meta.glob<NewsCard>('/content/news/*.json', { eager: true })
+const rawNewsModules = import.meta.glob<NewsCard>('/content/news/*.json', { eager: true, import: 'default' })
 const newsCards: NewsCard[] = Object.values(rawNewsModules).map(m => ({
   ...m,
   href: `/news/${m.slug}`,
