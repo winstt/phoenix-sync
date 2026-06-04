@@ -30,7 +30,7 @@ export default function OpportunitiesPage() {
         <div style={{ background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '3rem', textAlign: 'center' }}>
           <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#f5f0eb', marginBottom: '0.75rem' }}>No tenders at this time</h3>
           <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.6)', lineHeight: '1.6', maxWidth: '480px', margin: '0 auto' }}>
-            We do not have any open tenders right now. Check back soon or get in touch if you would like to discuss working with us.
+            We do not have any open tenders right now. Sign up below to be notified when new opportunities are posted.
           </p>
         </div>
       </section>
