@@ -1,6 +1,11 @@
 {
   "funders": [
     {
+      "name": "National Lottery Community Fund",
+      "logo": "/images/partners/national-lottery-community-fund.png",
+      "href": "https://www.tnlcommunityfund.org.uk"
+    },
+    {
       "name": "Anti Racist Cumbria",
       "logo": "/images/partners/anti-racist-cumbria.png",
       "href": "https://antiracistcumbria.org"
