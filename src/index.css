@@ -179,9 +179,13 @@ button:focus-visible {
   .home-hero-content {
     order: 1;
     justify-content: flex-start !important;
-    padding-top: 7rem !important;
+    padding-top: calc(90px + 1.5rem) !important;
     padding-bottom: 2rem !important;
     transform: none !important;
+  }
+
+  .home-hero-content > p:first-child {
+    margin-top: 0 !important;
   }
 
   .home-hero-heading-white {
@@ -191,7 +195,7 @@ button:focus-visible {
 
 @media (max-width: 480px) {
   .home-hero-content {
-    padding-top: 6rem !important;
+    padding-top: calc(90px + 1.25rem) !important;
     padding-bottom: 1rem !important;
   }
 
