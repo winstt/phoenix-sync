@@ -122,7 +122,7 @@ export default function AboutPage() {
         <p className="font-semibold uppercase mb-10" style={{ fontSize: '12px', letterSpacing: '0.14em', color: '#E8570A' }}>Our current partners and funders</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '1rem', alignItems: 'stretch', justifyItems: 'stretch' }}>
           {partners.map(p => {
-            const img = <img src={p.logo} alt={p.name} loading="lazy" style={{ maxHeight: '100%', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+            const img = <img src={logoByName[p.name] ?? p.logo} alt={p.name} loading="lazy" style={{ maxHeight: '100%', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }} />
             const boxStyle = { height: '100px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem', background: '#161616', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px' } as const
             return p.href ? (
               <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer" aria-label={p.name} style={{ ...boxStyle, cursor: 'pointer' }}>{img}</a>
