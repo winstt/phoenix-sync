@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { X, Minus, Plus, Mic, MicOff } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
-import accessibilityReferenceGlyph from '@/assets/accessibility-reference-glyph.png.asset.json'
+import accessibilityReferenceGlyph from '../assets/accessibility-reference-glyph.png.asset.json'
 
 type Settings = {
   textSize: number
