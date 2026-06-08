@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { X, Minus, Plus, Mic, MicOff } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
+import accessibilityReferenceGlyph from '@/assets/accessibility-reference-glyph.png.asset.json'
 
 type Settings = {
   textSize: number
@@ -106,23 +107,13 @@ const SAMPLE_COMMANDS = [
 
 function ReferenceAccessibilityIcon() {
   return (
-    <svg
-      width="24"
-      height="29"
-      viewBox="0 0 34 41"
+    <img
+      src={accessibilityReferenceGlyph.url}
+      alt=""
       aria-hidden="true"
-      focusable="false"
-      className="block overflow-visible"
-    >
-      <g fill="currentColor">
-        <circle cx="17" cy="4.5" r="4.5" />
-        <rect x="3" y="12" width="28" height="3" rx="1.5" />
-        <rect x="15" y="12" width="4" height="15" rx="1" />
-        <path d="M15 24h4l7 16h-4.5L17 29.5 12.5 40H8z" />
-        <circle cx="7.5" cy="37" r="3.5" />
-        <circle cx="26.5" cy="37" r="3.5" />
-      </g>
-    </svg>
+      className="block h-[28px] w-[23px] object-contain"
+      draggable={false}
+    />
   )
 }
 
