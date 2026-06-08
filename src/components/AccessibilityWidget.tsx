@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
-import { X, Minus, Plus, Mic, MicOff, Accessibility } from 'lucide-react'
+import { X, Minus, Plus, Mic, MicOff } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
 type Settings = {
@@ -103,6 +103,28 @@ const SAMPLE_COMMANDS = [
   '"Go back" / "Go forward"',
   '"Stop listening"',
 ]
+
+function ReferenceAccessibilityIcon() {
+  return (
+    <svg
+      width="24"
+      height="29"
+      viewBox="0 0 34 41"
+      aria-hidden="true"
+      focusable="false"
+      className="block overflow-visible"
+    >
+      <g fill="currentColor">
+        <circle cx="17" cy="4.5" r="4.5" />
+        <rect x="3" y="12" width="28" height="3" rx="1.5" />
+        <rect x="15" y="12" width="4" height="15" rx="1" />
+        <path d="M15 24h4l7 16h-4.5L17 29.5 12.5 40H8z" />
+        <circle cx="7.5" cy="37" r="3.5" />
+        <circle cx="26.5" cy="37" r="3.5" />
+      </g>
+    </svg>
+  )
+}
 
 function Toggle({ checked, onChange, label }: { checked: boolean; onChange: (v: boolean) => void; label: string }) {
   return (
@@ -407,9 +429,9 @@ export default function AccessibilityWidget() {
         onClick={() => setOpen((o) => !o)}
         aria-label="Open accessibility settings"
         aria-expanded={open}
-        className="a11y-no-scale fixed bottom-6 right-6 z-[9999] h-12 w-12 rounded-full bg-[hsl(330_77%_42%)] hover:bg-[hsl(330_77%_38%)] text-white shadow-2xl flex items-center justify-center transition-colors"
+        className="a11y-no-scale fixed bottom-6 right-6 z-[9999] h-12 w-12 rounded-full bg-[#b22d5b] hover:bg-[#a52753] text-white shadow-2xl flex items-center justify-center transition-colors"
       >
-        <Accessibility size={24} strokeWidth={2.25} aria-hidden="true" />
+        <ReferenceAccessibilityIcon />
       </button>
     </>
   )
