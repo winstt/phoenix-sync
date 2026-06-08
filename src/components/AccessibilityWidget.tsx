@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { X, Minus, Plus, Mic, MicOff } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
-import accessibilityReferenceGlyph from '../assets/accessibility-reference-glyph.png.asset.json'
 
 type Settings = {
   textSize: number
@@ -105,15 +104,21 @@ const SAMPLE_COMMANDS = [
   '"Stop listening"',
 ]
 
+const REFERENCE_ACCESSIBILITY_ICON_PATH = 'M15 0h4v1H15z M13 1h8v1H13z M13 2h8v1H13z M12 3h4v1H12z M18 3h4v1H18z M12 4h4v1H12z M18 4h4v1H18z M12 5h4v1H12z M18 5h4v1H18z M12 6h10v1H12z M13 7h8v1H13z M14 8h6v1H14z M15 9h4v1H15z M16 11h2v1H16z M3 12h28v1H3z M2 13h30v1H2z M3 14h28v1H3z M15 15h4v1H15z M15 16h4v1H15z M15 17h4v1H15z M15 18h4v1H15z M15 19h4v1H15z M15 20h4v1H15z M15 21h4v1H15z M7 22h4v1H7z M15 22h4v1H15z M23 22h4v1H23z M5 23h7v1H5z M15 23h4v1H15z M22 23h7v1H22z M4 24h8v1H4z M15 24h4v1H15z M22 24h8v1H22z M3 25h9v1H3z M14 25h6v1H14z M22 25h9v1H22z M2 26h6v1H2z M14 26h6v1H14z M26 26h6v1H26z M2 27h4v1H2z M14 27h6v1H14z M28 27h4v1H28z M1 28h5v1H1z M13 28h8v1H13z M28 28h5v1H28z M1 29h4v1H1z M13 29h8v1H13z M29 29h4v1H29z M0 30h4v1H0z M12 30h4v1H12z M18 30h4v1H18z M30 30h4v1H30z M0 31h4v1H0z M12 31h4v1H12z M18 31h4v1H18z M30 31h4v1H30z M1 32h2v1H1z M11 32h5v1H11z M18 32h5v1H18z M31 32h2v1H31z M11 33h4v1H11z M19 33h4v1H19z M11 34h4v1H11z M19 34h4v1H19z M10 35h4v1H10z M20 35h4v1H20z M10 36h4v1H10z M20 36h4v1H20z M9 37h4v1H9z M21 37h4v1H21z M9 38h4v1H9z M21 38h4v1H21z M9 39h4v1H9z M21 39h4v1H21z M9 40h3v1H9z M22 40h3v1H22z'
+
 function ReferenceAccessibilityIcon() {
   return (
-    <img
-      src={accessibilityReferenceGlyph.url}
-      alt=""
+    <svg
+      width="24"
+      height="29"
+      viewBox="0 0 34 41"
       aria-hidden="true"
-      className="block h-[28px] w-[23px] object-contain"
-      draggable={false}
-    />
+      focusable="false"
+      className="block overflow-visible"
+      shapeRendering="crispEdges"
+    >
+      <path d={REFERENCE_ACCESSIBILITY_ICON_PATH} fill="currentColor" />
+    </svg>
   )
 }
 
