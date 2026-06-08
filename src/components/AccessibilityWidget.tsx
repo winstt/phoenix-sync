@@ -1,5 +1,12 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
-import { X, Minus, Plus, Mic, MicOff, Accessibility } from 'lucide-react'
+import { X, Minus, Plus, Mic, MicOff } from 'lucide-react'
+
+const A11yIcon = ({ size = 22 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <circle cx="12" cy="4" r="1.8" />
+    <path d="M5 8.5c0-.6.5-1.1 1.1-1.1.2 0 .3 0 .5.1L10 8.6c.6.2 1.3.3 2 .3s1.4-.1 2-.3l3.4-1.1c.2-.1.3-.1.5-.1.6 0 1.1.5 1.1 1.1 0 .5-.3.9-.8 1L14.5 11v3l1.9 5.7c.2.6-.2 1.3-.9 1.5-.6.2-1.3-.2-1.5-.9L12 14.8l-2 5.5c-.2.7-.9 1-1.5.9-.7-.2-1.1-.9-.9-1.5l1.9-5.7v-3L5.8 9.5C5.3 9.4 5 9 5 8.5z" />
+  </svg>
+)
 import { useNavigate } from 'react-router-dom'
 
 type Settings = {
