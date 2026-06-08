@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
-import { X, Minus, Plus, Mic, MicOff, PersonStanding } from 'lucide-react'
+import { X, Minus, Plus, Mic, MicOff, Accessibility } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
 type Settings = {
