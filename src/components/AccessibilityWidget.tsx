@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
-import { X, Minus, Plus, Mic, MicOff } from 'lucide-react'
+import { X, Minus, Plus, Mic, MicOff, Accessibility } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
-import phoenixIcon from '../assets/phoenix-icon.png.asset.json'
 
 type Settings = {
   textSize: number
