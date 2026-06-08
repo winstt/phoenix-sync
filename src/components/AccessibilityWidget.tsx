@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
-import { X, Minus, Plus, Mic, MicOff, PersonStanding } from 'lucide-react'
+import { X, Minus, Plus, Mic, MicOff, Accessibility } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
 type Settings = {
@@ -409,7 +409,7 @@ export default function AccessibilityWidget() {
         aria-expanded={open}
         className="a11y-no-scale fixed bottom-6 right-6 z-[9999] h-12 w-12 rounded-full bg-[hsl(330_77%_42%)] hover:bg-[hsl(330_77%_38%)] text-white shadow-2xl flex items-center justify-center transition-colors"
       >
-        <PersonStanding size={24} strokeWidth={2.25} aria-hidden="true" />
+        <Accessibility size={24} strokeWidth={2.25} aria-hidden="true" />
       </button>
     </>
   )
