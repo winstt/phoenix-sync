@@ -1,0 +1,24 @@
+paths:
+  static: public
+  uploads: public/images/uploads
+timezone: Europe/Prague
+markdown:
+  engine: commonmark
+  options: {}
+source: /
+collections_config:
+  pages:
+    path: ''
+    icon: wysiwyg
+  assets:
+    path: src/assets
+    icon: cases
+  content:
+    path: content
+    icon: wysiwyg
+  news:
+    path: content/news
+    icon: newsmode
+  public_admin:
+    path: public/admin
+    icon: public_off
