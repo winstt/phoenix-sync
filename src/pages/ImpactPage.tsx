@@ -1,16 +1,26 @@
 import PageHero from '../components/PageHero'
 import CountUp from '../components/CountUp'
 import partnersContent from '../../content/partners.json'
+import antiRacistLogo from '../assets/funders-new/antiracist.png.asset.json'
+import nationalLotteryLogo from '../assets/funders-new/comfun.png.asset.json'
+import impactHubLogo from '../assets/funders-new/impact_hub.png.asset.json'
+import ubeleLogo from '../assets/funders-new/the_ubele.png.asset.json'
+import blackSouthWestLogo from '../assets/funders-new/bs_wn.png.asset.json'
+import southAsianLogo from '../assets/funders-new/south_asian.png.asset.json'
+import inclusiveNorthLogo from '../assets/funders-new/inclusive_north.png.asset.json'
+import blackSouthWestImage from '../assets/impact-partners/black_south_west_network_new.png.asset.json'
 
 const BASE = import.meta.env.BASE_URL
+const LOVABLE_ASSET_ORIGIN = 'https://the-phoenix-web.lovable.app'
+const cdnAsset = (url: string) => `${LOVABLE_ASSET_ORIGIN}${url}`
 const logoByName: Record<string, string> = {
-  'Anti Racist Cumbria': `${BASE}images/partners/anti-racist-cumbria-logo.png`,
-  'National Lottery Community Fund': `${BASE}images/partners/national-lottery-community-fund.png`,
-  'Impact Hub Yorkshire': `${BASE}images/partners/impact-hub-yorkshire-logo.png`,
-  'The Ubele Initiative': `${BASE}images/partners/the-ubele-logo.png`,
-  'Black South West Network': `${BASE}images/partners/black-south-west-network-logo.png`,
-  'South Asian Health Action': `${BASE}images/partners/south-asian-health-action-logo.png`,
-  'Inclusive North': `${BASE}images/partners/inclusive-north-logo.png`,
+  'Anti Racist Cumbria': cdnAsset(antiRacistLogo.url),
+  'National Lottery Community Fund': cdnAsset(nationalLotteryLogo.url),
+  'Impact Hub Yorkshire': cdnAsset(impactHubLogo.url),
+  'The Ubele Initiative': cdnAsset(ubeleLogo.url),
+  'Black South West Network': cdnAsset(blackSouthWestLogo.url),
+  'South Asian Health Action': cdnAsset(southAsianLogo.url),
+  'Inclusive North': cdnAsset(inclusiveNorthLogo.url),
 }
 
 const funderLogos = partnersContent.funders.map(f => ({
@@ -29,7 +39,7 @@ const stats = [
 const regions = ['North East & Cumbria', 'Yorkshire & Humber', 'North West', 'East Midlands', 'West Midlands', 'East of England', 'South West', 'Greater London', 'South East']
 
 const partnerImageByName: Record<string, string> = {
-  'Black South West Network': `${BASE}images/partners/black-south-west-network-card.png`,
+  'Black South West Network': cdnAsset(blackSouthWestImage.url),
 }
 
 const partners = partnersContent.networkPartners.map(p => ({

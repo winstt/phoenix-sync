@@ -2,37 +2,37 @@
   "funders": [
     {
       "name": "National Lottery Community Fund",
-      "logo": "/images/partners/national-lottery-community-fund.png",
+      "logo": "https://the-phoenix-web.lovable.app/__l5e/assets-v1/6f10d430-d9ca-47ec-8202-a42d07fe727b/comfun.png",
       "href": "https://www.tnlcommunityfund.org.uk"
     },
     {
       "name": "Anti Racist Cumbria",
-      "logo": "/images/partners/anti-racist-cumbria-logo.png",
+      "logo": "https://the-phoenix-web.lovable.app/__l5e/assets-v1/3c034bd2-9c59-4123-976e-4ddf0f506fe5/antiracist.png",
       "href": "https://antiracistcumbria.org"
     },
     {
       "name": "Impact Hub Yorkshire",
-      "logo": "/images/partners/impact-hub-yorkshire-logo.png",
+      "logo": "https://the-phoenix-web.lovable.app/__l5e/assets-v1/5783ad95-05e1-4c13-b9a2-763e9edb4751/impact_hub.png",
       "href": "https://yorkshire.impacthub.net"
     },
     {
       "name": "The Ubele Initiative",
-      "logo": "/images/partners/the-ubele-logo.png",
+      "logo": "https://the-phoenix-web.lovable.app/__l5e/assets-v1/579c4a9d-3337-42ba-a54b-aff183201b29/the_ubele.png",
       "href": "https://ubele.org"
     },
     {
       "name": "Black South West Network",
-      "logo": "/images/partners/black-south-west-network-logo.png",
+      "logo": "https://the-phoenix-web.lovable.app/__l5e/assets-v1/ee3b2fa1-856b-4645-8849-dd331bb296fb/bs_wn.png",
       "href": "https://www.blacksouthwestnetwork.org"
     },
     {
       "name": "South Asian Health Action",
-      "logo": "/images/partners/south-asian-health-action-logo.png",
+      "logo": "https://the-phoenix-web.lovable.app/__l5e/assets-v1/349b9d7a-86fb-4c9e-8f22-8b03dec43f3b/south_asian.png",
       "href": "https://www.sahauk.org"
     },
     {
       "name": "Inclusive North",
-      "logo": "/images/partners/inclusive-north-logo.png",
+      "logo": "https://the-phoenix-web.lovable.app/__l5e/assets-v1/426681dc-6bcb-40cf-8fb8-37d7de478d13/inclusive_north.png",
       "href": "https://www.inclusivenorth.org.uk"
     }
   ],
@@ -74,7 +74,7 @@
       "region": "South West",
       "tagline": "BUILDING POWER. CREATING CHANGE.",
       "desc": "Black South West Network works across the South West to advance racial justice, amplify Black voices, and build lasting opportunities for equity.",
-      "image": "/images/partners/black-south-west-network-card.png",
+      "image": "https://the-phoenix-web.lovable.app/__l5e/assets-v1/6b3da1f9-30b1-4bc8-90ff-0f8e5e6c0654/black_south_west_network_new.png",
       "href": "https://www.blacksouthwestnetwork.org"
     },
     {
