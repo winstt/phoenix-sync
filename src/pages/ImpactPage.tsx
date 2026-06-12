@@ -1,16 +1,17 @@
 import PageHero from '../components/PageHero'
 import CountUp from '../components/CountUp'
 import partnersContent from '../../content/partners.json'
+import { partnerLogoDataUrls, partnerPhotoDataUrls } from '../data/partnerImages'
 
 const BASE = import.meta.env.BASE_URL
 const logoByName: Record<string, string> = {
-  'Anti Racist Cumbria': `${BASE}images/partners-new/antiracist.png`,
-  'National Lottery Community Fund': `${BASE}images/partners-new/comfun.png`,
-  'Impact Hub Yorkshire': `${BASE}images/partners-new/impact_hub.png`,
-  'The Ubele Initiative': `${BASE}images/partners-new/the_ubele.png`,
-  'Black South West Network': `${BASE}images/partners-new/bs_wn.png`,
-  'South Asian Health Action': `${BASE}images/partners-new/south_asian.png`,
-  'Inclusive North': `${BASE}images/partners-new/inclusive_north.png`,
+  'Anti Racist Cumbria': partnerLogoDataUrls['Anti Racist Cumbria'],
+  'National Lottery Community Fund': partnerLogoDataUrls['National Lottery Community Fund'],
+  'Impact Hub Yorkshire': partnerLogoDataUrls['Impact Hub Yorkshire'],
+  'The Ubele Initiative': partnerLogoDataUrls['The Ubele Initiative'],
+  'Black South West Network': partnerLogoDataUrls['Black South West Network'],
+  'South Asian Health Action': partnerLogoDataUrls['South Asian Health Action'],
+  'Inclusive North': partnerLogoDataUrls['Inclusive North'],
 }
 
 const funderLogos = partnersContent.funders.map(f => ({
@@ -29,7 +30,7 @@ const stats = [
 const regions = ['North East & Cumbria', 'Yorkshire & Humber', 'North West', 'East Midlands', 'West Midlands', 'East of England', 'South West', 'Greater London', 'South East']
 
 const partnerImageByName: Record<string, string> = {
-  'Black South West Network': `${BASE}images/impact-partners/black_south_west_network_new.png`,
+  'Black South West Network': partnerPhotoDataUrls['Black South West Network'],
 }
 
 const partners = partnersContent.networkPartners.map(p => ({
@@ -96,7 +97,10 @@ export default function ImpactPage() {
                 <div style={{ aspectRatio: '4 / 3', overflow: 'hidden', background: '#161616' }}>
                   {p.href ? (
                     <a href={p.href} target="_blank" rel="noopener noreferrer" aria-label={p.name} style={{ display: 'block', width: '100%', height: '100%', cursor: 'pointer' }}>
-                      <img src={p.image} alt={p.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: p.name === 'Impact Hub Yorkshire' ? '22% center' : 'center', display: 'block' }} />
+                      <img src={p.image} alt={p.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: p.name === 'Impact Hub Yorkshire' ? '22% center' : 'center', display: 'block' }} onError={(e) => {
+                        const fallbackPhoto = partnerPhotoDataUrls[p.name]
+                        if (fallbackPhoto && e.currentTarget.src !== fallbackPhoto) e.currentTarget.src = fallbackPhoto
+                      }} />
                     </a>
                   ) : (
                     <img src={p.image} alt={p.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
@@ -132,6 +136,11 @@ export default function ImpactPage() {
                 style={{ maxHeight: '100%', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }}
                 onError={(e) => {
                   const el = e.currentTarget
+                  const fallbackLogo = partnerLogoDataUrls[l.name]
+                  if (fallbackLogo && el.src !== fallbackLogo) {
+                    el.src = fallbackLogo
+                    return
+                  }
                   el.style.display = 'none'
                   const parent = el.parentElement
                   if (parent && !parent.querySelector('[data-logo-fallback]')) {
