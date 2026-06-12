@@ -2,37 +2,37 @@
   "funders": [
     {
       "name": "National Lottery Community Fund",
-      "logo": "/images/partners-new/comfun.png",
+      "logo": "/images/partners/national-lottery-community-fund.png",
       "href": "https://www.tnlcommunityfund.org.uk"
     },
     {
       "name": "Anti Racist Cumbria",
-      "logo": "/images/partners-new/antiracist.png",
+      "logo": "/images/partners/anti-racist-cumbria-logo.png",
       "href": "https://antiracistcumbria.org"
     },
     {
       "name": "Impact Hub Yorkshire",
-      "logo": "/images/partners-new/impact_hub.png",
+      "logo": "/images/partners/impact-hub-yorkshire-logo.png",
       "href": "https://yorkshire.impacthub.net"
     },
     {
       "name": "The Ubele Initiative",
-      "logo": "/images/partners-new/the_ubele.png",
+      "logo": "/images/partners/the-ubele-logo.png",
       "href": "https://ubele.org"
     },
     {
       "name": "Black South West Network",
-      "logo": "/images/partners-new/bs_wn.png",
+      "logo": "/images/partners/black-south-west-network-logo.png",
       "href": "https://www.blacksouthwestnetwork.org"
     },
     {
       "name": "South Asian Health Action",
-      "logo": "/images/partners-new/south_asian.png",
+      "logo": "/images/partners/south-asian-health-action-logo.png",
       "href": "https://www.sahauk.org"
     },
     {
       "name": "Inclusive North",
-      "logo": "/images/partners-new/inclusive_north.png",
+      "logo": "/images/partners/inclusive-north-logo.png",
       "href": "https://www.inclusivenorth.org.uk"
     }
   ],
@@ -74,7 +74,7 @@
       "region": "South West",
       "tagline": "BUILDING POWER. CREATING CHANGE.",
       "desc": "Black South West Network works across the South West to advance racial justice, amplify Black voices, and build lasting opportunities for equity.",
-      "image": "/images/impact-partners/black_south_west_network_new.png",
+      "image": "/images/partners/black-south-west-network-card.png",
       "href": "https://www.blacksouthwestnetwork.org"
     },
     {
