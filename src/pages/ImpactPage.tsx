@@ -13,7 +13,11 @@ const logoByName: Record<string, string> = {
   'Inclusive North': `${BASE}images/partners-new/inclusive_north.png`,
 }
 
-const funderLogos = partnersContent.funders.map(f => ({ name: f.name, url: logoByName[f.name] ?? f.logo, href: f.href }))
+const funderLogos = partnersContent.funders.map(f => ({
+  name: f.name,
+  url: logoByName[f.name] ?? `${BASE}${(f.logo || '').replace(/^\//, '')}`,
+  href: f.href,
+}))
 
 const stats = [
   { num: '3000+', label: 'community members impacted' },
@@ -24,13 +28,18 @@ const stats = [
 
 const regions = ['North East & Cumbria', 'Yorkshire & Humber', 'North West', 'East Midlands', 'West Midlands', 'East of England', 'South West', 'Greater London', 'South East']
 
-import bswnPartnerImg from '../assets/impact-partners/black_south_west_network_new.png.asset.json'
-
 const partnerImageByName: Record<string, string> = {
-  'Black South West Network': bswnPartnerImg.url,
+  'Black South West Network': `${BASE}images/impact-partners/black_south_west_network_new.png`,
 }
 
-const partners = partnersContent.networkPartners.map(p => ({ name: p.name, region: p.region, tagline: p.tagline, desc: p.desc, image: partnerImageByName[p.name] ?? p.image, href: p.href }))
+const partners = partnersContent.networkPartners.map(p => ({
+  name: p.name,
+  region: p.region,
+  tagline: p.tagline,
+  desc: p.desc,
+  image: partnerImageByName[p.name] ?? `${BASE}${(p.image || '').replace(/^\//, '')}`,
+  href: p.href,
+}))
 
 export default function ImpactPage() {
   return (
