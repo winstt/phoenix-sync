@@ -2,17 +2,16 @@ import { useState } from 'react'
 import PageHero from '../components/PageHero'
 import trusteesContent from '../../content/trustees.json'
 import partnersContent from '../../content/partners.json'
-import { partnerLogoDataUrls } from '../data/partnerImages'
 
 const BASE = import.meta.env.BASE_URL
 const logoByName: Record<string, string> = {
-  'Anti Racist Cumbria': partnerLogoDataUrls['Anti Racist Cumbria'],
-  'National Lottery Community Fund': partnerLogoDataUrls['National Lottery Community Fund'],
-  'Impact Hub Yorkshire': partnerLogoDataUrls['Impact Hub Yorkshire'],
-  'The Ubele Initiative': partnerLogoDataUrls['The Ubele Initiative'],
-  'Black South West Network': partnerLogoDataUrls['Black South West Network'],
-  'South Asian Health Action': partnerLogoDataUrls['South Asian Health Action'],
-  'Inclusive North': partnerLogoDataUrls['Inclusive North'],
+  'Anti Racist Cumbria': `${BASE}images/partners-new/antiracist.png`,
+  'National Lottery Community Fund': `${BASE}images/partners/national-lottery-community-fund.png`,
+  'Impact Hub Yorkshire': `${BASE}images/partners-new/impact_hub.png`,
+  'The Ubele Initiative': `${BASE}images/partners-new/the_ubele.png`,
+  'Black South West Network': `${BASE}images/partners-new/bs_wn.png`,
+  'South Asian Health Action': `${BASE}images/partners-new/south_asian.png`,
+  'Inclusive North': `${BASE}images/partners-new/inclusive_north.png`,
 }
 
 const trustees = trusteesContent.trustees
@@ -125,11 +124,6 @@ export default function AboutPage() {
                 style={{ maxHeight: '100%', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }}
                 onError={(e) => {
                   const el = e.currentTarget
-                  const fallbackLogo = partnerLogoDataUrls[p.name]
-                  if (fallbackLogo && el.src !== fallbackLogo) {
-                    el.src = fallbackLogo
-                    return
-                  }
                   el.style.display = 'none'
                   const parent = el.parentElement
                   if (parent && !parent.querySelector('[data-logo-fallback]')) {
