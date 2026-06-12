@@ -1,25 +1,23 @@
 import PageHero from '../components/PageHero'
 import CountUp from '../components/CountUp'
 import partnersContent from '../../content/partners.json'
-import antiracistLogo from '../assets/funders-new/antiracist.png.asset.json'
-import comfunLogo from '../assets/funders-new/comfun.png.asset.json'
-import impactHubLogo from '../assets/funders-new/impact_hub.png.asset.json'
-import bswnLogo from '../assets/funders-new/bs_wn.png.asset.json'
-import southAsianLogo from '../assets/funders-new/south_asian.png.asset.json'
-import ubeleLogo from '../assets/funders-new/the_ubele.png.asset.json'
-import inclusiveNorthLogo from '../assets/funders-new/inclusive_north.png.asset.json'
 
+const BASE = import.meta.env.BASE_URL
 const logoByName: Record<string, string> = {
-  'Anti Racist Cumbria': antiracistLogo.url,
-  'National Lottery Community Fund': comfunLogo.url,
-  'Impact Hub Yorkshire': impactHubLogo.url,
-  'The Ubele Initiative': ubeleLogo.url,
-  'Black South West Network': bswnLogo.url,
-  'South Asian Health Action': southAsianLogo.url,
-  'Inclusive North': inclusiveNorthLogo.url,
+  'Anti Racist Cumbria': `${BASE}images/partners-new/antiracist.png`,
+  'National Lottery Community Fund': `${BASE}images/partners-new/comfun.png`,
+  'Impact Hub Yorkshire': `${BASE}images/partners-new/impact_hub.png`,
+  'The Ubele Initiative': `${BASE}images/partners-new/the_ubele.png`,
+  'Black South West Network': `${BASE}images/partners-new/bs_wn.png`,
+  'South Asian Health Action': `${BASE}images/partners-new/south_asian.png`,
+  'Inclusive North': `${BASE}images/partners-new/inclusive_north.png`,
 }
 
-const funderLogos = partnersContent.funders.map(f => ({ name: f.name, url: logoByName[f.name] ?? f.logo, href: f.href }))
+const funderLogos = partnersContent.funders.map(f => ({
+  name: f.name,
+  url: logoByName[f.name] ?? `${BASE}${(f.logo || '').replace(/^\//, '')}`,
+  href: f.href,
+}))
 
 const stats = [
   { num: '3000+', label: 'community members impacted' },
@@ -30,13 +28,18 @@ const stats = [
 
 const regions = ['North East & Cumbria', 'Yorkshire & Humber', 'North West', 'East Midlands', 'West Midlands', 'East of England', 'South West', 'Greater London', 'South East']
 
-import bswnPartnerImg from '../assets/impact-partners/black_south_west_network_new.png.asset.json'
-
 const partnerImageByName: Record<string, string> = {
-  'Black South West Network': bswnPartnerImg.url,
+  'Black South West Network': `${BASE}images/impact-partners/black_south_west_network_new.png`,
 }
 
-const partners = partnersContent.networkPartners.map(p => ({ name: p.name, region: p.region, tagline: p.tagline, desc: p.desc, image: partnerImageByName[p.name] ?? p.image, href: p.href }))
+const partners = partnersContent.networkPartners.map(p => ({
+  name: p.name,
+  region: p.region,
+  tagline: p.tagline,
+  desc: p.desc,
+  image: partnerImageByName[p.name] ?? `${BASE}${(p.image || '').replace(/^\//, '')}`,
+  href: p.href,
+}))
 
 export default function ImpactPage() {
   return (
@@ -121,7 +124,26 @@ export default function ImpactPage() {
         <p className="font-semibold uppercase mb-10" style={{ fontSize: '12px', letterSpacing: '0.14em', color: '#E8570A' }}>Our current partners and funders</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '1rem', alignItems: 'stretch', justifyItems: 'stretch' }}>
           {funderLogos.map(l => {
-            const img = <img src={l.url} alt={l.name} loading="lazy" style={{ maxHeight: '100%', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }} />
+            const img = (
+              <img
+                src={l.url}
+                alt={l.name}
+                loading="lazy"
+                style={{ maxHeight: '100%', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }}
+                onError={(e) => {
+                  const el = e.currentTarget
+                  el.style.display = 'none'
+                  const parent = el.parentElement
+                  if (parent && !parent.querySelector('[data-logo-fallback]')) {
+                    const span = document.createElement('span')
+                    span.setAttribute('data-logo-fallback', 'true')
+                    span.textContent = l.name
+                    span.style.cssText = 'color:#f5f0eb;font-size:12px;font-weight:600;text-align:center;line-height:1.3;'
+                    parent.appendChild(span)
+                  }
+                }}
+              />
+            )
             const boxStyle = { height: '100px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem', background: '#161616', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px' } as const
             return l.href ? (
               <a key={l.name} href={l.href} target="_blank" rel="noopener noreferrer" aria-label={l.name} style={{ ...boxStyle, cursor: 'pointer' }}>{img}</a>
