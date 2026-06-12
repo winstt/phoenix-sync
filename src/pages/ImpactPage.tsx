@@ -4,13 +4,13 @@ import partnersContent from '../../content/partners.json'
 
 const BASE = import.meta.env.BASE_URL
 const logoByName: Record<string, string> = {
-  'Anti Racist Cumbria': `${BASE}images/partners-new/antiracist.png`,
+  'Anti Racist Cumbria': `${BASE}images/partners/anti-racist-cumbria-logo.png`,
   'National Lottery Community Fund': `${BASE}images/partners/national-lottery-community-fund.png`,
-  'Impact Hub Yorkshire': `${BASE}images/partners-new/impact_hub.png`,
-  'The Ubele Initiative': `${BASE}images/partners-new/the_ubele.png`,
-  'Black South West Network': `${BASE}images/partners-new/bs_wn.png`,
-  'South Asian Health Action': `${BASE}images/partners-new/south_asian.png`,
-  'Inclusive North': `${BASE}images/partners-new/inclusive_north.png`,
+  'Impact Hub Yorkshire': `${BASE}images/partners/impact-hub-yorkshire-logo.png`,
+  'The Ubele Initiative': `${BASE}images/partners/the-ubele-logo.png`,
+  'Black South West Network': `${BASE}images/partners/black-south-west-network-logo.png`,
+  'South Asian Health Action': `${BASE}images/partners/south-asian-health-action-logo.png`,
+  'Inclusive North': `${BASE}images/partners/inclusive-north-logo.png`,
 }
 
 const funderLogos = partnersContent.funders.map(f => ({
@@ -29,7 +29,7 @@ const stats = [
 const regions = ['North East & Cumbria', 'Yorkshire & Humber', 'North West', 'East Midlands', 'West Midlands', 'East of England', 'South West', 'Greater London', 'South East']
 
 const partnerImageByName: Record<string, string> = {
-  'Black South West Network': `${BASE}images/impact-partners/black_south_west_network_new.png`,
+  'Black South West Network': `${BASE}images/partners/black-south-west-network-card.png`,
 }
 
 const partners = partnersContent.networkPartners.map(p => ({
