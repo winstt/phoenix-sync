@@ -45,7 +45,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About us"
         heading="Who we are & what we stand for."
-        description="The Phoenix Way is a Global Majority movement for funding justice and systems change, rooted in lived experience and community-led decision making, ending funding inequity by redistributing power and resources to our communities."
+        description="The Phoenix Community Trust is a Global Majority movement for funding justice and systems change, rooted in lived experience and community-led decision making, ending funding inequity by redistributing power and resources to our communities."
         imageUrl={`${import.meta.env.BASE_URL}images/about-us.jpeg`}
       />
 
