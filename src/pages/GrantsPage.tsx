@@ -147,7 +147,7 @@ export default function GrantsPage() {
           .fund-body-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
         }
         @media (max-width: 600px) {
-          .fund-header-grid > div:last-child { grid-template-columns: 1fr 1fr !important; }
+          .fund-header-grid > div:last-child { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </>
