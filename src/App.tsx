@@ -48,6 +48,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <NewsBanner />
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
