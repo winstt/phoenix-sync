@@ -127,7 +127,6 @@ export default function GrantsPage() {
 
       {/* Register interest */}
       <section style={{ padding: '4rem 2.5rem', background: '#1a1a1a', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-        <p className="font-semibold uppercase mb-4" style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#E8570A' }}>Register your interest</p>
         <h2 className="font-bold uppercase mb-4" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: '#f5f0eb' }}>Register your interest</h2>
         <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.6)', lineHeight: '1.7', maxWidth: '640px', marginBottom: '2rem' }}>
           Be part of a national movement strengthening leadership and collaboration across the UK — register your interest to receive updates on upcoming grants, events, and opportunities to engage with The Phoenix Community Trust.
