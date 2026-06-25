@@ -51,8 +51,9 @@ export default function Header() {
 
       {/* Header */}
       <header
-        className="fixed top-0 left-0 right-0 z-[100] transition-all duration-300"
+        className="fixed left-0 right-0 z-[100] transition-all duration-300"
         style={{
+          top: 'var(--banner-height, 0px)',
           background: scrolled ? 'rgba(13,13,13,0.88)' : 'transparent',
           borderBottom: scrolled ? '1px solid rgba(255,255,255,0.1)' : '1px solid transparent',
           backdropFilter: scrolled ? 'blur(14px)' : 'none',

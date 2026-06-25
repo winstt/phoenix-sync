@@ -109,7 +109,9 @@ export default function GrantsPage() {
           {/* CTA row */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
             <a
-              href="/contact"
+              href="https://www.tnlcommunityfund.org.uk/funding/funding-programmes/the-step-forward-fund"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
                 background: '#E8570A', color: '#0d0d0d', textDecoration: 'none',
