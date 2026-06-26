@@ -28,7 +28,7 @@ export default function GrantsPage() {
       {/* Statement band */}
       <div style={{ background: '#E8570A', padding: '2rem 2.5rem' }}>
         <p style={{ fontSize: '1.1rem', fontWeight: 600, color: '#0d0d0d', maxWidth: '900px', margin: '0 auto', textAlign: 'center', lineHeight: 1.5 }}>
-          By investing in Global Majority communities, we dismantle structural racism and strengthen the collective power of our communities
+          By investing in Global Majority and racially minoritised communities, we dismantle structural racism and strengthen the collective power of our communities
         </p>
       </div>
 
