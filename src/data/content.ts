@@ -42,7 +42,7 @@ export const siteContent = {
 
   // ── HERO ───────────────────────────────────────────────────────────────────
   hero: {
-    eyebrow: 'A Global Majority movement',
+    eyebrow: 'A Global Majority and racially minoritised movement',
     headlineOrange: 'Funding Justice.',
     headlineWhite: 'Redistributing Power and Resources to Communities Across the UK.',
     description:

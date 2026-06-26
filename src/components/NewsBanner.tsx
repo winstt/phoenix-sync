@@ -49,7 +49,7 @@ export default function NewsBanner() {
         className="inline-flex items-center gap-2 no-underline"
         style={{ color: '#0d0d0d' }}
       >
-        <span className="hidden sm:inline">New grants open:</span>
+        <span className="hidden sm:inline">New grants open for Global Majority and racially minoritised communities:</span>
         <span>The Step Forward Fund — apply now</span>
         <ArrowRight size={14} aria-hidden="true" />
       </Link>
