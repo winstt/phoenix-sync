@@ -57,7 +57,7 @@ export default function GrantsPage() {
                 The <span style={{ color: '#E91E8C' }}>Step Forward</span> Fund
               </h2>
               <p style={{ fontSize: '1rem', color: 'rgba(245,240,235,0.6)', lineHeight: 1.8, maxWidth: '560px' }}>
-                For grassroots groups from Global Majority communities who are ready to take their next step forward, but haven't yet had sufficient investment to get there.
+                For grassroots groups from Global Majority and racially minoritised communities who are ready to take their next step forward, but haven't yet had sufficient investment to get there.
               </p>
               <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', marginTop: '1.1rem' }}>
                 Delivered in collaboration with <strong style={{ color: '#f5f0eb', fontWeight: 600 }}>The National Lottery Community Fund</strong>.
