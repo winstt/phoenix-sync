@@ -129,7 +129,7 @@ const faqs: { q: string; a: React.ReactNode }[] = [
   },
   {
     q: 'Who does The Phoenix Community Trust serve?',
-    a: "We serve socially and economically disadvantaged Black and Global Majority communities across the UK - communities that hold the expertise and vision to direct their own futures, who have been systematically underfunded and underserved.\n\nOur work is about redistributing power and resources, building community infrastructure, and dismantling the structural barriers that have kept funding from flowing where it's needed most. We exist not to manage inequality, but to change the conditions that create it.",
+    a: "We serve socially and economically disadvantaged Black, Global Majority and racially minoritised communities across the UK - communities that hold the expertise and vision to direct their own futures, who have been systematically underfunded and underserved.\n\nOur work is about redistributing power and resources, building community infrastructure, and dismantling the structural barriers that have kept funding from flowing where it's needed most. We exist not to manage inequality, but to change the conditions that create it.",
   },
   {
     q: 'Who leads The Phoenix Community Trust?',
@@ -142,7 +142,7 @@ const faqs: { q: string; a: React.ReactNode }[] = [
   },
   {
     q: 'How do communities shape your decisions?',
-    a: "Community-led decision making isn't an aspiration for us, it's a founding commitment. Our board of trustees is made up of people with deep roots in and alongside Black and Global Majority communities, bringing lived experience into the heart of our governance.\n\nWe're also honest that we're still building. As we grow, we are actively developing the structures and processes that ensure communities don't just inform our decisions - they direct them. We'll be sharing more about how that takes shape as we move forward.",
+    a: "Community-led decision making isn't an aspiration for us, it's a founding commitment. Our board of trustees is made up of people with deep roots in and alongside Black, Global Majority and racially minoritised communities, bringing lived experience into the heart of our governance.\n\nWe're also honest that we're still building. As we grow, we are actively developing the structures and processes that ensure communities don't just inform our decisions - they direct them. We'll be sharing more about how that takes shape as we move forward.",
   },
 ]
 
