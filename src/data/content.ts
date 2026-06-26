@@ -42,11 +42,11 @@ export const siteContent = {
 
   // ── HERO ───────────────────────────────────────────────────────────────────
   hero: {
-    eyebrow: 'A Global Majority and racially minoritised movement',
+    eyebrow: 'A Global Majority movement',
     headlineOrange: 'Funding Justice.',
     headlineWhite: 'Redistributing Power and Resources to Communities Across the UK.',
     description:
-      'The Phoenix Community Trust exists to dismantle structural racism and end funding inequity by consolidating, resourcing and reinforcing the collective power, capacity and infrastructure of Global Majority and racially minoritised communities across the UK.',
+      'The Phoenix Community Trust exists to dismantle structural racism and end funding inequity by consolidating, resourcing and reinforcing the collective power, capacity and infrastructure of Global Majority communities across the UK.',
     primaryCta: { label: 'Join our community', href: '/newsletter' },
     secondaryCta: { label: 'Our impact', href: '/impact' },
     // Replace with your hero image URL. Use null to show a gradient placeholder.
@@ -75,7 +75,7 @@ export const siteContent = {
       num: '03',
       title: 'Our impact',
       description:
-        'Linking communities and leaders across regions to reinforce collective strength - celebrating the leadership and innovation already thriving within Global Majority and racially minoritised communities.',
+        'Linking communities and leaders across regions to reinforce collective strength - celebrating the leadership and innovation already thriving within Global Majority communities.',
       link: { label: 'See our impact', href: '/impact' },
     },
   ],
@@ -98,7 +98,7 @@ export const siteContent = {
     quoteBeforeHighlight: '"A future where structural racism is dismantled, ',
     quoteHighlight: 'funding justice is realised',
     quoteAfterHighlight:
-      ', and Global Majority and racially minoritised communities hold the power and resources to thrive."',
+      ', and Global Majority communities hold the power and resources to thrive."',
   },
 
   // ── IMPACT ─────────────────────────────────────────────────────────────────
@@ -142,7 +142,7 @@ export const siteContent = {
     entries: [
       {
         year: '2020',
-        text: 'The Phoenix Community Trust emerged as a community-led response to the structural inequalities confronting Global Majority and racially minoritised communities in the UK. In the midst of the COVID-19 pandemic, the Phoenix Fund mobilised emergency funding support for grassroots groups, getting resources to communities at pace, when they were needed most.',
+        text: 'The Phoenix Community Trust emerged as a community-led response to the structural inequalities confronting Global Majority communities in the UK. In the midst of the COVID-19 pandemic, the Phoenix Fund mobilised emergency funding support for grassroots groups, getting resources to communities at pace, when they were needed most.',
         isToday: false,
       },
       {

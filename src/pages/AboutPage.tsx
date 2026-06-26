@@ -26,7 +26,7 @@ const logoByName: Record<string, string> = {
 const trustees = trusteesContent.trustees
 
 const values = [
-  { title: 'Community Power', text: 'We believe Global Majority and racially minoritised communities hold the expertise, knowledge and vision to direct their own futures. We shift power from traditional funders to communities, ensuring those closest to the challenges lead the solutions.' },
+  { title: 'Community Power', text: 'We believe Global Majority communities hold the expertise, knowledge and vision to direct their own futures. We shift power from traditional funders to communities, ensuring those closest to the challenges lead the solutions.' },
   { title: 'Radical Trust and Transparency', text: 'We communicate openly and honestly, even when it\'s difficult. We share information early, explain our constraints clearly, and build and sustain trust through consistent action, presence, kind conflict, truth-telling and follow-through.' },
   { title: 'Collective Accountability', text: 'We hold ourselves and our partners to high standards while recognising that we are accountable to communities first. We balance governance responsibilities with our commitment to do things differently, setting realistic and achievable goals.' },
   { title: 'Intersectionality, Equity and Reciprocity', text: 'We recognise that racial justice cannot exist in isolation. Our partnerships are grounded in fairness, inclusivity and shared power, challenging extractive practices, meeting communities where they are, and ensuring independence and respect in every relationship.' },
@@ -110,7 +110,7 @@ export default function AboutPage() {
         <h2 className="font-bold uppercase mb-10" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: '#f5f0eb' }}>How Phoenix was born</h2>
         <div style={{ maxWidth: '760px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
           {[
-            'The Phoenix Community Trust emerged as a community-led response to the structural inequalities confronting Global Majority and racially minoritised communities in the UK. In the midst of the COVID-19 pandemic, the Phoenix Fund mobilised emergency funding support for grassroots groups, getting resources to communities at pace, when they were needed most.',
+            'The Phoenix Community Trust emerged as a community-led response to the structural inequalities confronting Global Majority communities in the UK. In the midst of the COVID-19 pandemic, the Phoenix Fund mobilised emergency funding support for grassroots groups, getting resources to communities at pace, when they were needed most.',
             'As the work grew from The Phoenix Fund with the National Lottery Community Fund, some of the partners came together as The Phoenix Way - working with a shared ambition to dismantle systemic racism in philanthropy and drive lasting, community-led, transformative change.',
             'A new chapter began when Phoenix was incorporated as an independent Global Majority-led organisation, with a newly appointed independent Board, to steward the next phase of the work. The new structure lays the foundation for long term investment in community infrastructure and the development of a lasting model for change.',
             'We honour the roots of The Phoenix Community Trust and the communities and partners who shaped its early momentum, while looking forward with renewed energy and excitement to what comes next.',
