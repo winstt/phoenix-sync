@@ -21,14 +21,14 @@ export default function GrantsPage() {
       <PageHero
         eyebrow="Grants"
         heading="Funding justice in action."
-        description="The Phoenix Community Trust is committed to redistributing power and resources to Global Majority communities across the UK - through grants, investment, and long-term community infrastructure."
+        description="The Phoenix Community Trust is committed to redistributing power and resources to Global Majority and racially minoritised communities across the UK - through grants, investment, and long-term community infrastructure."
         imageUrl={`${import.meta.env.BASE_URL}images/grants.jpeg`}
       />
 
       {/* Statement band */}
       <div style={{ background: '#E8570A', padding: '2rem 2.5rem' }}>
         <p style={{ fontSize: '1.1rem', fontWeight: 600, color: '#0d0d0d', maxWidth: '900px', margin: '0 auto', textAlign: 'center', lineHeight: 1.5 }}>
-          By investing in Global Majority communities, we dismantle structural racism and strengthen the collective power of our communities
+          By investing in Global Majority and racially minoritised communities, we dismantle structural racism and strengthen the collective power of our communities
         </p>
       </div>
 
@@ -57,7 +57,7 @@ export default function GrantsPage() {
                 The <span style={{ color: '#E91E8C' }}>Step Forward</span> Fund
               </h2>
               <p style={{ fontSize: '1rem', color: 'rgba(245,240,235,0.6)', lineHeight: 1.8, maxWidth: '560px' }}>
-                For grassroots groups from Global Majority communities who are ready to take their next step forward, but haven't yet had sufficient investment to get there.
+                For grassroots groups from Global Majority and racially minoritised communities who are ready to take their next step forward, but haven't yet had sufficient investment to get there.
               </p>
               <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.6)', marginTop: '1.1rem' }}>
                 Delivered in collaboration with <strong style={{ color: '#f5f0eb', fontWeight: 600 }}>The National Lottery Community Fund</strong>.
