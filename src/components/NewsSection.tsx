@@ -94,7 +94,7 @@ export default function NewsSection() {
           New grants are now open: The Step Forward Fund
         </h3>
         <p style={{ color: 'rgba(245,240,235,0.7)', fontSize: '0.95rem', lineHeight: 1.7, margin: 0 }}>
-          Applications are open for grassroots groups from Global Majority communities across England. Find eligibility, deadlines and how to apply on our Grants page.
+          Applications are open for grassroots groups from Global Majority and racially minoritised communities across England. Find eligibility, deadlines and how to apply on our Grants page.
         </p>
         <Link
           to="/grants"
