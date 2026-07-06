@@ -99,7 +99,10 @@ export default function ImpactPage() {
       <section id="partners-section" style={{ padding: '4rem 2rem', background: '#1a1a1a', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
           <p className="font-semibold uppercase mb-4" style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#E8570A' }}>Our network</p>
-          <h2 className="font-bold uppercase mb-10" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', color: '#f5f0eb' }}>Our current partners</h2>
+          <h2 className="font-bold uppercase mb-6" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', color: '#f5f0eb' }}>Our current grantees</h2>
+          <p style={{ fontSize: '0.95rem', color: '#f5f0eb', lineHeight: 1.7, maxWidth: '900px', marginBottom: '2.5rem' }}>
+            Our grantees are not responsible for awarding any grants or distributing funding by or for the trust. All grant-making decisions are made exclusively by The Phoenix Community Trust. For further information on your region, please register with the trust directly.
+          </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 0, border: '1px solid rgba(255,255,255,0.12)', borderRadius: '18px', overflow: 'hidden', background: '#0d0d0d' }}>
             {partners.map(p => (
               <article key={p.name} style={{ background: '#0d0d0d', borderRight: '1px solid rgba(255,255,255,0.12)', borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
@@ -131,7 +134,7 @@ export default function ImpactPage() {
 
       {/* Funders */}
       <section style={{ padding: '4rem 2.5rem', background: '#0d0d0d', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-        <p className="font-semibold uppercase mb-10" style={{ fontSize: '12px', letterSpacing: '0.14em', color: '#E8570A' }}>Our current partners and funders</p>
+        <p className="font-semibold uppercase mb-10" style={{ fontSize: '12px', letterSpacing: '0.14em', color: '#E8570A' }}>Our current grantees and funders</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '1rem', alignItems: 'stretch', justifyItems: 'stretch' }}>
           {funderLogos.map(l => {
             const img = (
