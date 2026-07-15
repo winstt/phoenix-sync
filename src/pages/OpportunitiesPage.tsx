@@ -80,34 +80,24 @@ export default function OpportunitiesPage() {
           <dl
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-              gap: '1rem',
-              marginBottom: '1.5rem',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
+              gap: '0.5rem 1.75rem',
+              marginBottom: '2rem',
             }}
           >
             {infoItems.map(item => (
-              <div
-                key={item.label}
-                style={{
-                  background: '#0d0d0d',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                  borderRadius: '8px',
-                  padding: '1rem 1.15rem',
-                }}
-              >
-                <dt style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#E8570A', marginBottom: '0.5rem' }}>
+              <div key={item.label} style={{ padding: '0.25rem 0' }}>
+                <dt style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#E8570A', marginBottom: '0.4rem' }}>
                   {item.label}
                 </dt>
-                <dd style={{ margin: 0, fontSize: '0.95rem', color: '#f5f0eb', lineHeight: 1.5 }}>
+                <dd style={{ margin: 0, fontSize: '0.9rem', color: '#f5f0eb', lineHeight: 1.45, whiteSpace: 'pre-line' }}>
                   {item.value}
                 </dd>
               </div>
             ))}
           </dl>
 
-          <p style={{ color: 'rgba(245,240,235,0.7)', fontSize: '0.9rem', lineHeight: 1.65, marginBottom: '2rem', maxWidth: '760px' }}>
-            The Expression of Interest is informal and will not be scored. Organisations that currently receive funding from TPCT are not eligible to bid because of a conflict of interest. Please review the full specification before submitting a proposal.
-          </p>
+
 
           {/* CTAs */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', alignItems: 'center' }}>
