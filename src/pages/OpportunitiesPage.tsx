@@ -15,7 +15,7 @@ const infoItems: Info[] = [
   { label: 'Expression of Interest deadline', value: '31 July 2026 at 5pm' },
   { label: 'Full proposal deadline', value: '24 August 2026 at 9am' },
   { label: 'Expected commission period', value: 'September 2026 – March 2027' },
-  { label: 'Scope', value: 'Nine regions across England' },
+  { label: 'Scope', value: 'Nine regions\u00a0across\u00a0England' },
 ]
 
 export default function OpportunitiesPage() {
