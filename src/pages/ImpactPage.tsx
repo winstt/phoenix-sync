@@ -26,7 +26,7 @@ const logoByName: Record<string, string> = {
 
 const funderLogos = partnersContent.funders.map(f => ({
   name: f.name,
-  url: logoByName[f.name] ?? `${BASE}${(f.logo || '').replace(/^\//, '')}`,
+  url: logoByName[f.name] ?? resolvePath(f.logo || ''),
   href: f.href,
 }))
 
