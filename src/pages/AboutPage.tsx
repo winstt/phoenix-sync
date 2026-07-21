@@ -13,6 +13,7 @@ import inclusiveNorthLogo from '../assets/funders-new/inclusive_north.png.asset.
 const BASE = import.meta.env.BASE_URL
 const LOVABLE_ASSET_ORIGIN = 'https://the-phoenix-web.lovable.app'
 const cdnAsset = (url: string) => `${LOVABLE_ASSET_ORIGIN}${url}`
+const resolvePath = (path: string) => /^https?:\/\//i.test(path) ? path : `${BASE}${path.replace(/^\//, '')}`
 const logoByName: Record<string, string> = {
   'Anti Racist Cumbria': cdnAsset(antiRacistLogo.url),
   'National Lottery Community Fund': cdnAsset(nationalLotteryLogo.url),
