@@ -48,7 +48,7 @@ const partners = partnersContent.networkPartners.map(p => ({
   region: p.region,
   tagline: p.tagline,
   desc: p.desc,
-  image: partnerImageByName[p.name] ?? `${BASE}${(p.image || '').replace(/^\//, '')}`,
+  image: partnerImageByName[p.name] ?? resolvePath(p.image || ''),
   href: p.href,
 }))
 
