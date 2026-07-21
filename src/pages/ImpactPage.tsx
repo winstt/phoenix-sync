@@ -13,6 +13,7 @@ import blackSouthWestImage from '../assets/impact-partners/black_south_west_netw
 const BASE = import.meta.env.BASE_URL
 const LOVABLE_ASSET_ORIGIN = 'https://the-phoenix-web.lovable.app'
 const cdnAsset = (url: string) => `${LOVABLE_ASSET_ORIGIN}${url}`
+const resolvePath = (path: string) => /^https?:\/\//i.test(path) ? path : `${BASE}${path.replace(/^\//, '')}`
 const logoByName: Record<string, string> = {
   'Anti Racist Cumbria': cdnAsset(antiRacistLogo.url),
   'National Lottery Community Fund': cdnAsset(nationalLotteryLogo.url),
@@ -25,7 +26,7 @@ const logoByName: Record<string, string> = {
 
 const funderLogos = partnersContent.funders.map(f => ({
   name: f.name,
-  url: logoByName[f.name] ?? `${BASE}${(f.logo || '').replace(/^\//, '')}`,
+  url: logoByName[f.name] ?? resolvePath(f.logo || ''),
   href: f.href,
 }))
 
@@ -47,7 +48,7 @@ const partners = partnersContent.networkPartners.map(p => ({
   region: p.region,
   tagline: p.tagline,
   desc: p.desc,
-  image: partnerImageByName[p.name] ?? `${BASE}${(p.image || '').replace(/^\//, '')}`,
+  image: partnerImageByName[p.name] ?? resolvePath(p.image || ''),
   href: p.href,
 }))
 
