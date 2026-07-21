@@ -128,7 +128,7 @@ export default function AboutPage() {
           {partners.map(p => {
             const img = (
               <img
-                src={logoByName[p.name] ?? `${BASE}${(p.logo || '').replace(/^\//, '')}`}
+                src={logoByName[p.name] ?? resolvePath(p.logo || '')}
                 alt={p.name}
                 loading="lazy"
                 style={{ maxHeight: '100%', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }}
