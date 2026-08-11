@@ -1,11 +1,9 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { Download, ExternalLink, Mail } from 'lucide-react'
+import { Download, Mail } from 'lucide-react'
 import PageHero from '../components/PageHero'
 
 const PDF_URL = `${import.meta.env.BASE_URL}documents/TPCT-Strategy-Development-Invitation-to-Tender.pdf`
-const WEBINAR_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeieIRa2cm7qAUpYN0WNi8S3JkAzJ8SQLi09MfUFY4dIDRZSg/viewform?usp=publish-editor'
-const EOI_URL = 'https://forms.gle/68ivmzVgQhuDBViy6'
 
 type Info = { label: string; value: ReactNode }
 
