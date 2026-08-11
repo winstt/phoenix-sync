@@ -114,36 +114,6 @@ export default function OpportunitiesPage() {
               <Download size={16} aria-hidden="true" />
               Download the full specification (PDF)
             </a>
-            <a
-              href={WEBINAR_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 no-underline"
-              style={{
-                background: 'transparent', color: '#f5f0eb',
-                padding: '13px 22px', borderRadius: '6px',
-                fontSize: '14px', fontWeight: 600,
-                border: '1.5px solid rgba(245,240,235,0.25)',
-              }}
-            >
-              Register for the supplier webinar
-              <ExternalLink size={14} aria-hidden="true" />
-            </a>
-            <a
-              href={EOI_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 no-underline"
-              style={{
-                background: 'transparent', color: '#f5f0eb',
-                padding: '13px 22px', borderRadius: '6px',
-                fontSize: '14px', fontWeight: 600,
-                border: '1.5px solid rgba(245,240,235,0.25)',
-              }}
-            >
-              Submit an Expression of Interest
-              <ExternalLink size={14} aria-hidden="true" />
-            </a>
           </div>
 
           <p style={{ marginTop: '1.5rem', fontSize: '0.9rem' }}>
