@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import NewsBanner from './components/NewsBanner'
 import Footer from './components/Footer'
 import AccessibilityWidget from './components/AccessibilityWidget'
 
