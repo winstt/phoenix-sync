@@ -109,6 +109,7 @@ export default function NewsSection() {
       </article>
 
       {/* Tender announcement */}
+      <article
         style={{
           background: '#0d0d0d',
           border: '1px solid rgba(255,255,255,0.1)',
