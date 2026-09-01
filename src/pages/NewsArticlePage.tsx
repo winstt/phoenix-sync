@@ -40,6 +40,14 @@ export default function NewsArticlePage() {
           </h1>
           <p style={{ fontSize: '13px', color: 'rgba(245,240,235,0.5)', marginBottom: '2.5rem' }}>{article.date}</p>
 
+          {article.image && (
+            <img
+              src={article.image}
+              alt={article.title}
+              style={{ width: '100%', maxWidth: '480px', borderRadius: '12px', marginBottom: '2.5rem', display: 'block' }}
+            />
+          )}
+
           {article.body?.map((para, i) => (
             <p key={i} style={{ fontSize: '1rem', lineHeight: 1.75, color: 'rgba(245,240,235,0.85)', marginBottom: '1.25rem' }}>
               {para}

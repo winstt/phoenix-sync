@@ -13,6 +13,7 @@ type NewsCard = {
   date: string
   href: string
   body: string[]
+  image?: string
 }
 
 const rawNewsModules = import.meta.glob<NewsCard>('/content/news/*.json', { eager: true, import: 'default' })
