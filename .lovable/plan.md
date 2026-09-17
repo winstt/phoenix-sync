@@ -1,7 +1,12 @@
-I found the source of the huge empty area: the shared `.hero-grid` CSS still forces `min-height: 100vh` on desktop, overriding the earlier policy-page padding reduction.
+# Remove expired funding and tender sections
 
-Plan:
-1. Update `PageHero` so pages without an image use a compact policy-style hero layout instead of the full-screen hero grid.
-2. Keep image-based pages using the current large split hero behavior.
-3. Tighten policy page content spacing so the divider and body text sit directly below the compact header.
-4. Check the cookie, privacy, and terms policy routes at the current desktop viewport to confirm the empty space is gone.
+## Changes
+- Remove the entire Step Forward Fund section from the Grants page, including its status, details, eligibility list, deadline, and application link.
+- Keep the Grants page introduction and “Register your interest” section.
+- Remove the entire Strategy Development Partner Commission section from the Work With Us page, including tender details, PDF link, and contact link.
+- Keep the Jobs and “Stay in the loop” sections.
+- Remove imports, constants, and data that become unused after these sections are deleted.
+
+## Verification
+- Confirm both pages display without the removed announcements.
+- Confirm the site still builds successfully.
