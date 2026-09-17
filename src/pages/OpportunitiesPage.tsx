@@ -1,20 +1,5 @@
-import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { Download, Mail } from 'lucide-react'
 import PageHero from '../components/PageHero'
-
-const PDF_URL = `${import.meta.env.BASE_URL}documents/TPCT-Strategy-Development-Invitation-to-Tender.pdf`
-
-type Info = { label: string; value: ReactNode }
-
-const infoItems: Info[] = [
-  { label: 'Indicative budget', value: '£100,000 plus VAT where applicable' },
-  { label: 'Supplier webinar', value: <>23 July 2026<br/>11:45am–12:30pm<br/>Online</> },
-  { label: 'Expression of Interest deadline', value: '31 July 2026 at 5pm' },
-  { label: 'Full proposal deadline', value: '24 August 2026 at 9am' },
-  { label: 'Expected commission period', value: 'September 2026 – March 2027' },
-  { label: 'Scope', value: 'Nine regions\u00a0across\u00a0England' },
-]
 
 export default function OpportunitiesPage() {
   return (
@@ -25,107 +10,6 @@ export default function OpportunitiesPage() {
         description="We are building a national movement for funding justice. If you share our commitment to amplifying community power and lasting change - we want to work with you."
         imageUrl={`${import.meta.env.BASE_URL}images/opportunities.jpeg`}
       />
-
-      {/* Strategy Development Partner Commission tender */}
-      <section
-        id="strategy-development-tender"
-        aria-labelledby="strategy-tender-heading"
-        style={{ padding: '4rem 2.5rem', background: '#0d0d0d', scrollMarginTop: '100px' }}
-      >
-        <div
-          style={{
-            background: '#1a1a1a',
-            border: '1px solid rgba(255,255,255,0.1)',
-            borderLeft: '3px solid #E8570A',
-            borderRadius: '12px',
-            padding: 'clamp(1.75rem, 4vw, 2.5rem)',
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem', flexWrap: 'wrap' }}>
-            <span
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: '8px',
-                color: '#E8570A', fontSize: '11px', fontWeight: 700,
-                letterSpacing: '0.12em', textTransform: 'uppercase',
-              }}
-            >
-              <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#E8570A' }} aria-hidden="true" />
-              Open tender
-            </span>
-          </div>
-
-          <h2
-            id="strategy-tender-heading"
-            className="font-bold uppercase"
-            style={{ fontSize: 'clamp(1.5rem, 3.2vw, 2.25rem)', color: '#f5f0eb', lineHeight: 1.15, marginBottom: '1.25rem', letterSpacing: '-0.01em' }}
-          >
-            Strategy Development Partner Commission
-          </h2>
-
-          <div style={{ maxWidth: '760px', color: 'rgba(245,240,235,0.85)', fontSize: '1rem', lineHeight: 1.7, marginBottom: '2rem' }}>
-            <p style={{ marginBottom: '1rem' }}>
-              The Phoenix Community Trust is seeking an external partner to lead a comprehensive and genuinely participatory strategy development process, working with communities and partners across nine regions in England.
-            </p>
-            <p style={{ marginBottom: '1rem' }}>
-              The appointed partner will lead discovery research, stakeholder engagement, nine regional convenings and a programme of digital engagement before producing a final strategy framework that TPCT's incoming Chief Executive and team can operationalise.
-            </p>
-            <p style={{ margin: 0 }}>
-              We are particularly interested in providers with a strong track record in participatory strategy development, anti-racist practice and community engagement at scale. Partnership and consortium bids are encouraged, particularly where they enable smaller or Global Majority-led organisations to participate.
-            </p>
-          </div>
-
-          {/* Info grid */}
-          <dl
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
-              gap: '0.5rem 1.75rem',
-              marginBottom: '2rem',
-            }}
-          >
-            {infoItems.map(item => (
-              <div key={item.label} style={{ padding: '0.25rem 0' }}>
-                <dt style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#E8570A', marginBottom: '0.4rem' }}>
-                  {item.label}
-                </dt>
-                <dd style={{ margin: 0, fontSize: '0.9rem', color: '#f5f0eb', lineHeight: 1.45, whiteSpace: 'pre-line' }}>
-                  {item.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
-
-
-
-          {/* CTAs */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', alignItems: 'center' }}>
-            <a
-              href={PDF_URL}
-              download
-              className="inline-flex items-center gap-2 no-underline"
-              style={{
-                background: '#E8570A', color: '#fff',
-                padding: '14px 24px', borderRadius: '6px',
-                fontSize: '14px', fontWeight: 700, letterSpacing: '0.02em',
-              }}
-            >
-              <Download size={16} aria-hidden="true" />
-              Download the full specification (PDF)
-            </a>
-          </div>
-
-          <p style={{ marginTop: '1.5rem', fontSize: '0.9rem' }}>
-            <a
-              href="mailto:info@phoenix-trust.co.uk"
-              className="inline-flex items-center gap-2"
-              style={{ color: '#E8570A', fontWeight: 600, textDecoration: 'underline' }}
-            >
-              <Mail size={14} aria-hidden="true" />
-              Questions about the tender?
-            </a>
-          </p>
-        </div>
-      </section>
 
       {/* Jobs */}
       <section style={{ padding: '0 2.5rem 4rem', background: '#0d0d0d' }}>
