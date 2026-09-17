@@ -24,47 +24,103 @@ const benefits = [
   },
 ]
 
+// Mailchimp audience (public embed values only - no private API keys)
+const MC_BASE = 'https://thephoenixwayuk.us9.list-manage.com/subscribe/post-json'
+const MC_U = 'e7750f68b25e6311a52e9aebc'
+const MC_ID = 'b558fe8950'
+const MC_F_ID = '001de8e3f0'
+const MC_HONEYPOT = `b_${MC_U}_${MC_ID}`
+
+type MailchimpResponse = { result: 'success' | 'error'; msg: string }
+
+function subscribeViaJsonp(params: Record<string, string>): Promise<MailchimpResponse> {
+  return new Promise((resolve, reject) => {
+    const callbackName = `mcCallback_${Date.now()}_${Math.floor(Math.random() * 1e6)}`
+    const query = new URLSearchParams({
+      u: MC_U,
+      id: MC_ID,
+      f_id: MC_F_ID,
+      ...params,
+      [MC_HONEYPOT]: '',
+      c: callbackName,
+    })
+
+    const script = document.createElement('script')
+    const timeout = window.setTimeout(() => {
+      cleanup()
+      reject(new Error('timeout'))
+    }, 15000)
+
+    function cleanup() {
+      window.clearTimeout(timeout)
+      delete (window as unknown as Record<string, unknown>)[callbackName]
+      script.remove()
+    }
+
+    ;(window as unknown as Record<string, unknown>)[callbackName] = (data: MailchimpResponse) => {
+      cleanup()
+      resolve(data)
+    }
+
+    script.src = `${MC_BASE}?${query.toString()}`
+    script.onerror = () => {
+      cleanup()
+      reject(new Error('network'))
+    }
+    document.body.appendChild(script)
+  })
+}
+
+function stripHtml(html: string) {
+  const el = document.createElement('div')
+  el.innerHTML = html
+  return el.textContent || el.innerText || ''
+}
+
 export default function NewsletterPage() {
   const [form, setForm] = useState({ FNAME: '', LNAME: '', EMAIL: '' })
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [error, setError] = useState('')
 
-  const mailchimpUrl = import.meta.env.VITE_MAILCHIMP_URL as string | undefined
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError('')
 
-    if (!form.FNAME.trim() || !form.EMAIL.trim()) {
+    const FNAME = form.FNAME.trim()
+    const LNAME = form.LNAME.trim()
+    const EMAIL = form.EMAIL.trim()
+
+    if (!FNAME || !EMAIL) {
       setError('Please fill in the required fields.')
       return
     }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.EMAIL)) {
+    if (FNAME.length > 100 || LNAME.length > 100 || EMAIL.length > 255) {
+      setError('Please shorten your details and try again.')
+      return
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(EMAIL)) {
       setError('Please enter a valid email address.')
       return
     }
 
     setStatus('loading')
 
-    if (!mailchimpUrl) {
-      // No Mailchimp configured yet - still show success so the UI is testable
-      setTimeout(() => setStatus('success'), 600)
-      return
-    }
-
     try {
-      const body = new FormData()
-      body.append('FNAME', form.FNAME)
-      body.append('LNAME', form.LNAME)
-      body.append('EMAIL', form.EMAIL)
-      // Honeypot field required by Mailchimp embedded forms
-      body.append('b_placeholder_placeholder', '')
-
-      await fetch(mailchimpUrl, { method: 'POST', mode: 'no-cors', body })
-      setStatus('success')
+      const data = await subscribeViaJsonp({ EMAIL, FNAME, LNAME })
+      if (data.result === 'success') {
+        setStatus('success')
+      } else {
+        setStatus('idle')
+        const msg = stripHtml(data.msg || '').replace(/^\d+\s*-\s*/, '')
+        setError(
+          /already subscribed/i.test(msg)
+            ? 'This email address is already subscribed.'
+            : msg || 'We could not complete your subscription. Please try again.',
+        )
+      }
     } catch {
-      setStatus('error')
-      setError('Something went wrong. Please try again.')
+      setStatus('idle')
+      setError('Something went wrong. Please check your connection and try again.')
     }
   }
 
