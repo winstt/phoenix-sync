@@ -174,7 +174,7 @@ const faqs: { q: string; a: React.ReactNode }[] = [
     a: (
       <>
         We're guided by an incredible and passionate team of trustees who bring a wealth of expertise and lived experience to everything we do. They are the heart of our governance and the backbone of our mission. You can find out more about each of them on the{' '}
-        <Link to="/impact" style={{ color: '#E8570A', textDecoration: 'none' }}>Our Impact</Link> page.
+        <Link to="/about#trustees-h2" style={{ color: '#E8570A', textDecoration: 'none' }}>About Us</Link> page.
       </>
     ),
   },
