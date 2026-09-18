@@ -113,7 +113,7 @@ export default function ContactPage() {
                 <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.6)', lineHeight: '1.6' }}>Thank you for getting in touch. We will be in touch soon.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} name={FORM_NAME} data-netlify="true" netlify-honeypot="bot-field" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <form onSubmit={handleSubmit} name={FORM_NAME} method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <input type="hidden" name="form-name" value={FORM_NAME} />
                 {/* Honeypot - invisible to humans, traps spam bots */}
                 <p style={{ display: 'none' }}>
