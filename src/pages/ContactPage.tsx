@@ -20,13 +20,43 @@ const socialLinks = [
   { label: 'Bluesky', icon: <BlueSkyIcon size={18} />, href: 'https://bsky.app/profile/phoenix-trust.bsky.social' },
 ]
 
+const FORM_NAME = 'contact'
+
 export default function ContactPage() {
   const [sent, setSent] = useState(false)
-  const [form, setForm] = useState({ name: '', email: '', org: '', message: '' })
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [form, setForm] = useState({ name: '', email: '', org: '', message: '', 'bot-field': '' })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSent(true)
+    // Honeypot filled -> silently pretend success (spam bot)
+    if (form['bot-field']) {
+      setSent(true)
+      return
+    }
+    setSending(true)
+    setError(null)
+    try {
+      const body = new URLSearchParams({
+        'form-name': FORM_NAME,
+        name: form.name,
+        email: form.email,
+        org: form.org,
+        message: form.message,
+      })
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString(),
+      })
+      if (!res.ok) throw new Error(`Submission failed (${res.status})`)
+      setSent(true)
+    } catch {
+      setError('Sorry, something went wrong sending your message. Please try again, or email us directly at info@phoenix-trust.co.uk.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -83,7 +113,12 @@ export default function ContactPage() {
                 <p style={{ fontSize: '0.95rem', color: 'rgba(245,240,235,0.6)', lineHeight: '1.6' }}>Thank you for getting in touch. We will be in touch soon.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <form onSubmit={handleSubmit} name={FORM_NAME} data-netlify="true" netlify-honeypot="bot-field" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <input type="hidden" name="form-name" value={FORM_NAME} />
+                {/* Honeypot - invisible to humans, traps spam bots */}
+                <p style={{ display: 'none' }}>
+                  <label>Don't fill this out if you're human: <input name="bot-field" value={form['bot-field']} onChange={e => setForm(p => ({ ...p, 'bot-field': e.target.value }))} /></label>
+                </p>
                 {[
                   { id: 'name', label: 'Your name', type: 'text', placeholder: 'Full name' },
                   { id: 'email', label: 'Email address', type: 'email', placeholder: 'you@example.com' },
@@ -91,9 +126,9 @@ export default function ContactPage() {
                 ].map(f => (
                   <div key={f.id}>
                     <label htmlFor={f.id} style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#f5f0eb', marginBottom: '0.4rem' }}>{f.label}</label>
-                    <input id={f.id} type={f.type} placeholder={f.placeholder}
+                    <input id={f.id} name={f.id} type={f.type} placeholder={f.placeholder}
                       required={f.id !== 'org'}
-                      value={form[f.id as keyof typeof form]}
+                      value={form[f.id as 'name' | 'email' | 'org']}
                       onChange={e => setForm(p => ({ ...p, [f.id]: e.target.value }))}
                       style={{ width: '100%', background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '6px', padding: '0.75rem 1rem', color: '#f5f0eb', fontSize: '14px', outline: 'none' }}
                     />
@@ -101,15 +136,18 @@ export default function ContactPage() {
                 ))}
                 <div>
                   <label htmlFor="message" style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#f5f0eb', marginBottom: '0.4rem' }}>Message</label>
-                  <textarea id="message" required rows={5} placeholder="Your message..."
+                  <textarea id="message" name="message" required rows={5} placeholder="Your message..."
                     value={form.message}
                     onChange={e => setForm(p => ({ ...p, message: e.target.value }))}
                     style={{ width: '100%', background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '6px', padding: '0.75rem 1rem', color: '#f5f0eb', fontSize: '14px', outline: 'none', resize: 'vertical' }}
                   />
                 </div>
                 <p style={{ fontSize: '12px', color: 'rgba(245,240,235,0.4)' }}>Your details will not be shared with third parties.</p>
-                <button type="submit" style={{ background: '#C2185B', color: 'white', border: 'none', borderRadius: '6px', padding: '14px 28px', fontSize: '15px', fontWeight: 600, cursor: 'pointer', alignSelf: 'flex-start' }}>
-                  Send message →
+                {error && (
+                  <p role="alert" style={{ fontSize: '13px', color: '#E8570A', lineHeight: 1.5 }}>{error}</p>
+                )}
+                <button type="submit" disabled={sending} style={{ background: '#C2185B', color: 'white', border: 'none', borderRadius: '6px', padding: '14px 28px', fontSize: '15px', fontWeight: 600, cursor: sending ? 'wait' : 'pointer', alignSelf: 'flex-start', opacity: sending ? 0.7 : 1 }}>
+                  {sending ? 'Sending…' : 'Send message →'}
                 </button>
               </form>
             )}
