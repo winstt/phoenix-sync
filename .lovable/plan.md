@@ -1,12 +1,9 @@
-# Remove expired funding and tender sections
+# Fix Netlify contact form detection
 
 ## Changes
-- Remove the entire Step Forward Fund section from the Grants page, including its status, details, eligibility list, deadline, and application link.
-- Keep the Grants page introduction and “Register your interest” section.
-- Remove the entire Strategy Development Partner Commission section from the Work With Us page, including tender details, PDF link, and contact link.
-- Keep the Jobs and “Stay in the loop” sections.
-- Remove imports, constants, and data that become unused after these sections are deleted.
+- Correct the static contact-form blueprint in the source HTML with `name="contact"`, `method="POST"`, `data-netlify="true"`, the honeypot declaration and matching `name`, `email`, `org`, and `message` controls.
+- Keep the visible form and its appearance unchanged while confirming its hidden `form-name=contact` field and URL-encoded AJAX submission remain aligned with the blueprint.
 
 ## Verification
-- Confirm both pages display without the removed announcements.
-- Confirm the site still builds successfully.
+- Run the production build and inspect `dist/index.html` directly to confirm Netlify receives the complete static blueprint at deploy time.
+- Confirm the generated page still builds successfully and the Mailchimp form is untouched.
